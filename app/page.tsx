@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import PopularCourses from "@/components/PopularCourses";
+import Accreditations from "@/components/Accreditations";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <main className="flex flex-col w-full">
         <Hero />
         <PopularCourses />
+        <Accreditations />
       </main>
     </div>
   );
