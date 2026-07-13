@@ -7,10 +7,10 @@ export default function CourseBanner() {
       <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row">
 
         {/* Left Content Area */}
-        <div className="w-full lg:w-[55%] xl:w-[60%] p-8 mb-[66px] flex flex-col justify-center">
+        <div className="w-full lg:w-[55%] xl:w-[60%] p-6 md:p-8 mb-[40px] lg:mb-[66px] flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
 
           {/* Logo */}
-          <div className="mb-8">
+          <div className="mb-8 flex justify-center lg:justify-start w-full">
             <Image
               src="/footer_logo.png"
               alt="OIHE Logo"
@@ -41,12 +41,12 @@ export default function CourseBanner() {
           </div>
 
           {/* Cards */}
-          <div className="flex flex-col sm:flex-row sm:items-start gap-6 mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-start gap-6 mb-12 w-full">
 
             {/* Card 1 */}
             <div className="flex-1 bg-[#0D2451] rounded-xl border-l-[4px] border-l-[#4D97E6] p-[16px] flex flex-col">
-              <div className="w-8 h-8 rounded-full bg-[#4D97E6] text-white text-[15px] font-bold flex items-center justify-center mb-3">1</div>
-              <div className="flex items-center gap-4 mb-3">
+              <div className="hidden sm:flex w-8 h-8 rounded-full bg-[#4D97E6] text-white text-[15px] font-bold items-center justify-center mb-3">1</div>
+              <div className="flex items-center justify-center sm:justify-start gap-4 mb-3">
                 <div className="w-12 h-12 rounded-full border-2 border-[#4D97E6] flex items-center justify-center shrink-0">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4D97E6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" />
@@ -59,8 +59,8 @@ export default function CourseBanner() {
 
             {/* Card 2 */}
             <div className="flex-1 bg-[#0D2451] rounded-xl border-l-[4px] border-l-[#4D97E6] p-[16px] flex flex-col">
-              <div className="w-8 h-8 rounded-full bg-[#4D97E6] text-white text-[15px] font-bold flex items-center justify-center mb-3">2</div>
-              <div className="flex items-center gap-4 mb-3">
+              <div className="hidden sm:flex w-8 h-8 rounded-full bg-[#4D97E6] text-white text-[15px] font-bold items-center justify-center mb-3">2</div>
+              <div className="flex items-center justify-center sm:justify-start gap-4 mb-3">
                 <div className="w-12 h-12 rounded-full border-2 border-[#4D97E6] flex items-center justify-center shrink-0">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4D97E6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" />
@@ -135,7 +135,7 @@ export default function CourseBanner() {
           </div>
 
           {/* Enroll Button */}
-          <Link href="#" className="bg-[#4D97E6] text-white px-8 py-4 text-[14px] font-semibold hover:bg-[#4D97E6] transition-colors w-fit flex items-center gap-3 ">
+          <Link href="#" className="bg-[#4D97E6] text-white px-6 py-3 md:px-8 md:py-4 text-[14px] font-semibold hover:bg-[#4D97E6] transition-colors w-fit flex items-center gap-3 ">
             Enroll Now
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7" />
@@ -145,7 +145,7 @@ export default function CourseBanner() {
         </div>
 
         {/* Right Image Area */}
-        <div className="w-full lg:w-[45%] relative min-h-[400px] lg:min-h-full">
+        <div className="w-full lg:w-[45%] relative min-h-[300px] md:min-h-[400px] lg:min-h-full">
           <Image
             src="/cousre_banner.png"
             alt="Early Childhood Education"

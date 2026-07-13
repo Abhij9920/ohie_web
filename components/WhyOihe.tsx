@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function WhyOihe() {
   return (
-    <section className="w-full bg-white relative pt-[90px] pb-24 md:pt-24 md:pb-32 lg:pb-48 overflow-hidden">
-      <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-start px-6  relative z-10">
+    <section className="w-full bg-white relative pt-[60px] pb-[120px] md:pt-[90px] md:pb-[160px] lg:pb-48 overflow-hidden">
+      <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-start px-6 relative z-10">
 
         {/* Left Side - Image */}
         <div className="w-full lg:w-1/2 relative flex items-center justify-center lg:justify-start lg:-ml-4 xl:-ml-12 mb-1 lg:mb-0 z-10">
@@ -13,12 +13,12 @@ export default function WhyOihe() {
             alt="OIHE Campus"
             width={800}
             height={800}
-            className="w-full h-auto max-w-full object-contain"
+            className="w-[110%] max-w-none h-auto object-contain -translate-x-4 md:-translate-x-8 lg:w-full lg:max-w-full lg:translate-x-0"
           />
         </div>
 
         {/* Right Side - Content */}
-        <div className="w-full lg:w-1/2 lg:pl-16 xl:pl-24 flex flex-col pt-4 lg:pt-8">
+        <div className="w-full lg:w-1/2 lg:pl-16 xl:pl-24 flex flex-col pt-8 lg:pt-8">
 
           {/* Subtitle */}
           <span className="text-[#3b71b8] text-[12px] font-bold tracking-widest uppercase mb-4">
@@ -103,13 +103,13 @@ export default function WhyOihe() {
 
       {/* Graduation Hands Image (Positioned at bottom of section) */}
       <div className="absolute bottom-0 left-0 w-full z-20 pointer-events-none flex justify-center overflow-hidden">
-        <div className="w-full max-w-[1440px] relative">
+        <div className="w-full max-w-[1440px] relative flex justify-center lg:justify-start">
           <Image
             src="/why_ohie/why_ohie_1.png"
             alt="Graduation Celebration"
             width={1440}
             height={500}
-            className="w-full h-auto object-contain object-left-bottom -ml-4 lg:-ml-12"
+            className="w-full h-auto object-contain object-left-bottom translate-x-[20%] md:translate-x-[25%] lg:translate-x-0 ml-0 lg:-ml-12"
           />
         </div>
       </div>

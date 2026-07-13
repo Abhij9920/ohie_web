@@ -2,15 +2,15 @@ import Image from "next/image";
 
 export default function Accreditations() {
   return (
-    <section className="w-full bg-[#FAFAF7] py-[60px] px-4 md:px-[80px]">
+    <section className="w-full bg-[#FAFAF7] py-[50px] md:py-[60px] px-4 md:px-[40px] lg:px-[80px]">
       <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-[100px]">
 
         {/* Left Side: Headings */}
-        <div className="lg:w-1/3 flex flex-col items-start w-full">
+        <div className="lg:w-1/3 flex flex-col items-center lg:items-start text-center lg:text-left w-full">
           <h4 className="text-[10px] font-[family-name:var(--font-geist-sans)] font-semibold text-[#2463A7] tracking-widest uppercase mb-4">
             RECOGNISED BY
           </h4>
-          <h2 className="text-[#000000] text-[40px] font-normal font-[family-name:var(--font-dm-serif)] leading-[1.1] mb-6">
+          <h2 className="text-[#000000] text-[32px] md:text-[40px] font-normal font-[family-name:var(--font-dm-serif)] leading-[1.1] mb-6">
             Our Accreditations<br />& Partnerships
           </h2>
           <div className="w-[40px] h-[2px]"><svg width="40" height="2" viewBox="0 0 40 2" fill="none" xmlns="http://www.w3.org/2000/svg">

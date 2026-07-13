@@ -31,7 +31,7 @@ const courses = [
 export default function PopularCourses() {
   return (
     <>
-      <section className="relative w-full bg-[#FAFAF7] py-[100px] px-4 md:px-[100px] overflow-hidden">
+      <section className="relative w-full bg-[#FAFAF7] py-[60px] md:py-[80px] lg:py-[100px] px-4 md:px-[40px] lg:px-[100px] overflow-hidden">
         <div className="relative z-10 max-w-[1440px] mx-auto">
 
           {/* Header Section */}
@@ -40,13 +40,13 @@ export default function PopularCourses() {
               <h4 className="text-[10px] font-sans font-semibold text-[#2463A7] tracking-widest uppercase mb-2">
                 Programmes
               </h4>
-              <h2 className="text-[#0B1F4A] text-[52px] font-normal font-[family-name:var(--font-dm-serif)] leading-none">
+              <h2 className="text-[#0B1F4A] text-[36px] md:text-[44px] lg:text-[52px] font-normal font-[family-name:var(--font-dm-serif)] leading-none">
                 Popular Courses at OIHE.
               </h2>
             </div>
 
             {/* Tabs */}
-            <div className="flex items-center gap-[32px] mt-8 lg:mt-0">
+            <div className="flex flex-wrap items-center gap-4 md:gap-[32px] mt-6 lg:mt-0">
               {tabs.map((tab, idx) => (
                 <button
                   key={tab}
@@ -76,12 +76,12 @@ export default function PopularCourses() {
                 </div>
 
                 {/* Card Body */}
-                <div className="p-[32px] flex flex-col  flex-1">
-                  <span className="text-[#2463A7] text-[10px] font-semibold tracking-wider uppercase mb-[16px]">
+                <div className="p-[24px] md:p-[32px] flex flex-col flex-1">
+                  <span className="text-[#2463A7] text-[10px] font-semibold tracking-wider uppercase mb-[12px] md:mb-[16px]">
                     {course.level}
                   </span>
 
-                  <h3 className="text-[#0B1F4A] text-[22px] font-[family-name:var(--font-dm-serif)] leading-[1.2] mb-[16px]">
+                  <h3 className="text-[#0B1F4A] text-[20px] md:text-[22px] font-[family-name:var(--font-dm-serif)] leading-[1.2] mb-[12px] md:mb-[16px]">
                     {course.title}
                   </h3>
 

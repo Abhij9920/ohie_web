@@ -17,7 +17,7 @@ const Dot = () => (
 
 export default function Hero() {
   return (
-    <div className="relative w-full min-h-[750px] flex items-center justify-center overflow-hidden">
+    <div className="relative w-full min-h-[500px] md:min-h-[600px] lg:min-h-[750px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -35,26 +35,26 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-8 text-center max-w-[1100px] mx-auto mt-3">
 
         {/* Main Heading */}
-        <h1 className="text-white text-[72px] font-normal font-[family-name:var(--font-dm-serif)] leading-[1.1] mb-[16px]">
+        <h1 className="text-white text-[40px] md:text-[56px] lg:text-[72px] font-normal font-[family-name:var(--font-dm-serif)] leading-[1.1] mb-[16px]">
           Shape Your Future at Ozford Institute of Higher Education
         </h1>
 
         {/* Sub Heading */}
-        <p className="text-white text-[22px] font-normal font-sans mb-10 max-w-4xl">
-          World-class education, professionally recognised <br /> qualifications, and a launchpad for your career.
+        <p className="text-white text-[16px] md:text-[18px] lg:text-[22px] font-normal font-sans mb-10 max-w-4xl">
+          World-class education, professionally recognised <br className="hidden sm:block" /> qualifications, and a launchpad for your career.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-[24px]">
+        <div className="flex flex-col sm:flex-row items-center gap-[16px] sm:gap-[24px] w-full sm:w-auto">
           <Link
             href="#"
-            className="bg-[#2463A7] bg-opacity-[0.65] rounded-sm hover:bg-opacity-100 text-white text-[16px] font-medium px-[40px] py-[14px] transition-all duration-300"
+            className="bg-[#2463A7] bg-opacity-[0.65] rounded-sm hover:bg-opacity-100 text-white text-[14px] sm:text-[16px] font-medium px-[24px] py-[12px] sm:px-[40px] sm:py-[14px] transition-all duration-300 w-full sm:w-auto text-center"
           >
             Explore Courses
           </Link>
           <Link
             href="#"
-            className="bg-transparent border border-white hover:bg-white/10 text-white text-[16px] font-medium px-[40px] py-[14px] transition-all duration-300"
+            className="bg-transparent border border-white hover:bg-white/10 text-white text-[14px] sm:text-[16px] font-medium px-[24px] py-[12px] sm:px-[40px] sm:py-[14px] transition-all duration-300 w-full sm:w-auto text-center"
           >
             Learn More
           </Link>

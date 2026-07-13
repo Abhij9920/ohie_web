@@ -24,7 +24,7 @@ const newsItems = [
 
 export default function NewsEvents() {
   return (
-    <section className="relative w-full py-[100px] px-4 md:px-[80px] overflow-hidden bg-[#F2F2F2]">
+    <section className="relative w-full py-[60px] md:py-[80px] lg:py-[100px] px-4 md:px-[40px] lg:px-[80px] overflow-hidden bg-[#F2F2F2]">
 
       {/* Background Map Image */}
       <div className="absolute inset-0 z-0 mix-blend-multiply">
@@ -39,12 +39,12 @@ export default function NewsEvents() {
       <div className="relative z-10 max-w-[1440px] mx-auto">
 
         {/* Header Area */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div className="flex flex-col items-start">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end text-center md:text-left mb-12 gap-6">
+          <div className="flex flex-col items-center md:items-start">
             <h4 className="text-[10px] font-[family-name:var(--font-geist-sans)] font-semibold text-[#2463A7] tracking-widest uppercase mb-4">
               NEWS & EVENTS
             </h4>
-            <h2 className="text-[#0B1F4A] text-[40px] font-normal font-[family-name:var(--font-dm-serif)] leading-[1.1]">
+            <h2 className="text-[#0B1F4A] text-[32px] md:text-[40px] font-normal font-[family-name:var(--font-dm-serif)] leading-[1.1]">
               Latest News & Events.
             </h2>
           </div>
@@ -71,7 +71,7 @@ export default function NewsEvents() {
               </div>
 
               {/* Card Content */}
-              <div className="flex flex-col flex-grow p-6 lg:p-8">
+              <div className="flex flex-col flex-grow p-6 lg:p-8 items-center md:items-start text-center md:text-left">
                 <span className="text-[#2463A7] text-[11px] font-[family-name:var(--font-geist-sans)] font-semibold tracking-widest uppercase mb-3">
                   {item.date}
                 </span>
