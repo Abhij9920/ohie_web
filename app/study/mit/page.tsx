@@ -46,12 +46,27 @@ export default function MitCoursePage() {
       <CourseKeyInfo />
       <CourseTabs tabs={tabs} />
 
-      {/* Course Structure Section - Displayed directly on the page */}
-      <CourseStructureContent />
-      <CourseUnitsAccordion />
-      <AssessmentMethods />
+      {/* Overview & Entry Requirements (both contained in CourseOverviewContent) */}
+      <div className="w-full bg-[#F8F9FA] pb-16">
+        <div className="w-full max-w-[1440px] mx-auto px-4 xl:px-[100px]">
+          <CourseOverviewContent />
+        </div>
+      </div>
+
+      <div id="structure">
+        <CourseStructureContent />
+        <CourseUnitsAccordion />
+      </div>
+
+      <div id="assessment">
+        <AssessmentMethods />
+      </div>
+
+      <div id="student-info">
+        <StudentInformationSection />
+      </div>
+
       <CourseCTA />
-      <StudentInformationSection />
       <Accreditations />
 
     </main>
