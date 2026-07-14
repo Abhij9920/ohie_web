@@ -2,7 +2,18 @@
 
 import React, { useState } from 'react';
 
-const categories = [
+export interface CourseUnit {
+  code: string;
+  title: string;
+  description: string;
+}
+
+export interface CourseUnitsAccordionProps {
+  categories?: string[];
+  unitsData?: Record<string, CourseUnit[]>;
+}
+
+const defaultCategories = [
   "Core Units",
   "Cyber Security Specialisation Units",
   "Data Analytics Specialisation Units",
@@ -10,7 +21,7 @@ const categories = [
   "Elective Units"
 ];
 
-const unitsData: Record<string, { code: string; title: string; description: string }[]> = {
+const defaultUnitsData: Record<string, CourseUnit[]> = {
   "Core Units": [
   {
     code: "COM5981",
@@ -181,16 +192,21 @@ const unitsData: Record<string, { code: string; title: string; description: stri
   ]
 };
 
-export default function CourseUnitsAccordion() {
+export default function CourseUnitsAccordion({
+  categories = defaultCategories,
+  unitsData = defaultUnitsData
+}: CourseUnitsAccordionProps) {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
-  const [expandedUnit, setExpandedUnit] = useState<string | null>("COM5981");
+  const [expandedUnit, setExpandedUnit] = useState<string | null>(
+    unitsData[categories[0]]?.[0]?.code || null
+  );
 
   return (
     <section className="w-full bg-[#F8F9FA] py-16">
       <div className="max-w-[1440px] mx-auto px-4 xl:px-[100px]">
 
         {/* Categories (Pills) */}
-        <div className="flex overflow-x-auto hide-scrollbar gap-3 mb-12">
+        <div className={`flex overflow-x-auto hide-scrollbar gap-3 mb-12 ${categories.length < 4 ? 'justify-center' : ''}`}>
           {categories.map((cat) => {
             const isActive = activeCategory === cat;
             return (
