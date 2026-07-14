@@ -5,11 +5,15 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'], // Add the weights you need
+  display: 'swap',
+  variable: '--font-plus-jakarta', // Optional: for Tailwind
 });
 
 const dmSerifDisplay = DM_Serif_Display({
   weight: "400",
+  style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-dm-serif",
 });
