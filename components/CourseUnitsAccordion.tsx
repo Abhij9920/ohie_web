@@ -190,14 +190,14 @@ export default function CourseUnitsAccordion() {
       <div className="max-w-[1440px] mx-auto px-4 xl:px-[100px]">
 
         {/* Categories (Pills) */}
-        <div className="flex flex-wrap gap-3 mb-12">
+        <div className="flex overflow-x-auto hide-scrollbar gap-3 mb-12">
           {categories.map((cat) => {
             const isActive = activeCategory === cat;
             return (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-5 py-2.5 text-[12px] md:text-[13px] font-bold transition-colors cursor-pointer ${isActive
+                className={`px-5 py-2.5 text-[12px] md:text-[13px] font-bold whitespace-nowrap flex-shrink-0 transition-colors cursor-pointer ${isActive
                   ? 'bg-[#4D97E6] text-white border border-[#4D97E6]'
                   : 'bg-transparent text-[#0B1F4A] border border-[#0B1F4A]'
                   }`}

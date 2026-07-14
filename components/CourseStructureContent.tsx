@@ -14,9 +14,9 @@ export default function CourseStructureContent({
   title = "Course Units",
   requirementsTitle = "REQUIREMENTS",
   requirements = [
-    "13 core units PLUS 3 cyber security\nspecialisation units OR",
-    "3 data analytics specialisation\nunits OR",
-    "3 software development\nspecialisation units"
+    "13 core units PLUS 3 cyber security specialisation units OR",
+    "3 data analytics specialisation units OR",
+    "3 software development specialisation units"
   ],
   careerOutcomesTitle = "CAREER OUTCOMES",
   careerOutcomes = [
@@ -33,16 +33,16 @@ export default function CourseStructureContent({
       <svg width="12" height="2" viewBox="0 0 12 2" className="flex-none shrink-0 mr-4 mt-[10px]" style={{ shapeRendering: 'crispEdges' }}>
         <rect width="12" height="2" fill="white" />
       </svg>
-      <p className="text-white text-[15px] leading-relaxed flex-1 font-light whitespace-pre-line">
+      <p className="text-white text-[15px] leading-relaxed flex-1 font-light">
         {children}
       </p>
     </div>
   );
 
   return (
-    <section className="w-full bg-[#0A1A44] py-20">
+    <section className="w-full bg-[#0A1A44] py-12 md:py-20">
       <div className="max-w-[1440px] mx-auto px-4 xl:px-[100px]">
-        <div className="flex flex-col lg:grid lg:grid-cols-12 items-center gap-12 lg:gap-16">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 items-center gap-8 lg:gap-16">
 
           {/* Left Column - Titles */}
           <div className="w-full lg:col-span-4 xl:col-span-3">

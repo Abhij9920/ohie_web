@@ -49,14 +49,18 @@ export default function CourseTabs({ tabs }: CourseTabsProps) {
   }, [tabs]);
 
   return (
-    <section className="w-full bg-[#F8F9FA] pt-14 pb-16">
+    <section className="w-full bg-[#F8F9FA] pt-8 md:pt-14">
       {/* Tab Header */}
-      <div className="w-full border-b-2 border-[#4D97E6] mb-12 sticky top-0 z-40 bg-[#F8F9FA] pt-4 shadow-sm">
-        <div className="max-w-[1440px] mx-auto px-4 xl:px-[100px]">
-          <div className="flex overflow-x-auto overflow-y-hidden hide-scrollbar gap-6 md:gap-12">
-            {tabs.map((tab) => {
-              const isActive = activeTabId === tab.id;
-              return (
+      <div className="w-full sticky top-0 z-40 bg-[#F8F9FA] pt-4 shadow-sm">
+        <div className="relative w-full">
+          {/* Continuous Full-Width Border */}
+          <div className="absolute bottom-0 left-0 w-full h-[2px] bg-[#4D97E6] z-0"></div>
+
+          <div className="max-w-[1440px] mx-auto px-4 xl:px-[100px] relative z-10">
+            <div className="flex overflow-x-auto overflow-y-hidden hide-scrollbar gap-6 md:gap-12">
+              {tabs.map((tab) => {
+                const isActive = activeTabId === tab.id;
+                return (
                 <button
                   key={tab.id}
                   onClick={(e) => {
@@ -69,16 +73,14 @@ export default function CourseTabs({ tabs }: CourseTabsProps) {
                       window.scrollTo({ top: y, behavior: 'smooth' });
                     }
                   }}
-                  className={`pb-4 text-[16px] whitespace-nowrap transition-colors relative cursor-pointer ${isActive ? 'text-[#0A1A44] font-semibold' : 'text-[#6B7280] font-medium hover:text-[#0A1A44]'
+                  className={`pb-3 text-[14px] md:text-[16px] whitespace-nowrap transition-colors cursor-pointer border-b-[2px] ${isActive ? 'text-[#0A1A44] font-semibold border-[#4F8CE6]' : 'text-[#6B7280] font-medium border-transparent hover:text-[#0A1A44]'
                     }`}
                 >
                   {tab.label}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#4F8CE6]"></span>
-                  )}
                 </button>
               );
             })}
+            </div>
           </div>
         </div>
       </div>

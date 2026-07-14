@@ -19,7 +19,7 @@ export default function CourseCTA({
   secondaryButtonLink = "#"
 }: CourseCTAProps) {
   return (
-    <section className="w-full bg-[#0A1A44] py-16 md:py-24 px-4 flex justify-center items-center">
+    <section className="w-full bg-[#0A1A44] border-t border-white/10 py-12 md:py-16 px-4 flex justify-center items-center">
       <div className="max-w-[720px] w-full flex flex-col items-center text-center">
         <h2
           className="text-white text-[32px] md:text-[40px] lg:text-[46px] mb-5"

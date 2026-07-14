@@ -20,9 +20,12 @@ export default function CourseHero({
   secondaryButtonText,
 }: CourseHeroProps) {
   return (
-    <section className="relative w-full h-[600px] overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full z-0">
+    <section className="relative w-full min-h-[600px] md:h-[600px] overflow-hidden">
+      {/* Solid Blue Background for Mobile */}
+      <div className="absolute inset-0 w-full h-full z-0 bg-[#0A1A44] block md:hidden" />
+
+      {/* Background Image for Tablet/Desktop */}
+      <div className="absolute inset-0 w-full h-full z-0 hidden md:block">
         <div
           className="w-full h-full bg-cover bg-right"
           style={{ backgroundImage: `url(${backgroundImageUrl})` }}
@@ -30,34 +33,34 @@ export default function CourseHero({
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 h-full flex items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 h-full flex flex-col justify-center pt-32 pb-16 md:pt-0 md:pb-0">
         <div className="max-w-xl">
-          <div className="text-[#4D97E6] text-[10px] font-semibold tracking-wider mb-1 uppercase">
+          <div className="text-[#4D97E6] text-[10px] md:text-[12px] font-semibold tracking-wider mb-1 md:mb-2 uppercase">
             {degreeLevel}
           </div>
-          <div className="text-white/70 text-[10px] mb-6">
+          <div className="text-white/70 text-[10px] md:text-[12px] mb-4 md:mb-6">
             CRICOS CODE: {cricosCode}
           </div>
 
           <h1
-            className="text-[40px] md:text-[56px] text-white italic mb-6 tracking-normal"
+            className="text-[32px] md:text-[56px] text-white italic mb-4 md:mb-6 tracking-normal"
             style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}
           >
             {title}
           </h1>
 
-          <p className="text-white/90 text-[16px] mb-10 leading-relaxed max-w-lg font-light">
+          <p className="text-white/90 text-[15px] md:text-[16px] mb-8 md:mb-10 leading-relaxed max-w-lg font-light">
             {description}
           </p>
 
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-[#4F8CE6] hover:bg-[#3B7BE0] text-white px-8 py-3 text-[14px] font-medium transition-colors flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="bg-[#4F8CE6] hover:bg-[#3B7BE0] text-white px-8 py-3 text-[14px] font-medium transition-colors flex items-center justify-center gap-2 w-full sm:w-auto">
               {primaryButtonText}
               <svg width="11" height="9" viewBox="79 2.5 10 8.5" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M82.843 10.6016L86.903 6.24756V7.31156L82.843 3.02756H84.761L88.093 6.42956V7.12956L84.761 10.6016H82.843ZM79.357 7.52156V6.09356H86.791V7.52156H79.357Z" fill="currentColor"/>
               </svg>
             </button>
-            <button className="border-2 border-white hover:border-white/60 hover:bg-white/5 text-white px-8 py-3  text-sm font-medium transition-colors flex items-center gap-2">
+            <button className="border-2 border-white hover:border-white/60 hover:bg-white/5 text-white px-8 py-3 text-sm font-medium transition-colors flex items-center justify-center gap-2 w-full sm:w-auto">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_6200_2938)">
                   <path d="M2.41406 16.6094C2.67236 17.4177 3.42161 18.0039 4.30375 18.0039H13.6955C14.5776 18.0039 15.3268 17.4177 15.5851 16.6094H2.41406Z" fill="white" />

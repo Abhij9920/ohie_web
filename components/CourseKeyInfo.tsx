@@ -118,11 +118,11 @@ export default function CourseKeyInfo({
   return (
     <section className="w-full bg-[#0A1A44] border-t-4 border-[#4F8CE6]">
       <div className="max-w-[1500px] mx-auto px-4 xl:px-8 py-10">
-        <div className="flex flex-col lg:flex-row lg:divide-x divide-white/10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:divide-x divide-white/10 gap-y-8 lg:gap-y-0">
           {infoItems.map((item, index) => (
             <div
               key={index}
-              className="flex-1 flex flex-col items-center text-center px-4 py-4 lg:py-0"
+              className="flex flex-col items-center text-center px-2 lg:px-4 py-2 lg:py-0"
             >
               <div className="text-[#4F8CE6] mb-3">
                 {item.icon}
