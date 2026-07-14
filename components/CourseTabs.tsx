@@ -53,7 +53,7 @@ export default function CourseTabs({ tabs }: CourseTabsProps) {
       {/* Tab Header */}
       <div className="w-full border-b-2 border-[#4D97E6] mb-12 sticky top-0 z-40 bg-[#F8F9FA] pt-4 shadow-sm">
         <div className="max-w-[1440px] mx-auto px-4 xl:px-[100px]">
-          <div className="flex overflow-x-auto overflow-y-hidden hide-scrollbar gap-12">
+          <div className="flex overflow-x-auto overflow-y-hidden hide-scrollbar gap-6 md:gap-12">
             {tabs.map((tab) => {
               const isActive = activeTabId === tab.id;
               return (

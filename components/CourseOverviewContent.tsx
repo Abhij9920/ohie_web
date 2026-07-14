@@ -40,21 +40,21 @@ export default function CourseOverviewContent({
 
       {/* Course Overview */}
       <div id="overview">
-        <div className="flex items-center mt-10 gap-4 mb-6">
+        <div className="flex items-center mt-6 md:mt-10 gap-3 md:gap-4 mb-4 md:mb-6">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M36.8676 12.6045C37.3506 12.6045 37.8261 12.6495 38.2956 12.717V7.3125C38.2956 5.655 36.9531 4.3125 35.2956 4.3125H12.2256C10.5681 4.3125 9.22559 5.655 9.22559 7.3125V34.4625C9.22559 36.12 10.5681 37.4625 12.2256 37.4625H35.2956C36.9531 37.4625 38.2956 36.12 38.2956 34.4625V32.4435C37.8246 32.5125 37.3491 32.556 36.8676 32.556C34.1991 32.556 31.6926 31.5195 29.8101 29.6355C25.9191 25.746 25.9191 19.4145 29.8101 15.5235C31.6941 13.641 34.2006 12.6045 36.8676 12.6045ZM26.4606 18.1725C26.4606 18.918 25.8561 19.5225 25.1106 19.5225H16.7406C15.9951 19.5225 15.3906 18.918 15.3906 18.1725C15.3906 17.427 15.9951 16.8225 16.7406 16.8225H25.1106C25.8561 16.8225 26.4606 17.427 26.4606 18.1725ZM25.5906 23.6175C25.5906 24.363 24.9861 24.9675 24.2406 24.9675H16.7406C15.9951 24.9675 15.3906 24.363 15.3906 23.6175C15.3906 22.872 15.9951 22.2675 16.7406 22.2675H24.2406C24.9861 22.2675 25.5906 22.872 25.5906 23.6175ZM16.7361 11.3715H20.2506C20.9961 11.3715 21.6006 11.976 21.6006 12.7215C21.6006 13.467 20.9961 14.0715 20.2506 14.0715H16.7361C15.9906 14.0715 15.3861 13.467 15.3861 12.7215C15.3861 11.976 15.9906 11.3715 16.7361 11.3715ZM27.6306 29.0625C27.6306 29.808 27.0261 30.4125 26.2806 30.4125H16.7406C15.9951 30.4125 15.3906 29.808 15.3906 29.0625C15.3906 28.317 15.9951 27.7125 16.7406 27.7125H26.2806C27.0261 27.7125 27.6306 28.317 27.6306 29.0625Z" fill="#0B1F4A" />
             <path d="M45.9529 29.7596L42.8704 26.6771C44.8039 23.8451 44.5249 19.9436 42.0124 17.4326C39.1729 14.5946 34.5559 14.5961 31.7164 17.4326C28.8784 20.2706 28.8784 24.8891 31.7164 27.7271C33.1354 29.1461 34.9999 29.8556 36.8644 29.8556C38.2984 29.8556 39.7294 29.4251 40.9609 28.5851L44.0419 31.6661C44.3059 31.9301 44.6509 32.0621 44.9959 32.0621C45.3409 32.0621 45.6859 31.9301 45.9499 31.6661C46.4809 31.1411 46.4809 30.2861 45.9529 29.7596ZM33.6274 25.8191C31.8424 24.0341 31.8424 21.1271 33.6274 19.3421C34.5199 18.4496 35.6929 18.0026 36.8659 18.0026C38.0389 18.0026 39.2119 18.4496 40.1044 19.3421C41.8894 21.1271 41.8894 24.0341 40.1044 25.8191C38.3749 27.5501 35.3569 27.5501 33.6274 25.8191Z" fill="#0B1F4A" />
             <path d="M12.225 40.1637C9.0825 40.1637 6.525 37.6063 6.525 34.4637V10.5312H6C4.35 10.5312 3 11.8663 3 13.5313V40.6813C3 42.3463 4.35 43.6813 6 43.6813H29.07C30.72 43.6813 32.07 42.3463 32.07 40.6813V40.1637H12.225Z" fill="#0B1F4A" />
           </svg>
 
-          <h2 className="font-serif text-[36px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>Course Overview</h2>
+          <h2 className="font-serif text-[28px] md:text-[36px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>Course Overview</h2>
         </div>
 
         <p className="text-[#4B5563] text-[16px] pt-5 font-normal leading-relaxed">
           {overviewText}
         </p>
 
-        <div className="border-l-[3px] border-[#2463A7]  pl-6 py-2 mt-10 mb-40">
+        <div className="border-l-[3px] border-[#2463A7] pl-4 md:pl-6 py-2 mt-8 md:mt-10 mb-12 lg:mb-40">
           <p className="text-[#0B1F4A] text-[20px] md:text-[22px] leading-relaxed" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>
             {overviewQuote}
           </p>
@@ -63,7 +63,7 @@ export default function CourseOverviewContent({
 
       {/* Requirements Grid */}
       <div id="entry" className="scroll-mt-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
 
         {/* Academic Requirements */}
         <div>
@@ -79,7 +79,7 @@ export default function CourseOverviewContent({
               </defs>
             </svg>
 
-            <h2 className="text-[32px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>Academic Requirements</h2>
+            <h2 className="text-[24px] md:text-[32px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>Academic Requirements</h2>
           </div>
           <div className="flex flex-col">
             {academicRequirements.map((req, i) => (
@@ -96,7 +96,7 @@ export default function CourseOverviewContent({
               <path fill-rule="evenodd" clip-rule="evenodd" d="M5 5C5 2.23858 7.23858 0 10 0H23.85C24.5798 0 25.2733 0.319003 25.7483 0.873265L34.3983 10.9676C34.7867 11.4207 35 11.9977 35 12.5943V35C35 37.7615 32.7615 40 30 40H10C7.23858 40 5 37.7615 5 35V5ZM20 26.6667C25.5228 26.6667 30 22.1895 30 16.6667C30 11.1438 25.5228 6.66667 20 6.66667C14.4771 6.66667 10 11.1438 10 16.6667C10 22.1895 14.4771 26.6667 20 26.6667ZM26.6667 31.6667V30H13.3333V31.6667H26.6667ZM23.3333 33.3333V35H16.6667V33.3333H23.3333Z" fill="#0B1F4A" />
             </svg>
 
-            <h2 className="font-serif text-[32px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>English Language Requirements</h2>
+            <h2 className="font-serif text-[24px] md:text-[32px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>English Language Requirements</h2>
           </div>
           <div className="flex flex-col">
             {englishRequirements.map((req, i) => (
@@ -107,7 +107,7 @@ export default function CourseOverviewContent({
       </div>
 
       {/* Age Requirements */}
-      <div className="border border-[#2463A7] p-8 md:p-10 w-full mt-4 bg-white/50">
+      <div className="border border-[#2463A7] p-6 md:p-8 lg:p-10 w-full mt-4 bg-white/50">
         <div className="flex items-center gap-4 mb-4">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_6200_3077)">
@@ -124,7 +124,7 @@ export default function CourseOverviewContent({
             </defs>
           </svg>
 
-          <h2 className="text-[32px] text-[#0A1A44]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>Age Requirements</h2>
+          <h2 className="text-[24px] md:text-[32px] text-[#0A1A44]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>Age Requirements</h2>
         </div>
         <p className="text-[#4B5563] text-[14px]">
           {ageRequirement}
