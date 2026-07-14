@@ -56,13 +56,15 @@ export default function Testimonials() {
     <section className="relative w-full py-[60px] md:py-[80px] lg:py-[100px] px-4 md:px-[40px] lg:px-[80px] overflow-hidden bg-[#F8FAFC]">
       
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/testimonials_section/test_bg.png"
-          alt="Testimonials Background"
-          fill
-          className="object-cover object-center"
-        />
+      <div className="absolute inset-0 z-0 flex justify-center overflow-hidden pointer-events-none">
+        <div className="w-full max-w-[1440px] h-full relative">
+          <Image
+            src="/testimonials_section/test_bg.png"
+            alt="Testimonials Background"
+            fill
+            className="object-cover object-center"
+          />
+        </div>
       </div>
 
       <div className="relative z-10 max-w-[1440px] mx-auto">
