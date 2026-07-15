@@ -13,17 +13,18 @@ export const postgradCourses = [
   { name: "Graduate Diploma in Information Technology", href: "/study/gdit" },
   { name: "Graduate Diploma in Management", href: "/study/gdm" },
   { name: "Graduate Certificate in Information Technology", href: "/study/gcit" },
-  { name: "Graduate Certificate in Management", href: "#" },
-  { name: "Master of Teaching (Early Childhood)", href: "#" },
-  { name: "Graduate Diploma in Early Childhood Education", href: "#" }
+  { name: "Graduate Certificate in Management", href: "/study/gcm" },
+  { name: "Master of Teaching (Early Childhood)", href: "/study/mtec" },
+  { name: "Graduate Diploma in Early Childhood Education", href: "/study/gdece" }
 ];
 
 export const undergradCourses = [
-  { name: "Bachelor of Cyber Security", href: "#" },
-  { name: "Bachelor of Information Systems", href: "#" },
-  { name: "Bachelor of Business (Accounting)", href: "#" },
   { name: "Bachelor of Business", href: "#" },
-  { name: "Diploma of Business", href: "#" }
+  { name: "Bachelor of Information Technology", href: "#" },
+  { name: "Bachelor of Cyber Security", href: "/study/bcs" },
+  { name: "Bachelor of Information Systems", href: "/study/bis" },
+  { name: "Diploma of Business", href: "#" },
+  { name: "Diploma of Information Technology", href: "#" }
 ];
 
 export const studentLifeData = {

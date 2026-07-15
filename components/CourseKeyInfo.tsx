@@ -4,7 +4,7 @@ interface CourseKeyInfoProps {
   duration?: string;
   intakes?: string;
   studyMode?: string;
-  englishRequirement?: string;
+  englishRequirement?: React.ReactNode;
   location?: string;
   courseRequirement?: string;
 }
