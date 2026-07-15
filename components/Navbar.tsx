@@ -99,10 +99,10 @@ export default function Navbar() {
       </div>
 
       {/* Desktop Mega Menus */}
-      <StudyMegaMenu isActive={activeDropdown === 'Study'} />
-      <StudentLifeMegaMenu isActive={activeDropdown === 'Student Life'} />
-      <AdmissionMegaMenu isActive={activeDropdown === 'Admission'} />
-      <AboutMegaMenu isActive={activeDropdown === 'About Us'} />
+      <StudyMegaMenu isActive={activeDropdown === 'Study'} onClose={() => setActiveDropdown(null)} />
+      <StudentLifeMegaMenu isActive={activeDropdown === 'Student Life'} onClose={() => setActiveDropdown(null)} />
+      <AdmissionMegaMenu isActive={activeDropdown === 'Admission'} onClose={() => setActiveDropdown(null)} />
+      <AboutMegaMenu isActive={activeDropdown === 'About Us'} onClose={() => setActiveDropdown(null)} />
 
       {/* Mobile Menu Panel */}
       <div
@@ -130,7 +130,7 @@ export default function Navbar() {
               </button>
               
               {/* Mobile Submenu for Study */}
-              {link.name === 'Study' && <MobileStudySubMenu isActive={activeDropdown === 'Study'} />}
+              {link.name === 'Study' && <MobileStudySubMenu isActive={activeDropdown === 'Study'} onClose={() => { setActiveDropdown(null); setIsMobileMenuOpen(false); }} />}
             </div>
           ))}
           <div className="pt-2">

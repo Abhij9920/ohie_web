@@ -55,31 +55,35 @@ export default function CourseStructureContent({
           </div>
 
           {/* Right Column - Boxes */}
-          <div className="w-full lg:col-span-8 xl:col-span-9 flex flex-col md:flex-row gap-6">
+          <div className="w-full lg:col-span-8 xl:col-span-9 flex flex-col md:flex-row gap-6 md:items-start">
 
             {/* Requirements Box */}
-            <div className="flex-1 bg-[#2863A3] p-6 md:p-8">
-              <h4 className="text-white text-[11px] font-bold tracking-widest uppercase mb-8">
-                {requirementsTitle}
-              </h4>
-              <div className="flex flex-col">
-                {requirements.map((req, i) => (
-                  <BulletPoint key={i}>{req}</BulletPoint>
-                ))}
+            {requirements && requirements.length > 0 && (
+              <div className="flex-1 bg-[#2863A3] p-6 md:p-8">
+                <h4 className="text-white text-[11px] font-bold tracking-widest uppercase mb-8">
+                  {requirementsTitle}
+                </h4>
+                <div className="flex flex-col">
+                  {requirements.map((req, i) => (
+                    <BulletPoint key={i}>{req}</BulletPoint>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Career Outcomes Box */}
-            <div className="flex-1 border border-[#4F8CE6]/40 p-6 md:p-8">
-              <h4 className="text-[#4F8CE6] text-[11px] font-bold tracking-widest uppercase mb-8">
-                {careerOutcomesTitle}
-              </h4>
-              <div className="flex flex-col">
-                {careerOutcomes.map((req, i) => (
-                  <BulletPoint key={i}>{req}</BulletPoint>
-                ))}
+            {careerOutcomes && careerOutcomes.length > 0 && (
+              <div className="flex-1 border border-[#4F8CE6]/40 p-6 md:p-8">
+                <h4 className="text-[#4F8CE6] text-[11px] font-bold tracking-widest uppercase mb-8">
+                  {careerOutcomesTitle}
+                </h4>
+                <div className="flex flex-col">
+                  {careerOutcomes.map((req, i) => (
+                    <BulletPoint key={i}>{req}</BulletPoint>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
           </div>
         </div>

@@ -7,23 +7,23 @@ export const navLinks = [
 ];
 
 export const postgradCourses = [
-  "Master of Information Technology (MIT)",
-  "Master of Business Administration (MBA)",
-  "Master of Professional Accounting (MPA)",
-  "Graduate Diploma in Information Technology",
-  "Graduate Diploma in Management",
-  "Graduate Certificate in Information Technology",
-  "Graduate Certificate in Management",
-  "Master of Teaching (Early Childhood)",
-  "Graduate Diploma in Early Childhood Education"
+  { name: "Master of Information Technology (MIT)", href: "/study/mit" },
+  { name: "Master of Business Administration (MBA)", href: "/study/mba" },
+  { name: "Master of Professional Accounting (MPA)", href: "/study/mpa" },
+  { name: "Graduate Diploma in Information Technology", href: "/study/gdit" },
+  { name: "Graduate Diploma in Management", href: "/study/gdm" },
+  { name: "Graduate Certificate in Information Technology", href: "/study/gcit" },
+  { name: "Graduate Certificate in Management", href: "#" },
+  { name: "Master of Teaching (Early Childhood)", href: "#" },
+  { name: "Graduate Diploma in Early Childhood Education", href: "#" }
 ];
 
 export const undergradCourses = [
-  "Bachelor of Cyber Security",
-  "Bachelor of Information Systems",
-  "Bachelor of Business (Accounting)",
-  "Bachelor of Business",
-  "Diploma of Business"
+  { name: "Bachelor of Cyber Security", href: "#" },
+  { name: "Bachelor of Information Systems", href: "#" },
+  { name: "Bachelor of Business (Accounting)", href: "#" },
+  { name: "Bachelor of Business", href: "#" },
+  { name: "Diploma of Business", href: "#" }
 ];
 
 export const studentLifeData = {

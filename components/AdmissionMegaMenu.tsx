@@ -3,9 +3,10 @@ import { MegaMenuBadge, MegaMenuHeader, MegaMenuLink, MegaMenuRightBanner } from
 
 interface Props {
   isActive: boolean;
+  onClose?: () => void;
 }
 
-export default function AdmissionMegaMenu({ isActive }: Props) {
+export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
   return (
     <div
       className={`absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl transition-all duration-300 ease-in-out origin-top ${isActive ? 'opacity-100 visible scale-y-100' : 'opacity-0 invisible scale-y-0'
@@ -20,7 +21,7 @@ export default function AdmissionMegaMenu({ isActive }: Props) {
               <MegaMenuHeader title="Higher Education" />
               <ul className="space-y-[24px]">
                 {admissionData.higherEducation.map((course, idx) => (
-                  <MegaMenuLink key={idx} href="#">{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href="#" onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>
@@ -30,7 +31,7 @@ export default function AdmissionMegaMenu({ isActive }: Props) {
                 <MegaMenuHeader title="Apply Now" />
                 <ul className="space-y-[24px]">
                   {admissionData.applyNow.map((course, idx) => (
-                    <MegaMenuLink key={idx} href="#">{course}</MegaMenuLink>
+                    <MegaMenuLink key={idx} href="#" onClick={onClose}>{course}</MegaMenuLink>
                   ))}
                 </ul>
               </div>

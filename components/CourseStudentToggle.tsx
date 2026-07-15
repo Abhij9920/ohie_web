@@ -6,6 +6,8 @@ interface CourseStudentToggleProps {
   option1Text?: string;
   option2Text?: string;
   helperText?: string;
+  value?: 'domestic' | 'international';
+  onChange?: (value: 'domestic' | 'international') => void;
 }
 
 export default function CourseStudentToggle({
@@ -13,8 +15,13 @@ export default function CourseStudentToggle({
   option1Text = "Domestic Student",
   option2Text = "International Student",
   helperText = "Select your student type to view relevant fees, entry requirements and support services",
+  value = 'domestic',
+  onChange
 }: CourseStudentToggleProps) {
-  const [studentType, setStudentType] = useState<'domestic' | 'international'>('domestic');
+  // Use local state only if not controlled
+  const [localType, setLocalType] = useState<'domestic' | 'international'>('domestic');
+  const studentType = onChange ? value : localType;
+  const setStudentType = onChange ? onChange : setLocalType;
 
   const activeClass = "bg-[#0A1A44] text-white";
   const inactiveClass = "bg-white text-[#0A1A44] hover:bg-gray-50";
@@ -30,7 +37,7 @@ export default function CourseStudentToggle({
 
       <div className="flex flex-col sm:flex-row mb-4 gap-4 w-full px-6 sm:px-0 max-w-[320px] sm:max-w-none mx-auto sm:justify-center">
         <button
-          className={`px-6 sm:px-8 py-3.5 flex items-center justify-center gap-3 text-[15px] font-medium transition-colors border-2 border-[#0A1A44] w-full sm:w-auto ${studentType === 'domestic' ? activeClass : inactiveClass}`}
+          className={`px-6 sm:px-8 py-3.5 flex items-center justify-center gap-3 text-[15px] font-medium transition-colors border-2 border-[#0A1A44] w-full sm:w-auto cursor-pointer ${studentType === 'domestic' ? activeClass : inactiveClass}`}
           onClick={() => setStudentType('domestic')}
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
@@ -39,7 +46,7 @@ export default function CourseStudentToggle({
           <span className="text-center sm:text-left">{option1Text}</span>
         </button>
         <button
-          className={`px-6 sm:px-8 py-3.5 flex items-center justify-center gap-3 text-[15px] font-medium transition-colors border-2 border-[#0A1A44] w-full sm:w-auto ${studentType === 'international' ? activeClass : inactiveClass}`}
+          className={`px-6 sm:px-8 py-3.5 flex items-center justify-center gap-3 text-[15px] font-medium transition-colors border-2 border-[#0A1A44] w-full sm:w-auto cursor-pointer ${studentType === 'international' ? activeClass : inactiveClass}`}
           onClick={() => setStudentType('international')}
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">

@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import CourseHero from '@/components/CourseHero';
 
 import CourseStudentToggle from '@/components/CourseStudentToggle';
@@ -14,17 +15,102 @@ import Testimonials from '@/components/Testimonials';
 import Accreditations from '@/components/Accreditations';
 
 export default function MitCoursePage() {
+  const [studentType, setStudentType] = useState<'domestic' | 'international'>('domestic');
+
+  const info = {
+    domestic: {
+      keyInfo: {
+        duration: "Full-time, 2 years (4\nTrimesters)",
+        intakes: "March, April, August,\nSeptember, December,\n2026",
+        studyMode: "Full-time, face to face",
+        englishRequirement: "IELTS 6.5 minimum, no\nband below 6.0",
+        location: "Melbourne VIC 3000 /\nSpring Hill QLD 4000",
+        courseRequirement: "18 core units + 3\nspecialisation units",
+      },
+      overview: {
+        academicRequirements: [
+          "Completion of an Australian Bachelor's degree (or equivalent) in any discipline; or",
+          "Completion of an Australian Graduate Certificate (or equivalent) in any discipline; or",
+          "Completion of an Australian Graduate Diploma (or equivalent) in any discipline."
+        ],
+        englishRequirements: [
+          "IELTS score of a minimum of 6.5 with no band less than 6.0 or equivalent; or",
+          "Completion of undergraduate or postgraduate degree, including Graduate Certificate or Graduate Diploma in Australia within the past two years; or",
+          "Completion of a higher education qualification in English Language awarded by a recognised university in which English is the primary language."
+        ],
+        ageRequirement: "Applicants must be 18 years of age or over at the time of Application/Enrolment, not only by commencement."
+      },
+      structure: {
+        requirements: [
+          "13 core units PLUS 3 cyber security specialisation units OR",
+          "3 data analytics specialisation units OR",
+          "3 software development specialisation units"
+        ],
+        careerOutcomes: [
+          "Business Analyst",
+          "Database Administrator",
+          "Information Systems Manager",
+          "ICT Consultant",
+          "Systems Analyst"
+        ]
+      }
+    },
+    international: {
+      keyInfo: {
+        duration: "Full-time, 2 years (4 Trimesters)",
+        intakes: "March, April, August, September, December, 2026",
+        studyMode: "Full-time, face to face",
+        englishRequirement: (
+          <>
+            IELTS score of a minimum of 6.5 with no band less than 6.0 or equivalent<br />
+            <a href="#" className="underline">( check IELTS equivalence )</a>
+          </>
+        ) as any,
+        location: "333, Queen Street Melbourne VIC 3000\n433 Boundary Street, Spring Hill QLD 4000",
+        courseRequirement: "10 core units PLUS 3 cyber security specialisation units OR\n3 data analytics specialisation units OR\n3 software development specialisation units",
+      },
+      overview: {
+        academicRequirements: [
+          "Completion of an Australian Bachelor's degree (or equivalent) in any discipline; or",
+          "Completion of an Australian Graduate Certificate (or equivalent) in any discipline; or"
+        ],
+        englishRequirements: [
+          "IELTS score of a minimum of 6.5 with no band less than 6.0 or equivalent; or",
+          "Completion of undergraduate or postgraduate degree, including Graduate Certificate or Graduate Diploma in Australia within the past two years; or",
+          "Completion of a higher education qualification in English Language awarded by a recognised university in which English is the primary language."
+        ],
+        ageRequirement: "Applicants must be 18 years of age or over at the time of Application/Enrolment, not only by commencement."
+      },
+      structure: {
+        requirements: [
+          "10 core units PLUS 3 cyber security specialisation units OR",
+          "3 data analytics specialisation units OR",
+          "3 software development specialisation units"
+        ],
+        careerOutcomes: [
+          "Business Analyst",
+          "Database Administrator",
+          "Information Systems Manager",
+          "ICT Consultant",
+          "Systems Analyst"
+        ]
+      }
+    }
+  };
+
+  const currentInfo = info[studentType];
+
   const tabs = [
     {
       id: 'overview',
       label: 'Overview',
-      content: <CourseOverviewContent />
+      content: <CourseOverviewContent {...currentInfo.overview} />
     },
     { id: 'entry', label: 'Entry Requirements', content: <div>Entry Requirements Content</div> },
     {
       id: 'structure',
       label: 'Course Structure',
-      content: <CourseStructureContent />
+      content: <CourseStructureContent {...currentInfo.structure} />
     },
     { id: 'assessment', label: 'Assessment Methods', content: <div>Assessment Methods Content</div> },
     { id: 'student-info', label: 'Student Information', content: <div>Student Information Content</div> },
@@ -42,19 +128,19 @@ export default function MitCoursePage() {
         secondaryButtonText="Course Brochure"
       />
 
-      <CourseStudentToggle />
-      <CourseKeyInfo />
+      <CourseStudentToggle value={studentType} onChange={setStudentType} />
+      <CourseKeyInfo {...currentInfo.keyInfo} />
       <CourseTabs tabs={tabs} />
 
       {/* Overview & Entry Requirements (both contained in CourseOverviewContent) */}
       <div className="w-full bg-[#F8F9FA] pb-16">
         <div className="w-full max-w-[1440px] mx-auto px-4 xl:px-[100px]">
-          <CourseOverviewContent />
+          <CourseOverviewContent {...currentInfo.overview} />
         </div>
       </div>
 
       <div id="structure">
-        <CourseStructureContent />
+        <CourseStructureContent {...currentInfo.structure} />
         <CourseUnitsAccordion />
       </div>
 
