@@ -67,7 +67,11 @@ export default function BisCoursePage() {
         englishRequirement: (
           <>
             IELTS score of a minimum of 6.0 with no band less than 5.5 or equivalent<br />
-            <a href="#" className="underline hover:text-white transition-colors">( check IELTS equivalence )</a>
+            <a href="#english-requirements" onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById('english-requirements');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }} className="underline hover:text-white transition-colors cursor-pointer">( check IELTS equivalence )</a>
           </>
         ),
         courseRequirement: "21 core units plus 3 elective units, or 1 elective unit and an internship"
