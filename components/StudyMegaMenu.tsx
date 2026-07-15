@@ -5,9 +5,10 @@ import { MegaMenuBadge, MegaMenuHeader, MegaMenuLink, MegaMenuRightBanner } from
 
 interface StudyMegaMenuProps {
   isActive: boolean;
+  onClose?: () => void;
 }
 
-export default function StudyMegaMenu({ isActive }: StudyMegaMenuProps) {
+export default function StudyMegaMenu({ isActive, onClose }: StudyMegaMenuProps) {
   return (
     <div
       className={`absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl transition-all duration-300 ease-in-out origin-top ${isActive ? 'opacity-100 visible scale-y-100' : 'opacity-0 invisible scale-y-0'
@@ -24,7 +25,7 @@ export default function StudyMegaMenu({ isActive }: StudyMegaMenuProps) {
               <MegaMenuHeader title="Postgraduate" />
               <ul className="space-y-[24px]">
                 {postgradCourses.map((course, idx) => (
-                  <MegaMenuLink key={idx} href="#">{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href={course.href} onClick={onClose}>{course.name}</MegaMenuLink>
                 ))}
               </ul>
             </div>
@@ -35,7 +36,7 @@ export default function StudyMegaMenu({ isActive }: StudyMegaMenuProps) {
                 <MegaMenuHeader title="Undergraduate" />
                 <ul className="space-y-[24px]">
                   {undergradCourses.map((course, idx) => (
-                    <MegaMenuLink key={idx} href="#">{course}</MegaMenuLink>
+                    <MegaMenuLink key={idx} href={course.href} onClick={onClose}>{course.name}</MegaMenuLink>
                   ))}
                 </ul>
               </div>

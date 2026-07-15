@@ -21,7 +21,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={require("../public/hero_bg.png")}
+          src="/hero_bg.png"
           alt="Ozford Campus Background"
           fill
           priority

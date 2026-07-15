@@ -3,9 +3,10 @@ import { MegaMenuBadge, MegaMenuHeader, MegaMenuLink } from "./MegaMenuShared";
 
 interface Props {
   isActive: boolean;
+  onClose?: () => void;
 }
 
-export default function AboutMegaMenu({ isActive }: Props) {
+export default function AboutMegaMenu({ isActive, onClose }: Props) {
   return (
     <div
       className={`absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl transition-all duration-300 ease-in-out origin-top ${isActive ? 'opacity-100 visible scale-y-100' : 'opacity-0 invisible scale-y-0'
@@ -19,7 +20,7 @@ export default function AboutMegaMenu({ isActive }: Props) {
             <MegaMenuHeader title="About Ozford" />
             <ul className="space-y-[24px]">
               {aboutData.aboutOzford.map((course, idx) => (
-                <MegaMenuLink key={idx} href="#">{course}</MegaMenuLink>
+                <MegaMenuLink key={idx} href="#" onClick={onClose}>{course}</MegaMenuLink>
               ))}
             </ul>
           </div>
@@ -29,7 +30,7 @@ export default function AboutMegaMenu({ isActive }: Props) {
               <MegaMenuHeader title="Student Services & Support" />
               <ul className="space-y-[24px]">
                 {aboutData.support.map((course, idx) => (
-                  <MegaMenuLink key={idx} href="#">{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href="#" onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>
@@ -40,7 +41,7 @@ export default function AboutMegaMenu({ isActive }: Props) {
               <MegaMenuHeader title="Terms & Conditions" />
               <ul className="space-y-[24px]">
                 {aboutData.terms.map((course, idx) => (
-                  <MegaMenuLink key={idx} href="#">{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href="#" onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>
@@ -51,7 +52,7 @@ export default function AboutMegaMenu({ isActive }: Props) {
               <MegaMenuHeader title="Blogs & Events" />
               <ul className="space-y-[24px]">
                 {aboutData.blogs.map((course, idx) => (
-                  <MegaMenuLink key={idx} href="#">{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href="#" onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>

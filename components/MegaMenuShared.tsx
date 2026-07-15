@@ -16,19 +16,33 @@ export const MegaMenuHeader = ({ title }: MegaMenuHeaderProps) => (
   </div>
 );
 
+import { usePathname } from "next/navigation";
+
 interface MegaMenuLinkProps {
   href: string;
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
-export const MegaMenuLink = ({ href, children }: MegaMenuLinkProps) => (
-  <li>
-    <Link href={href} className="group flex items-center justify-between text-[13px] text-[#374151] hover:text-[#0B1F4A] transition-colors">
-      <span className="pr-4">{children}</span>
-      <ArrowRight />
-    </Link>
-  </li>
-);
+export const MegaMenuLink = ({ href, children, onClick }: MegaMenuLinkProps) => {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
+  return (
+    <li>
+      <Link 
+        href={href} 
+        onClick={onClick}
+        className={`group flex items-center justify-between text-[13px] transition-colors ${
+          isActive ? 'text-[#0B1F4A] font-bold' : 'text-[#374151] hover:text-[#0B1F4A]'
+        }`}
+      >
+        <span className="pr-4">{children}</span>
+        <ArrowRight />
+      </Link>
+    </li>
+  );
+};
 
 interface MegaMenuBadgeProps {
   title: string;

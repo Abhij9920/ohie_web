@@ -53,7 +53,7 @@ export default function Footer() {
           <div className="lg:col-span-5 flex flex-col">
             <div className="mb-[40px]">
               {/* Logo Area */}
-              <Image src={require("../public/footer_logo.png")} width={97} height={40} alt="Logo" />
+              <Image src="/footer_logo.png" width={97} height={40} alt="Logo" />
             </div>
 
             <div className="flex flex-col gap-6">
