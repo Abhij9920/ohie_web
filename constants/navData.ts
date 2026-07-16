@@ -19,12 +19,11 @@ export const postgradCourses = [
 ];
 
 export const undergradCourses = [
-  { name: "Bachelor of Business", href: "#" },
-  { name: "Bachelor of Information Technology", href: "#" },
   { name: "Bachelor of Cyber Security", href: "/study/bcs" },
   { name: "Bachelor of Information Systems", href: "/study/bis" },
-  { name: "Diploma of Business", href: "#" },
-  { name: "Diploma of Information Technology", href: "#" }
+  { name: "Bachelor of Business (Accounting)", href: "/study/bba" },
+  { name: "Bachelor of Business", href: "/study/bbus" },
+  { name: "Diploma of Business", href: "/study/dipbus" }
 ];
 
 export const studentLifeData = {

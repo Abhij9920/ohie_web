@@ -134,11 +134,11 @@ export default function MpaCoursePage() {
   const currentInfo = info[studentType];
 
   const tabs = [
-    { id: 'overview', label: 'Overview', content: <CourseOverviewContent {...currentInfo.overview} /> },
-    { id: 'entry', label: 'Entry Requirements', content: <div>Entry Requirements Content</div> },
-    { id: 'structure', label: 'Course Structure', content: <CourseStructureContent {...currentInfo.structure} /> },
-    { id: 'assessment', label: 'Assessment Methods', content: <div>Assessment Methods Content</div> },
-    { id: 'student-info', label: 'Student Information', content: <div>Student Information Content</div> },
+    { id: 'overview', label: 'Overview' },
+    { id: 'entry', label: 'Entry Requirements' },
+    { id: 'structure', label: 'Course Structure' },
+    { id: 'assessment', label: 'Assessment Methods' },
+    { id: 'information', label: 'Student Information' }
   ];
 
   return (
@@ -160,20 +160,22 @@ export default function MpaCoursePage() {
       {/* Overview & Entry Requirements (both contained in CourseOverviewContent) */}
       <div className="w-full bg-[#F8F9FA] pb-16">
         <div className="w-full max-w-[1440px] mx-auto px-4 xl:px-[100px]">
-          <CourseOverviewContent {...currentInfo.overview} />
+          <CourseOverviewContent {...currentInfo.overview} academicTitle="Entry Requirements" />
         </div>
       </div>
 
-      <div id="structure">
+      <div id="structure" className="scroll-mt-24">
         <CourseStructureContent {...currentInfo.structure} />
-        <CourseUnitsAccordion categories={mpaCategories} unitsData={mpaUnitsData} />
+        <div className="pt-16">
+          <CourseUnitsAccordion categories={mpaCategories} unitsData={mpaUnitsData} />
+        </div>
       </div>
 
-      <div id="assessment">
+      <div id="assessment" className="scroll-mt-24">
         <AssessmentMethods />
       </div>
 
-      <div id="student-info">
+      <div id="information" className="scroll-mt-24">
         <StudentInformationSection />
       </div>
       

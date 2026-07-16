@@ -1,9 +1,11 @@
 import React from 'react';
 
 export interface CourseOverviewContentProps {
-  overviewText?: string;
+  overviewText?: React.ReactNode;
   overviewQuote?: string;
+  academicTitle?: string;
   academicRequirements?: string[] | React.ReactNode;
+  englishTitle?: string;
   englishRequirements?: string[] | React.ReactNode;
   ageRequirement?: string;
 }
@@ -11,11 +13,13 @@ export interface CourseOverviewContentProps {
 export default function CourseOverviewContent({
   overviewText = "The overall purpose of the Master of Information Technology (MIT) course is to develop competent and practical practitioners who add value to the professional ICT community. The course is designed to enable students to gain advanced knowledge and expertise in ICT. Students will learn the principles behind the design of computing systems and how ICT can be used to help organisations to meet their needs. Contemporary and emerging ICT topics such as big data, block chain, business intelligence, cyber security and Internet of Things are incorporated into the course to ensure graduates are immersed in the latest developments in ICT.",
   overviewQuote = "“Our MIT graduates don't just understand technology; they understand how to leverage it to solve complex business problems and drive innovation in a competitive global market.”",
+  academicTitle = "Academic Requirements",
   academicRequirements = [
     "Completion of an Australian Bachelor's degree (or equivalent) in any discipline; or",
     "Completion of an Australian Graduate Certificate (or equivalent) in any discipline; or",
     "Completion of an Australian Graduate Diploma (or equivalent) in any discipline."
   ],
+  englishTitle = "English Language Requirements",
   englishRequirements = [
     "IELTS score of a minimum of 6.5 with no band less than 6.0 or equivalent; or",
     "Completion of undergraduate or postgraduate degree, including Graduate Certificate or Graduate Diploma in Australia within the past two years; or",
@@ -47,7 +51,7 @@ export default function CourseOverviewContent({
             <path d="M12.225 40.1637C9.0825 40.1637 6.525 37.6063 6.525 34.4637V10.5312H6C4.35 10.5312 3 11.8663 3 13.5313V40.6813C3 42.3463 4.35 43.6813 6 43.6813H29.07C30.72 43.6813 32.07 42.3463 32.07 40.6813V40.1637H12.225Z" fill="#0B1F4A" />
           </svg>
 
-          <h2 className="font-serif text-[28px] md:text-[36px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>Course Overview</h2>
+          <h2 className="font-serif text-[28px] md:text-[36px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>Overview</h2>
         </div>
 
         <p className="text-[#4B5563] text-[16px] pt-5 font-normal leading-relaxed">
@@ -81,7 +85,7 @@ export default function CourseOverviewContent({
                 </defs>
               </svg>
 
-              <h2 className="text-[24px] md:text-[32px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>Academic Requirements</h2>
+              <h2 className="text-[24px] md:text-[32px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>{academicTitle}</h2>
             </div>
             <div className="flex flex-col">
               {Array.isArray(academicRequirements) ? academicRequirements.map((req, i) => (
@@ -98,7 +102,7 @@ export default function CourseOverviewContent({
                 <path fillRule="evenodd" clipRule="evenodd" d="M5 5C5 2.23858 7.23858 0 10 0H23.85C24.5798 0 25.2733 0.319003 25.7483 0.873265L34.3983 10.9676C34.7867 11.4207 35 11.9977 35 12.5943V35C35 37.7615 32.7615 40 30 40H10C7.23858 40 5 37.7615 5 35V5ZM20 26.6667C25.5228 26.6667 30 22.1895 30 16.6667C30 11.1438 25.5228 6.66667 20 6.66667C14.4771 6.66667 10 11.1438 10 16.6667C10 22.1895 14.4771 26.6667 20 26.6667ZM26.6667 31.6667V30H13.3333V31.6667H26.6667ZM23.3333 33.3333V35H16.6667V33.3333H23.3333Z" fill="#0B1F4A" />
               </svg>
 
-              <h2 className="font-serif text-[24px] md:text-[32px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>English Language Requirements</h2>
+              <h2 className="font-serif text-[24px] md:text-[32px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>{englishTitle}</h2>
             </div>
             <div className="flex flex-col">
               {Array.isArray(englishRequirements) ? englishRequirements.map((req, i) => (

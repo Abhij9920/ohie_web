@@ -4,9 +4,9 @@ export interface CourseStructureContentProps {
   eyebrow?: string;
   title?: string;
   requirementsTitle?: string;
-  requirements?: string[];
+  requirements?: React.ReactNode[];
   careerOutcomesTitle?: string;
-  careerOutcomes?: string[];
+  careerOutcomes?: React.ReactNode[];
 }
 
 export default function CourseStructureContent({
@@ -59,7 +59,7 @@ export default function CourseStructureContent({
 
             {/* Requirements Box */}
             {requirements && requirements.length > 0 && (
-              <div className="flex-1 bg-[#2863A3] p-6 md:p-8">
+              <div id="course-requirements" className="flex-1 bg-[#2863A3] p-6 md:p-8 scroll-mt-24">
                 <h4 className="text-white text-[11px] font-bold tracking-widest uppercase mb-8">
                   {requirementsTitle}
                 </h4>
@@ -73,7 +73,7 @@ export default function CourseStructureContent({
 
             {/* Career Outcomes Box */}
             {careerOutcomes && careerOutcomes.length > 0 && (
-              <div className="flex-1 border border-[#4F8CE6]/40 p-6 md:p-8">
+              <div id="career" className="flex-1 border border-[#4F8CE6]/40 p-6 md:p-8 scroll-mt-24">
                 <h4 className="text-[#4F8CE6] text-[11px] font-bold tracking-widest uppercase mb-8">
                   {careerOutcomesTitle}
                 </h4>
