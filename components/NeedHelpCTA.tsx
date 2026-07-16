@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function NeedHelpCTA() {
   return (
     <section className="w-full bg-[#2463A7] py-[50px] md:py-[60px] flex justify-center items-center">
-      <div className="max-w-[1440px] mx-auto w-full flex flex-col md:flex-row justify-between items-center px-4 xl:px-[100px]">
+      <div className="max-w-[1440px] mx-auto w-full flex flex-col md:flex-row justify-between items-center px-4 md:px-8 xl:px-[100px]">
         {/* Left Side */}
         <div className="text-white text-center md:text-left mb-8 md:mb-0">
           <h2 className="text-[36px] md:text-[40px] font-serif italic mb-2 leading-tight" style={{ fontFamily: 'var(--font-dm-serif)' }}>

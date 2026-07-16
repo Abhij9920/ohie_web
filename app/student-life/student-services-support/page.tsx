@@ -83,7 +83,7 @@ export default function StudentServicesSupportPage() {
       />
 
       <section className="w-full py-16 md:py-24">
-        <div className=" mx-auto px-4 xl:px-[100px] flex justify-start">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px] flex justify-start">
           <Accordion items={supportItems} />
         </div>
       </section>
