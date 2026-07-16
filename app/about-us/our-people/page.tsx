@@ -66,14 +66,14 @@ export default function OurPeoplePage() {
           />
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-8">
-          <div className="w-full lg:w-[calc(33.333%-1.33rem)]">
+          <div className="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1.33rem)]">
             <ProfileCard
               name="Prof Ritesh Chugh"
               role="Associate Dean - Engagement"
               imageUrl="/our_people/img7.png"
             />
           </div>
-          <div className="w-full lg:w-[calc(33.333%-1.33rem)]">
+          <div className="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1.33rem)]">
             <ProfileCard
               name="Dr Priyantha Bandara"
               role="Academic Dean"

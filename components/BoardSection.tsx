@@ -23,7 +23,7 @@ export default function BoardSection({ smallTitle, mainTitle, theme = 'light', c
           <h4 className={`text-[11px]  font-semibold uppercase tracking-wider mb-2 text-[#4D97E6]`}>
             {smallTitle}
           </h4>
-          <h2 className={`text-[36px] font-serif mb-4 ${isDark ? 'text-white' : 'text-[#0B1F4A]'}`} style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '1.2' }}>
+          <h2 className={`text-[28px] md:text-[36px] font-serif mb-4 ${isDark ? 'text-white' : 'text-[#0B1F4A]'}`} style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '1.2' }}>
             {mainTitle}
           </h2>
           {/* Short blue underline */}

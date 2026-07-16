@@ -14,13 +14,13 @@ export default function ProfileCard({ name, role, description, imageUrl, theme =
 
   return (
     <div
-      className={`flex flex-col items-center text-center px-6 pt-10 pb-8 h-full transition-all duration-300 hover:shadow-lg ${isDark
+      className={`flex flex-col items-center text-center px-4 pt-8 pb-6 md:px-6 md:pt-10 md:pb-8 h-full transition-all duration-300 hover:shadow-lg ${isDark
         ? 'bg-transparent border border-[#FFFFFF26]'
         : 'bg-white border border-[#E0E0E0] border-b-[3px] border-b-[#4D97E6]'
         }`}
     >
       {/* Avatar */}
-      <div className="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden mb-4 bg-gray-100 flex-shrink-0">
+      <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden mb-4 bg-gray-100 flex-shrink-0">
         {imageUrl ? (
           <Image
             src={imageUrl}

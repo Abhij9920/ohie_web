@@ -5,7 +5,7 @@ export default function JoinTeamCTA() {
   return (
     <section className="w-full bg-[#0B1F4A] py-[80px] md:py-[120px] px-4 md:px-[40px] flex justify-center items-center">
       <div className="max-w-[900px] mx-auto text-center flex flex-col items-center">
-        <h2 className="text-white text-[44px] font-serif italic mb-6 leading-tight" style={{ fontFamily: 'var(--font-dm-serif)' }}>
+        <h2 className="text-white text-[32px] md:text-[44px] lg:text-[48px] font-serif italic mb-6 leading-tight" style={{ fontFamily: 'var(--font-dm-serif)' }}>
           Passionate About Education? Join Our Team.
         </h2>
         <p className="text-[#4D97E6] text-[16px]  leading-relaxed mb-[40px] max-w-[700px]">
