@@ -30,7 +30,7 @@ export default function StudentLifeMegaMenu({ isActive, onClose }: Props) {
               <MegaMenuHeader title="Life at Ozford" />
               <ul className="space-y-[24px]">
                 {studentLifeData.support.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Student Services & Support" ? "/student-life/student-services-support" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href={course === "Student Services & Support" ? "/student-life/student-services-support" : course === "Career Hub" ? "/student-life/career-hub" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>
