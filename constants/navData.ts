@@ -32,22 +32,24 @@ export const studentLifeData = {
     "OIHE (Moodle)",
     "Policies & Procedures",
     "Our People",
-    "Life at Ozford"
+
   ],
   support: [
     "Student Services & Support",
     "Career Hub",
     "Endorsement",
     "Campus Safety & Sexual Misconduct",
-    "Key Dates"
+
   ],
-  intakes: [
+  keyDates: [
+    "Intakes",
     "Fee Due Dates",
     "Orientations",
     "Events",
     "International Students"
   ],
-  apply: [
+  internationalStudent: [
+    "Apply",
     "Accommodation",
     "Study in Melbourne Australia",
     "ESOS Framework"

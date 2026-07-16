@@ -20,7 +20,7 @@ export default function AboutMegaMenu({ isActive, onClose }: Props) {
             <MegaMenuHeader title="About Ozford" />
             <ul className="space-y-[24px]">
               {aboutData.aboutOzford.map((course, idx) => (
-                <MegaMenuLink key={idx} href={course === "Our People" ? "/about-us/our-people" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                <MegaMenuLink key={idx} href={course === "Our People" ? "/about-us/our-people" : course === "Policies & Procedures" ? "/policies" : "#"} onClick={onClose}>{course}</MegaMenuLink>
               ))}
             </ul>
           </div>
@@ -30,7 +30,7 @@ export default function AboutMegaMenu({ isActive, onClose }: Props) {
               <MegaMenuHeader title="Life at Ozford" />
               <ul className="space-y-[24px]">
                 {aboutData.support.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Student Services & Support" ? "/student-life/student-services-support" : course === "Career Hub" ? "/student-life/career-hub" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href={course === "Student Services & Support" ? "/student-life/student-services-support" : course === "Career Hub" ? "/student-life/career-hub" : course === "Endorsement" ? "/student-life/endorsement" : course === "Campus Safety & Sexual Misconduct" ? "/campus-safety" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>
@@ -41,7 +41,7 @@ export default function AboutMegaMenu({ isActive, onClose }: Props) {
               <MegaMenuHeader title="Terms & Conditions" />
               <ul className="space-y-[24px]">
                 {aboutData.terms.map((course, idx) => (
-                  <MegaMenuLink key={idx} href="#" onClick={onClose}>{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href={course === "Policies & Procedures" ? "/policies" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>

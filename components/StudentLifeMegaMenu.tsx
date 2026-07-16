@@ -14,13 +14,13 @@ export default function StudentLifeMegaMenu({ isActive, onClose }: Props) {
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="flex pt-[12px] gap-8 lg:gap-12 pb-[42px]">
-          
+
           <div className="flex-1 border-r border-[#E8E8E4] pr-8 lg:pr-12">
             <MegaMenuBadge title="Student Life" />
             <MegaMenuHeader title="Current Student" />
             <ul className="space-y-[24px]">
               {studentLifeData.currentStudent.map((course, idx) => (
-                <MegaMenuLink key={idx} href={course === "Our People" ? "/about-us/our-people" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                <MegaMenuLink key={idx} href={course === "Our People" ? "/about-us/our-people" : course === "Webmail" ? "https://www.office.com/login" : course === "OIHE (Moodle)" ? "https://oihe.ozford.edu.au/login/index.php" : course === "Policies & Procedures" ? "/policies" : "#"} onClick={onClose}>{course}</MegaMenuLink>
               ))}
             </ul>
           </div>
@@ -30,7 +30,7 @@ export default function StudentLifeMegaMenu({ isActive, onClose }: Props) {
               <MegaMenuHeader title="Life at Ozford" />
               <ul className="space-y-[24px]">
                 {studentLifeData.support.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Student Services & Support" ? "/student-life/student-services-support" : course === "Career Hub" ? "/student-life/career-hub" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href={course === "Student Services & Support" ? "/student-life/student-services-support" : course === "Career Hub" ? "/student-life/career-hub" : course === "Endorsement" ? "/student-life/endorsement" : course === "Campus Safety & Sexual Misconduct" ? "/campus-safety" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>
@@ -38,9 +38,9 @@ export default function StudentLifeMegaMenu({ isActive, onClose }: Props) {
 
           <div className="flex-1 border-r border-[#E8E8E4] pr-8 lg:pr-12">
             <div className="mt-[42px]">
-              <MegaMenuHeader title="Intakes" />
+              <MegaMenuHeader title="Key Dates" />
               <ul className="space-y-[24px]">
-                {studentLifeData.intakes.map((course, idx) => (
+                {studentLifeData.keyDates.map((course, idx) => (
                   <MegaMenuLink key={idx} href="#" onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
@@ -49,9 +49,9 @@ export default function StudentLifeMegaMenu({ isActive, onClose }: Props) {
 
           <div className="flex-1">
             <div className="mt-[42px]">
-              <MegaMenuHeader title="Apply" />
+              <MegaMenuHeader title="International Students" />
               <ul className="space-y-[24px]">
-                {studentLifeData.apply.map((course, idx) => (
+                {studentLifeData.internationalStudent.map((course, idx) => (
                   <MegaMenuLink key={idx} href="#" onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>

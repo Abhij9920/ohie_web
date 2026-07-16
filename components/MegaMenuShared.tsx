@@ -27,18 +27,33 @@ interface MegaMenuLinkProps {
 export const MegaMenuLink = ({ href, children, onClick }: MegaMenuLinkProps) => {
   const pathname = usePathname();
   const isActive = pathname === href;
+  const isExternal = href.startsWith('http');
+
+  const linkContent = (
+    <>
+      <span className="pr-4">{children}</span>
+      <ArrowRight />
+    </>
+  );
+
+  const className = `group flex items-center justify-between text-[13px] transition-colors ${
+    isActive ? 'text-[#0B1F4A] font-bold' : 'text-[#374151] hover:text-[#0B1F4A]'
+  }`;
+
+  if (isExternal) {
+    return (
+      <li>
+        <a href={href} onClick={onClick} target="_blank" rel="noopener noreferrer" className={className}>
+          {linkContent}
+        </a>
+      </li>
+    );
+  }
 
   return (
     <li>
-      <Link 
-        href={href} 
-        onClick={onClick}
-        className={`group flex items-center justify-between text-[13px] transition-colors ${
-          isActive ? 'text-[#0B1F4A] font-bold' : 'text-[#374151] hover:text-[#0B1F4A]'
-        }`}
-      >
-        <span className="pr-4">{children}</span>
-        <ArrowRight />
+      <Link href={href} onClick={onClick} className={className}>
+        {linkContent}
       </Link>
     </li>
   );
