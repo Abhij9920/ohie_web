@@ -35,6 +35,7 @@ export const studentLifeData = {
     "Life at Ozford"
   ],
   support: [
+    "Student Services & Support",
     "Career Hub",
     "Endorsement",
     "Campus Safety & Sexual Misconduct",
@@ -89,6 +90,7 @@ export const aboutData = {
     "Life at Ozford"
   ],
   support: [
+    "Student Services & Support",
     "Career Hub",
     "Endorsement",
     "Campus Safety & Sexual Misconduct",

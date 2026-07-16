@@ -10,9 +10,10 @@ interface PageHeaderProps {
   breadcrumbs: Breadcrumb[];
   title: string;
   quote?: React.ReactNode;
+  description?: React.ReactNode;
 }
 
-export default function PageHeader({ breadcrumbs, title, quote }: PageHeaderProps) {
+export default function PageHeader({ breadcrumbs, title, quote, description }: PageHeaderProps) {
   return (
     <div className="w-full bg-[#0B1F4A] pt-[60px] pb-[80px] md:pt-[80px] md:pb-[100px]">
       <div className="max-w-[1440px] mx-auto px-4 xl:px-[100px] flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
@@ -43,7 +44,14 @@ export default function PageHeader({ breadcrumbs, title, quote }: PageHeaderProp
             {title}
           </h1>
           {/* Blue underline */}
-          <div className="w-[80px] md:w-[120px] h-[3px] bg-[#4D97E6] mt-4"></div>
+          <div className="w-[80px] md:w-[120px] h-[3px] bg-[#4D97E6] mt-4 mb-6"></div>
+
+          {/* Description */}
+          {description && (
+            <div className="text-[#FFFFFF]/70 text-[15px] md:text-[16px] leading-relaxed max-w-[600px]">
+              {description}
+            </div>
+          )}
         </div>
 
         {/* Right Side: Quote */}
