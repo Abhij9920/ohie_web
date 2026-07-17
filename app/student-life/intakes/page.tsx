@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Link from 'next/link';
 import PageHeader from '@/components/PageHeader';
 import QuickStatsBoxes from '@/components/QuickStatsBoxes';
 import Accreditations from '@/components/Accreditations';
@@ -521,10 +522,10 @@ export default function IntakesPage() {
                 <span className="md:hidden">For more information regarding Orientation</span>
               </div>
               <span className="hidden md:inline">
-                For more information regarding Orientation please <a href="#" className="text-[#4D97E6] hover:underline">click here.</a>
+                For more information regarding Orientation please <Link href="/student-life/orientation" className="text-[#4D97E6] hover:underline">click here.</Link>
               </span>
               <span className="md:hidden">
-                please <a href="#" className="text-[#4D97E6] hover:underline">click here.</a>
+                please <Link href="/student-life/orientation" className="text-[#4D97E6] hover:underline">click here.</Link>
               </span>
             </div>
 
