@@ -359,9 +359,9 @@ export default function IntakesPage() {
       />
 
       {/* Description text below header */}
-      <section className="w-full py-8">
+      <section className="w-full py-6 md:py-8">
         <div className="max-w-[1440px] mx-auto px-4 text-center">
-          <p className="text-[#0B1F4A] text-[15px]">
+          <p className="text-[#0B1F4A] text-[14px] md:text-[15px]">
             Ozford Institute of Higher Education divides the academic year into three trimesters. Most students undertake<br className="hidden md:block" /> two trimesters each year.
           </p>
         </div>
@@ -381,20 +381,20 @@ export default function IntakesPage() {
           </h2>
 
           {/* Blue underline (if wanted, matching other pages) */}
-          <div className="w-[80px] md:w-[120px] h-[3px] bg-[#4D97E6] mt-[-20px] mb-[40px]"></div>
+          <div className="w-[80px] md:w-[120px] h-[3px] bg-[#4D97E6] mt-[-20px] mb-[30px] md:mb-[40px]"></div>
 
           {/* Intake Tabs & Year Tabs row */}
-          <div className="flex flex-col lg:flex-row justify-between bg-white border border-[#E0D9C8] mb-[40px]">
+          <div className="flex flex-col xl:flex-row justify-between bg-white border border-[#E0D9C8] mb-[30px] md:mb-[40px]">
 
             {/* Intake Tabs */}
-            <div className="flex overflow-x-auto hide-scrollbar">
+            <div className="flex overflow-x-auto hide-scrollbar w-full xl:w-auto border-b xl:border-b-0 border-[#E0D9C8]">
               {intakeTabs.map((tab, idx) => {
                 const isActive = activeIntake === tab.id;
                 return (
                   <button
                     key={tab.id + idx}
                     onClick={() => setActiveIntake(tab.id)}
-                    className={`min-w-[110px] md:min-w-[130px] py-4 px-4 text-[13px] md:text-[14px] transition-colors ${isActive
+                    className={`min-w-[110px] md:min-w-[130px] py-3 md:py-4 px-4 text-[13px] md:text-[14px] transition-colors whitespace-nowrap ${isActive
                       ? 'bg-[#0B1F4A] text-white font-medium'
                       : 'bg-white text-[#0B1F4A] hover:bg-gray-50'
                       } ${idx !== intakeTabs.length - 1 ? 'border-r border-[#E0D9C8]' : ''}`}
@@ -426,17 +426,17 @@ export default function IntakesPage() {
           </div>
 
           {/* Dark Blue Header */}
-          <div className="w-full bg-[#0B1F4A] py-5 px-6 flex items-center mb-[40px]">
-            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className='mr-3'>
+          <div className="w-full bg-[#0B1F4A] py-4 md:py-5 px-4 md:px-6 flex items-center mb-[20px] md:mb-[40px]">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className='mr-2 md:mr-3 shrink-0'>
               <path d="M5.33333 1.33594V4.00282M10.6667 1.33594V4.00282M2 6.6697H14M3.33333 2.66938H12.6667C13.403 2.66938 14 3.26638 14 4.00282V13.3369C14 14.0733 13.403 14.6703 12.6667 14.6703H3.33333C2.59695 14.6703 2 14.0733 2 13.3369V4.00282C2 3.26638 2.59695 2.66938 3.33333 2.66938Z" stroke="#4D97E6" strokeWidth="2" strokeLinecap="round" />
             </svg>
-            <h3 className="text-[14px] font-semibold tracking-widest uppercase text-[#4D97E6]">
+            <h3 className="text-[13px] md:text-[14px] font-semibold tracking-widest uppercase text-[#4D97E6]">
               {currentTabLabel} — {activeYear}
             </h3>
           </div>
 
           {/* Data Table */}
-          <div className="w-full flex flex-col">
+          <div className="w-full flex flex-col gap-4 md:gap-0">
 
             {/* Rows 1 to 5 mapped */}
             {[
@@ -447,10 +447,10 @@ export default function IntakesPage() {
               { label: 'Term Break', value: data.termBreak },
             ].map((row, idx) => (
               <div key={idx} className="flex flex-col md:flex-row w-full">
-                <div className="w-full md:w-[250px] lg:w-[300px] py-6 pr-6 font-normal text-[#0B1F4A] font-semibold text-[14px]">
+                <div className="w-full md:w-[250px] lg:w-[300px] pb-2 pt-1 md:py-6 pr-0 md:pr-6 font-normal text-[#0B1F4A] font-semibold text-[14px]">
                   {row.label}
                 </div>
-                <div className="w-full flex-1 py-6 px-6 text-[#333333] text-[14px] flex items-center bg-white border border-[#E0D9C8] border-b-2 border-l-0">
+                <div className="w-full flex-1 py-4 px-4 md:py-6 md:px-6 text-[#333333] text-[14px] flex items-center bg-white border border-[#E0D9C8] border-b-2 md:border-l-0">
                   {row.value}
                 </div>
               </div>
@@ -458,22 +458,22 @@ export default function IntakesPage() {
 
             {/* Row 6 (Public Holiday) */}
             <div className="flex flex-col md:flex-row w-full">
-              <div className="w-full md:w-[250px] lg:w-[300px] py-6 pr-6 font-normal text-[#0B1F4A] font-semibold text-[14px]">
+              <div className="w-full md:w-[250px] lg:w-[300px] pb-2 pt-1 md:py-6 pr-0 md:pr-6 font-normal text-[#0B1F4A] font-semibold text-[14px]">
                 Public Holiday
               </div>
-              <div className="w-full flex-1 py-6 px-6 bg-white border border-[#E0D9C8] border-b-2 border-l-0">
+              <div className="w-full flex-1 py-4 px-4 md:py-6 md:px-6 bg-white border border-[#E0D9C8] border-b-2 md:border-l-0">
 
                 {data.holidaysVic.length > 0 || data.holidaysQld.length > 0 ? (
                   <div className="flex flex-col xl:flex-row gap-12">
                     {/* VIC */}
                     {data.holidaysVic.length > 0 && (
-                      <div className="flex-1">
+                      <div className="flex-1 mb-6 xl:mb-0">
                         <h5 className="text-[#4D97E6] text-[12px] font-semibold tracking-widest uppercase mb-4">
                           VICTORIA (VIC)
                         </h5>
                         <ul className="space-y-3">
                           {data.holidaysVic.map((hol, i) => (
-                            <li key={i} className="flex text-[#333333] text-[14px]">
+                            <li key={i} className="flex text-[#333333] text-[13px] md:text-[14px]">
                               <span className="text-[#4D97E6] mr-3 mt-1 text-[20px] leading-[10px]">&bull;</span>
                               <span>{hol.name}{hol.date && <> - <strong>{hol.date}</strong></>} {hol.extra}</span>
                             </li>
@@ -490,7 +490,7 @@ export default function IntakesPage() {
                         </h5>
                         <ul className="space-y-3">
                           {data.holidaysQld.map((hol, i) => (
-                            <li key={i} className="flex text-[#333333] text-[14px]">
+                            <li key={i} className="flex text-[#333333] text-[13px] md:text-[14px]">
                               <span className="text-[#4D97E6] mr-3 mt-1 text-[20px] leading-[10px]">&bull;</span>
                               <span>{hol.name}{hol.date && <> - <strong>{hol.date}</strong></>} {hol.extra}</span>
                             </li>
@@ -510,21 +510,27 @@ export default function IntakesPage() {
 
         </div>
       </section>
-      <section className="w-full py-8 pb-4">
+      <section className="w-full py-6 md:py-8 pb-4">
         <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px]">
-          <div className="w-full border border-[#4D97E6] bg-[#FAFAF7] p-6 md:p-8 flex flex-col">
-            <div className="flex items-center text-[#0B1F4A] text-[13px] font-medium mb-5">
-              <svg className="w-[20px] h-[20px] text-[#4D97E6] mr-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span>
+          <div className="w-full border border-[#4D97E6] bg-[#FAFAF7] p-5 md:p-8 flex flex-col">
+            <div className="flex flex-col md:flex-row md:items-center text-[#0B1F4A] text-[13px] font-medium mb-4 md:mb-5">
+              <div className="flex items-center mb-2 md:mb-0">
+                <svg className="w-[20px] h-[20px] text-[#4D97E6] mr-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="md:hidden">For more information regarding Orientation</span>
+              </div>
+              <span className="hidden md:inline">
                 For more information regarding Orientation please <a href="#" className="text-[#4D97E6] hover:underline">click here.</a>
+              </span>
+              <span className="md:hidden">
+                please <a href="#" className="text-[#4D97E6] hover:underline">click here.</a>
               </span>
             </div>
 
-            <div className="w-full h-[1px] bg-[#E0D9C8] mb-5"></div>
+            <div className="w-full h-[1px] bg-[#E0D9C8] mb-4 md:mb-5"></div>
 
-            <p className="text-[#0B1F4A] text-[13px] leading-relaxed">
+            <p className="text-[#0B1F4A] text-[12px] md:text-[13px] leading-relaxed">
               Ozford Institute of Higher Education divides the academic year into three trimesters. Trimester 1 usually goes from March to July. Trimester 2 from July to November and Trimester 3 from November to February the following year. Most students usually undertake two trimesters each year*. *Exceptions apply to students who commenced from Trimester 3 or mid-trimester intake.
             </p>
           </div>
