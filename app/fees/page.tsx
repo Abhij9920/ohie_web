@@ -1,37 +1,25 @@
-"use client";
 'use client';
 
+import Accreditations from '@/components/Accreditations';
 import React from 'react';
 
 const FeesPage = () => {
   return (
     <div className="bg-white font-sans">
       {/* Breadcrumb */}
-      <div className="bg-[#0A2540] text-white py-3 text-sm">
+      <div className="bg-[#0A2540] text-white py-16 px-32  text-sm">
         <div className="max-w-7xl mx-auto px-6">
           Home / Student Life / Fees Due Dates
         </div>
+        <p className="max-w-7xl mx-auto px-6 font-normal text-[52px] leading-none tracking-normal font-dm-serif mt-2">
+          2026 Fees
+        </p>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Title */}
-        <h1 className="text-5xl font-bold text-[#0A2540] mt-10 mb-12">2026 Fees</h1>
+      <div className="max-w-7xl mx-auto px-6 mt-20">
 
-        {/* Student Type Selector */}
-        <div className="border border-gray-300 rounded-lg p-8 mb-12 bg-white">
-          <h2 className="text-center text-2xl mb-6 font-medium">I am a...</h2>
-          <div className="flex justify-center gap-4">
-            <button className="bg-[#0A2540] text-white px-10 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-[#1a3a5f]">
-              👤 Domestic Student
-            </button>
-            <button className="border-2 border-[#0A2540] text-[#0A2540] px-10 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-gray-50">
-              🌍 International Student
-            </button>
-          </div>
-          <p className="text-center text-sm text-gray-500 mt-4">
-            Select your student type to view relevant fees, entry requirements and support services
-          </p>
-        </div>
+
+
 
         {/* Payment Methods Section */}
         <div className="grid grid-cols-12 gap-10">
@@ -48,6 +36,21 @@ const FeesPage = () => {
 
           {/* Main Content */}
           <div className="col-span-12 lg:col-span-9">
+            {/* Student Type Selector */}
+            <div className="border border-gray-300 rounded-lg p-8 mb-12 bg-white">
+              <h2 className="text-center text-2xl mb-6 font-medium">I am a...</h2>
+              <div className="flex justify-center gap-4">
+                <button className="bg-[#0A2540] text-white px-10 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-[#1a3a5f]">
+                  👤 Domestic Student
+                </button>
+                <button className="border-2 border-[#0A2540] text-[#0A2540] px-10 py-3 rounded-lg font-medium flex items-center gap-2 hover:bg-gray-50">
+                  🌍 International Student
+                </button>
+              </div>
+              <p className="text-center text-sm text-gray-500 mt-4">
+                Select your student type to view relevant fees, entry requirements and support services
+              </p>
+            </div>
             <h3 className="text-3xl font-semibold mb-8">How to Pay</h3>
 
             {/* Online Payment */}
@@ -61,7 +64,7 @@ const FeesPage = () => {
               </a>
               <div className="text-sm text-gray-600 leading-relaxed">
                 <strong>SECURITY POLICY</strong><br />
-                All credit card data is securely transmitted through 128 bit SSL (Secure Socket Layer) encryption. 
+                All credit card data is securely transmitted through 128 bit SSL (Secure Socket Layer) encryption.
                 SSL is an industry standard technology. Information sent between your browser and the bank is encrypted and secure.
               </div>
             </div>
@@ -135,7 +138,7 @@ const FeesPage = () => {
               </div>
 
               <p className="text-xs text-gray-500 mt-4 px-2">
-                Note: Fees shown are total course fees for the full duration of study. Fees are indicative and subject to change. 
+                Note: Fees shown are total course fees for the full duration of study. Fees are indicative and subject to change.
                 Fees are reviewed annually and may vary over the duration of your course.
               </p>
             </div>
@@ -188,21 +191,10 @@ const FeesPage = () => {
             </div>
           </div>
         </div>
-
+ </div>
         {/* Accreditations */}
-        <div className="mt-24 mb-20">
-          <h2 className="text-3xl font-bold mb-8">Our Accreditations &amp; Partnerships</h2>
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-10">
-            <img src="/logos/ihea.png" alt="IHEA" className="h-12" />
-            <img src="/logos/cma.png" alt="CMA" className="h-12" />
-            <img src="/logos/cpa.png" alt="CPA" className="h-12" />
-            <img src="/logos/study-australia.png" alt="Study Australia" className="h-12" />
-            <img src="/logos/tac.png" alt="TAC" className="h-12" />
-            <img src="/logos/aia.png" alt="AIA" className="h-12" />
-            <img src="/logos/australia.png" alt="Australia" className="h-12" />
-          </div>
-        </div>
-      </div>
+        <Accreditations />
+     
     </div>
   );
 };
