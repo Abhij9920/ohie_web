@@ -155,7 +155,7 @@ const Accommodation: React.FC = () => {
                                 </div>
 
                                 {/* Card Body */}
-                                < div className="p-5 flex flex-col flex-1" >
+                                < div className="py-5 px-4 flex flex-col flex-1" >
                                     <p className="text-[14px] text-gray-700 mb-3">
                                         <strong className="text-[12px] text-[#0B1F4A] uppercase tracking-wider">Address</strong>
                                         <br />
