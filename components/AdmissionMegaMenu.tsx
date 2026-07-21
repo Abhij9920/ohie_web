@@ -21,7 +21,7 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
               <MegaMenuHeader title="Higher Education" />
               <ul className="space-y-[24px]">
                 {admissionData.higherEducation.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "How to Apply" ? "/student-life/how-to-apply" : course === "Policies & Procedures" ? "/policies" : course === "Orientation" ? "/student-life/orientation" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href={course === "Why OIHE?" ? "/admission-entry/why-oihe" : course === "How to Apply" ? "/student-life/how-to-apply" : course === "Policies & Procedures" ? "/policies" : course === "Orientation" ? "/student-life/orientation" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>
