@@ -12,7 +12,7 @@ export default function CallToAction() {
           Applications are now open for the next intake.
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-          <Link href="/student-life/how-to-apply" className="bg-white text-[#0B1F4A] px-6 py-3 md:px-8 md:py-3.5 text-[14px] font-semibold hover:bg-white/90 transition-colors min-w-[200px] text-center">
+          <Link href="/admission-entry/how-to-apply" className="bg-white text-[#0B1F4A] px-6 py-3 md:px-8 md:py-3.5 text-[14px] font-semibold hover:bg-white/90 transition-colors min-w-[200px] text-center">
             Apply Now
           </Link>
           <Link href="#" className="bg-transparent border border-white text-white px-6 py-3 md:px-8 md:py-3.5 text-[14px] font-semibold hover:bg-white hover:text-[#0B1F4A] transition-colors min-w-[200px] text-center">

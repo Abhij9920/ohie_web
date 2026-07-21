@@ -141,9 +141,15 @@ const SidebarLinksSection = ({ title, links, activeLink }: { title: string, link
     <ul className="space-y-5">
       {links.map((link, idx) => {
         const isActive = activeLink === link;
+        
+        let href = "#";
+        if (link === 'ESOS Framework') href = "/student-life/esos-framework";
+        if (link === 'Statement of Tuition Assurance') href = "/admission-entry/statement-of-tuition-assurance";
+        // add more as needed
+
         return (
           <li key={idx}>
-            <Link href="#" className={`flex items-center gap-3 text-[14px] transition-colors group ${isActive ? 'text-[#2463A7] font-bold' : 'text-[#1A1A1A] font-medium hover:text-[#2463A7]'}`}>
+            <Link href={href} className={`flex items-center gap-3 text-[14px] transition-colors group ${isActive ? 'text-[#2463A7] font-bold' : 'text-[#1A1A1A] font-medium hover:text-[#2463A7]'}`}>
               <span className={`shrink-0 transition-transform ${isActive ? 'translate-x-1' : 'group-hover:translate-x-1'}`}>
                 <ArrowRightIcon />
               </span>

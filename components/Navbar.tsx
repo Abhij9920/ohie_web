@@ -57,7 +57,7 @@ export default function Navbar() {
           {/* Call to Action Button */}
           <div className="hidden lg:flex items-center">
             <Link
-              href="/student-life/how-to-apply"
+              href="/admission-entry/how-to-apply"
               className="bg-[#0B1F4A] hover:bg-[#081530] text-white text-[14px] font-medium px-[36px] py-[12px] transition-colors duration-300"
             >
               Apply Now
@@ -135,7 +135,7 @@ export default function Navbar() {
           ))}
           <div className="pt-2">
             <Link
-              href="/student-life/how-to-apply"
+              href="/admission-entry/how-to-apply"
               className="flex justify-center bg-[#0B1F4A] hover:bg-[#081530] text-white text-[16px] font-medium px-[36px] py-[16px] transition-colors duration-300 w-full"
               onClick={() => setIsMobileMenuOpen(false)}
             >

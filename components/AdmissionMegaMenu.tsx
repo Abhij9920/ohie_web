@@ -20,9 +20,24 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
               <MegaMenuBadge title="Admission & Entry" />
               <MegaMenuHeader title="Higher Education" />
               <ul className="space-y-[24px]">
-                {admissionData.higherEducation.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Why OIHE?" ? "/admission-entry/why-oihe" : course === "Intakes & Trimester Dates" ? "/student-life/intakes" : course === "How to Apply" ? "/student-life/how-to-apply" : course === "Policies & Procedures" ? "/policies" : course === "Orientation" ? "/student-life/orientation" : course === "Entry Requirements" ? "/admission-entry/entry-requirements" : course === "Pre-Enrolment" ? "/admission-entry/pre-enrolment" : "#"} onClick={onClose}>{course}</MegaMenuLink>
-                ))}
+                {admissionData.higherEducation.map((course, idx) => {
+                  const c = course.toLowerCase();
+                  let href = "#";
+                  if (c.includes("why oihe")) href = "/admission-entry/why-oihe";
+                  else if (c.includes("intakes")) href = "/student-life/intakes";
+                  else if (c.includes("how to apply")) href = "/admission-entry/how-to-apply";
+                  else if (c.includes("policies")) href = "/policies";
+                  else if (c.includes("orientation")) href = "/student-life/orientation";
+                  else if (c.includes("entry requirements")) href = "/admission-entry/entry-requirements";
+                  else if (c.includes("pre-enrolment")) href = "/admission-entry/pre-enrolment";
+                  else if (c.includes("brochure")) href = "/OIHE_Brochure_2026.pdf";
+                  else if (c.includes("handbook")) href = "/OIHE_Student_Handbook_Jul_2026_1.pdf";
+                  else if (c.includes("tuition assurance") || c.includes("tution")) href = "/admission-entry/statement-of-tuition-assurance";
+
+                  return (
+                    <MegaMenuLink key={idx} href={href} onClick={onClose}>{course}</MegaMenuLink>
+                  );
+                })}
               </ul>
             </div>
 
@@ -42,7 +57,7 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
             show={true}
             title={<>Your journey to<br />excellence starts here.</>}
             linkText="Start Your Application"
-            linkHref="/student-life/how-to-apply"
+            linkHref="/admission-entry/how-to-apply"
             className="mt-[42px]"
           />
 

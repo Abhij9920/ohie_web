@@ -27,7 +27,7 @@ interface MegaMenuLinkProps {
 export const MegaMenuLink = ({ href, children, onClick }: MegaMenuLinkProps) => {
   const pathname = usePathname();
   const isActive = pathname === href;
-  const isExternal = href.startsWith('http');
+  const isExternal = href.startsWith('http') || href.endsWith('.pdf');
 
   const linkContent = (
     <>
