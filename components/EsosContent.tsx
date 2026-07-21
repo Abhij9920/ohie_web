@@ -135,18 +135,23 @@ const SectionHeading = ({ title }: { title: string }) => (
   </>
 );
 
-const SidebarLinksSection = ({ title, links }: { title: string, links: string[] }) => (
+const SidebarLinksSection = ({ title, links, activeLink }: { title: string, links: string[], activeLink?: string }) => (
   <div className="p-6 md:p-8">
     <h3 className="text-[#0B1F4A] text-[20px] italic mb-6" style={{ fontFamily: 'var(--font-dm-serif)' }}>{title}</h3>
     <ul className="space-y-5">
-      {links.map((link, idx) => (
-        <li key={idx}>
-          <Link href="#" className="flex items-center gap-3 text-[14px] text-[#1A1A1A] hover:text-[#2463A7] transition-colors group font-medium">
-            <span className="shrink-0 transition-transform group-hover:translate-x-1"><ArrowRightIcon /></span>
-            {link}
-          </Link>
-        </li>
-      ))}
+      {links.map((link, idx) => {
+        const isActive = activeLink === link;
+        return (
+          <li key={idx}>
+            <Link href="#" className={`flex items-center gap-3 text-[14px] transition-colors group ${isActive ? 'text-[#2463A7] font-bold' : 'text-[#1A1A1A] font-medium hover:text-[#2463A7]'}`}>
+              <span className={`shrink-0 transition-transform ${isActive ? 'translate-x-1' : 'group-hover:translate-x-1'}`}>
+                <ArrowRightIcon />
+              </span>
+              {link}
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   </div>
 );
@@ -454,6 +459,7 @@ export default function EsosContent() {
             <SidebarLinksSection
               title="Terms & Policies"
               links={['ESOS Framework', 'ESOS Act', 'Statement of Tuition Assurance', 'Privacy Statement', 'Disclaimer', 'Policies & Procedures']}
+              activeLink="ESOS Framework"
             />
             
             <div className="w-full h-[1px] bg-[#EAEAE6]"></div>
