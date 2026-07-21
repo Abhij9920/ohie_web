@@ -46,7 +46,6 @@ export const studentLifeData = {
     "Fee Due Dates",
     "Orientations",
     "Events",
-    "International Students"
   ],
   internationalStudent: [
     "Apply",

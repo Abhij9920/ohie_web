@@ -41,7 +41,7 @@ export default function StudentLifeMegaMenu({ isActive, onClose }: Props) {
               <MegaMenuHeader title="Key Dates" />
               <ul className="space-y-[24px]">
                 {studentLifeData.keyDates.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Intakes" ? "/student-life/intakes" : course === "Orientations" ? "/student-life/orientation" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href={course === "Intakes" ? "/student-life/intakes" : course === "Orientations" ? "/student-life/orientation" : course === "Events" ? "/student-life/events" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>
