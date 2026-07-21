@@ -12,9 +12,10 @@ interface PageHeaderProps {
   quote?: React.ReactNode;
   description?: React.ReactNode;
   rightImage?: string;
+  hideUnderline?: boolean;
 }
 
-export default function PageHeader({ breadcrumbs, title, quote, description, rightImage }: PageHeaderProps) {
+export default function PageHeader({ breadcrumbs, title, quote, description, rightImage, hideUnderline }: PageHeaderProps) {
 
   // Left side content rendering (reused in both layouts)
   const renderContent = () => (
@@ -44,7 +45,7 @@ export default function PageHeader({ breadcrumbs, title, quote, description, rig
       </h1>
 
       {/* Blue underline */}
-      <div className="w-[80px] md:w-[120px] h-[3px] bg-[#4D97E6] mt-4 mb-6"></div>
+      {!hideUnderline && <div className="w-[80px] md:w-[120px] h-[3px] bg-[#4D97E6] mt-4 mb-6"></div>}
 
       {/* Description */}
       {description && (

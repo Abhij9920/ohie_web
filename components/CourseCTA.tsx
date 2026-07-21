@@ -14,7 +14,7 @@ export default function CourseCTA({
   title = "Ready to Begin Your MIT Journey?",
   description = "Join our diverse global community of innovators and leaders. Applications are now open for the next intake in Melbourne.",
   primaryButtonText = "Apply Now",
-  primaryButtonLink = "#",
+  primaryButtonLink = "/student-life/how-to-apply",
   secondaryButtonText = "Download Prospectus",
   secondaryButtonLink = "#"
 }: CourseCTAProps) {
