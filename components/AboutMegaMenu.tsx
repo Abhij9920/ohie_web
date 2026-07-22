@@ -20,7 +20,7 @@ export default function AboutMegaMenu({ isActive, onClose }: Props) {
             <MegaMenuHeader title="About Ozford" />
             <ul className="space-y-[24px]">
               {aboutData.aboutOzford.map((course, idx) => (
-                <MegaMenuLink key={idx} href={course === "About us" ? "/about-us" : course === "Our People" ? "/about-us/our-people" : course === "Policies & Procedures" ? "/policies" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                <MegaMenuLink key={idx} href={course === "About us" ? "/about-us" : course === "Our Philosophy" ? "/about-us/our-philosophy" : course === "Our People" ? "/about-us/our-people" : course === "Policies & Procedures" ? "/policies" : "#"} onClick={onClose}>{course}</MegaMenuLink>
               ))}
             </ul>
           </div>
