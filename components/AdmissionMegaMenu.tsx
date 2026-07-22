@@ -14,7 +14,7 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="flex pt-[12px] gap-12">
-          
+
           <div className="flex-1 flex gap-12 pb-[42px]">
             <div className="flex-1 border-r border-[#E8E8E4] pr-12">
               <MegaMenuBadge title="Admission & Entry" />
@@ -43,17 +43,30 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
 
             <div className="flex-1 pr-12">
               <div className="mt-[42px]">
-                <MegaMenuHeader title="Apply Now" />
+                <MegaMenuHeader title="Information" />
                 <ul className="space-y-[24px]">
-                  {admissionData.applyNow.map((course, idx) => (
-                    <MegaMenuLink key={idx} href={course === "Orientations" ? "/student-life/orientation" : "#"} onClick={onClose}>{course}</MegaMenuLink>
-                  ))}
+                  {admissionData.information.map((course, idx) => {
+                    const c = course.toLowerCase();
+                    let href = "#";
+                    
+                    if (c.includes("orientation")) href = "/student-life/orientation";
+                    else if (c.includes("apply now")) href = "/student-life/how-to-apply";
+                    else if (c.includes("agent")) href = "/admission-entry/authorized-agents";
+                    else if (c.includes("tuition assurance") || c.includes("tution")) href = "/admission-entry/statement-of-tuition-assurance";
+                    else if (c.includes("handbook")) href = "/OIHE_Student_Handbook_Jul_2026_1.pdf";
+                    else if (c.includes("policies")) href = "/policies";
+                    else if (c.includes("fee") || c.includes("payment")) href = "/fees";
+                    
+                    return (
+                      <MegaMenuLink key={idx} href={href} onClick={onClose}>{course}</MegaMenuLink>
+                    );
+                  })}
                 </ul>
               </div>
             </div>
           </div>
 
-          <MegaMenuRightBanner 
+          <MegaMenuRightBanner
             show={true}
             title={<>Your journey to<br />excellence starts here.</>}
             linkText="Start Your Application"

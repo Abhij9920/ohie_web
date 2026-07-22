@@ -68,9 +68,9 @@ export const admissionData = {
     "Student Handbook",
     "Policies & Procedures",
     "Statement of Tuition Assurance",
-    "Information"
   ],
-  applyNow: [
+  information: [
+    "Apply Now",
     "Pay Fees",
     "Payment Methods",
     "Fee Help",
