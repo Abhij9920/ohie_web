@@ -15,9 +15,9 @@ export default function CallToAction() {
           <Link href="/admission-entry/how-to-apply" className="bg-white text-[#0B1F4A] px-6 py-3 md:px-8 md:py-3.5 text-[14px] font-semibold hover:bg-white/90 transition-colors min-w-[200px] text-center">
             Apply Now
           </Link>
-          <Link href="#" className="bg-transparent border border-white text-white px-6 py-3 md:px-8 md:py-3.5 text-[14px] font-semibold hover:bg-white hover:text-[#0B1F4A] transition-colors min-w-[200px] text-center">
+          <a href="/OIHE_Brochure_2026.pdf" target="_blank" rel="noopener noreferrer" className="bg-transparent border border-white text-white px-6 py-3 md:px-8 md:py-3.5 text-[14px] font-semibold hover:bg-white hover:text-[#0B1F4A] transition-colors min-w-[200px] text-center">
             Download Prospectus
-          </Link>
+          </a>
         </div>
       </div>
     </section>

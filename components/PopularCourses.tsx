@@ -1,37 +1,128 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "./Icons"; // Assuming ArrowRight exists or we can use an inline SVG
+import { useState } from "react";
 
 const tabs = ["IT", "Business", "Accounting", "Early Childhood"];
 
-const courses = [
+const allCourses = [
+  // IT
   {
+    category: "IT",
     image: "/prg/it_1.png",
     level: "POSTGRADUATE",
     title: "Master of Information Technology",
     description: "Advanced computing and system analysis for modern enterprise environments.",
     duration: "2 Years · On Campus",
+    href: "/study/mit",
   },
   {
+    category: "IT",
     image: "/prg/it_2.png",
     level: "POSTGRADUATE",
-    title: "Master of Business Administration",
-    description: "Strategic leadership and management for future-focused global executives.",
-    duration: "2 Years · On Campus",
+    title: "Graduate Diploma in Information Technology",
+    description: "Build strong foundational skills in computing and IT systems.",
+    duration: "1 Year · On Campus",
+    href: "/study/gdit",
   },
   {
+    category: "IT",
     image: "/prg/it_3.png",
     level: "UNDERGRADUATE",
     title: "Bachelor of Cyber Security",
     description: "Protecting digital infrastructure and mitigating cyber threats in the modern age.",
+    duration: "3 Years · On Campus",
+    href: "/study/bcs",
+  },
+  
+  // Business
+  {
+    category: "Business",
+    image: "/prg/business_1.png",
+    level: "POSTGRADUATE",
+    title: "Master of Business Administration",
+    description: "Strategic leadership and management for future-focused global executives.",
     duration: "2 Years · On Campus",
-  }
+    href: "/study/mba",
+  },
+  {
+    category: "Business",
+    image: "/prg/business_2.png",
+    level: "POSTGRADUATE",
+    title: "Graduate Diploma in Management",
+    description: "Develop essential management skills to lead diverse teams effectively.",
+    duration: "1 Year · On Campus",
+    href: "/study/gdm",
+  },
+  {
+    category: "Business",
+    image: "/prg/business_3.png",
+    level: "UNDERGRADUATE",
+    title: "Bachelor of Business",
+    description: "Comprehensive business education to prepare you for the corporate world.",
+    duration: "3 Years · On Campus",
+    href: "/study/bbus",
+  },
+
+  // Accounting
+  {
+    category: "Accounting",
+    image: "/prg/accounting_1.png",
+    level: "POSTGRADUATE",
+    title: "Master of Professional Accounting",
+    description: "Advanced accounting principles for aspiring professional accountants.",
+    duration: "2 Years · On Campus",
+    href: "/study/mpa",
+  },
+  {
+    category: "Accounting",
+    image: "/prg/accounting_2.png",
+    level: "UNDERGRADUATE",
+    title: "Bachelor of Business (Accounting)",
+    description: "Foundational accounting knowledge paired with broad business skills.",
+    duration: "3 Years · On Campus",
+    href: "/study/bba",
+  },
+  {
+    category: "Accounting",
+    image: "/prg/accounting_1.png",
+    level: "UNDERGRADUATE",
+    title: "Diploma of Business",
+    description: "A pathway into a successful business or accounting career.",
+    duration: "1 Year · On Campus",
+    href: "/study/dipbus",
+  },
+
+  // Early Childhood
+  {
+    category: "Early Childhood",
+    image: "/prg/ece_1.png",
+    level: "POSTGRADUATE",
+    title: "Master of Teaching (Early Childhood)",
+    description: "Shape the future by inspiring young minds with modern teaching strategies.",
+    duration: "2 Years · On Campus",
+    href: "/study/mtec",
+  },
+  {
+    category: "Early Childhood",
+    image: "/prg/ece_1.png",
+    level: "POSTGRADUATE",
+    title: "Graduate Diploma in Early Childhood Education",
+    description: "Develop practical skills for nurturing early childhood development.",
+    duration: "1 Year · On Campus",
+    href: "/study/gdece",
+  },
 ];
 
 export default function PopularCourses() {
+  const [activeTab, setActiveTab] = useState(tabs[0]);
+
+  const filteredCourses = allCourses.filter(course => course.category === activeTab);
+
   return (
     <>
-      <section className="relative w-full bg-[#FAFAF7] py-[60px] md:py-[80px] lg:py-[100px] px-4 md:px-[40px] lg:px-[100px] overflow-hidden">
+      <section id="explore-courses" className="relative w-full bg-[#FAFAF7] py-[60px] md:py-[80px] lg:py-[100px] px-4 md:px-[40px] lg:px-[100px] overflow-hidden">
         <div className="relative z-10 max-w-[1440px] mx-auto">
 
           {/* Header Section */}
@@ -47,13 +138,15 @@ export default function PopularCourses() {
 
             {/* Tabs */}
             <div className="flex flex-wrap items-center gap-4 md:gap-[32px] mt-6 lg:mt-0">
-              {tabs.map((tab, idx) => (
+              {tabs.map((tab) => (
                 <button
                   key={tab}
-                  className={`text-[14px] font-sans pb-2 transition-colors ${idx === 0
-                    ? "text-[#0B1F4A] font-medium border-b-[2px]  border-[#2463A7]"
-                    : "text-[#6B7280] font-normal cursor-pointer hover:text-[#0B1F4A]"
-                    }`}
+                  onClick={() => setActiveTab(tab)}
+                  className={`text-[14px] font-sans pb-2 transition-colors ${
+                    activeTab === tab
+                      ? "text-[#0B1F4A] font-medium border-b-[2px] border-[#2463A7]"
+                      : "text-[#6B7280] font-normal cursor-pointer hover:text-[#0B1F4A]"
+                  }`}
                 >
                   {tab}
                 </button>
@@ -63,7 +156,7 @@ export default function PopularCourses() {
 
           {/* Cards Grid */}
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
-            {courses.map((course, idx) => (
+            {filteredCourses.map((course, idx) => (
               <div key={idx} className="bg-white border-[#E8E8E4] border-2 flex flex-col group hover:shadow-xl transition-shadow duration-300">
                 {/* Image */}
                 <div className="relative w-full h-[240px] overflow-hidden">
@@ -90,13 +183,13 @@ export default function PopularCourses() {
                   </p>
 
                   {/* Footer */}
-                  <div className="flex items-center justify-between  mt-auto">
+                  <div className="flex items-center justify-between mt-auto">
                     <span className="text-[#2463A7] text-[12px] font-medium">
                       {course.duration}
                     </span>
 
                     <Link
-                      href="#"
+                      href={course.href}
                       className="flex flex-col group text-[#0B1F4A] hover:text-[#2463A7] transition-colors w-fit"
                     >
                       <div className="flex items-center text-[13px] font-semibold mb-[4px]">
@@ -116,7 +209,6 @@ export default function PopularCourses() {
           </div>
 
         </div>
-
 
       </section>
 

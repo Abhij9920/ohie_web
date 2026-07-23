@@ -41,9 +41,8 @@ export default function Navbar() {
                       setActiveDropdown(null);
                     }
                   }}
-                  className={`text-[14px] font-medium flex items-center transition-colors duration-200 ${
-                    activeDropdown === link.name ? 'text-[#0B1F4A]' : 'text-[#2D2D2D] hover:text-[#0B1F4A]'
-                  }`}
+                  className={`text-[14px] font-medium flex items-center transition-colors duration-200 ${activeDropdown === link.name ? 'text-[#0B1F4A]' : 'text-[#2D2D2D] hover:text-[#0B1F4A]'
+                    }`}
                 >
                   {link.name}
                   <span className={`ml-[11px] transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`}>
@@ -112,9 +111,8 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <div key={link.name}>
               <button
-                className={`w-full text-[16px] font-medium flex items-center justify-between border-b border-gray-100 pb-4 transition-colors duration-200 ${
-                  activeDropdown === link.name ? 'text-[#0B1F4A]' : 'text-[#2D2D2D] hover:text-[#0B1F4A]'
-                }`}
+                className={`w-full text-[16px] font-medium flex items-center justify-between border-b border-gray-100 pb-4 transition-colors duration-200 ${activeDropdown === link.name ? 'text-[#0B1F4A]' : 'text-[#2D2D2D] hover:text-[#0B1F4A]'
+                  }`}
                 onClick={() => {
                   if (link.hasDropdown) {
                     setActiveDropdown(activeDropdown === link.name ? null : link.name);
@@ -128,14 +126,14 @@ export default function Navbar() {
                   {link.hasDropdown ? <ChevronDown /> : null}
                 </span>
               </button>
-              
+
               {/* Mobile Submenu for Study */}
               {link.name === 'Study' && <MobileStudySubMenu isActive={activeDropdown === 'Study'} onClose={() => { setActiveDropdown(null); setIsMobileMenuOpen(false); }} />}
             </div>
           ))}
           <div className="pt-2">
             <Link
-              href="/admission-entry/how-to-apply"
+              href="https://ozford.meshedhe.com.au/Publics/PublicsPages/StudentApply/pp_Application_Step0.aspx"
               className="flex justify-center bg-[#0B1F4A] hover:bg-[#081530] text-white text-[16px] font-medium px-[36px] py-[16px] transition-colors duration-300 w-full"
               onClick={() => setIsMobileMenuOpen(false)}
             >

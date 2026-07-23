@@ -88,23 +88,22 @@ export const aboutData = {
     "Testimonials",
     "Our Stories",
     "Policies & Procedures",
-    "Life at Ozford"
   ],
-  support: [
+  lifeAtOzford: [
     "Student Services & Support",
     "Career Hub",
     "Endorsement",
-    "Campus Safety & Sexual Misconduct",
-    "Terms & Policies"
+    "Campus Safety & Sexual Misconduct"
   ],
-  terms: [
+  termsAndPolicies: [
+    "Terms & Conditions",
     "ESOS Act",
     "Privacy Statement",
     "Disclaimer",
-    "Policies & Procedures",
-    "Engage"
+    "Policies & Procedures"
   ],
-  blogs: [
+  engage: [
+    "Blogs & Events",
     "Contact us",
     "Job Vacancy",
     "FAQ's"

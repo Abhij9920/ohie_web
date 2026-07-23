@@ -2,14 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 
 const infoLinks = [
-  { label: 'How to Apply', href: '#' },
-  { label: 'Authorized Agents', href: '#' },
-  { label: 'Intakes & Trimester Dates', href: '#' },
-  { label: 'Fees & Scholarships', href: '#' },
-  { label: 'Pathways', href: '#' },
-  { label: 'Terms & Conditions', href: '#' },
-  { label: 'Policies & Procedures', href: '#' },
-  { label: 'FAQ\'s', href: '#' },
+  { label: 'How to Apply', href: '/admission-entry/how-to-apply' },
+  { label: 'Authorized Agents', href: '/admission-entry/authorized-agents' },
+  { label: 'Intakes & Trimester Dates', href: '/student-life/intakes' },
+  { label: 'Fees & Scholarships', href: '/fees' },
+  { label: 'Pathways', href: '/admission-entry/pathways' },
+  { label: 'Terms & Conditions', href: '/terms' },
+  { label: 'Policies & Procedures', href: '/policies' },
+  { label: 'FAQ\'s', href: '/about-us/faqs' },
 ];
 
 export default function StudentInformationSection() {

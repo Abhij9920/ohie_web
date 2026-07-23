@@ -90,7 +90,7 @@ export default function WhyOihe() {
 
           {/* Link */}
           <Link
-            href="#"
+            href="/admission-entry/why-oihe"
             className="text-[#102a5e] font-bold text-[16px] hover:text-[#3b71b8] transition-colors flex items-center gap-2 group w-fit pb-1"
           >
             <span className="border-b-2 border-[#102a5e] group-hover:border-[#3b71b8] transition-colors">

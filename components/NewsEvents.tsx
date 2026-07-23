@@ -4,21 +4,24 @@ import Link from "next/link";
 const newsItems = [
   {
     image: "/news_section/news_1.png",
-    date: "12 OCT 2024",
-    title: "Melbourne Campus Expansion",
-    desc: "OIHE announces the opening of two additional floors dedicated to research labs and collaboration."
+    date: "17 JUL 2026",
+    title: "Melbourne Career Expo 2026",
+    desc: "OIHE is excited to be part of the Melbourne Career Expo 2026, held from 17-19 July at the Melbourne Convention & Exhibition Centre.",
+    slug: "melbourne-career-expo-2026"
   },
   {
     image: "/news_section/news_2.png",
-    date: "05 OCT 2024",
-    title: "Global Innovation Summit",
-    desc: "Students from our IT faculty participated in the annual Melbourne Tech Week hackathon."
+    date: "27 MAY 2026",
+    title: "Leadership & Change Session",
+    desc: "Celebrate Culture, Community & Connection. Join us for a vibrant cultural celebration and special speaker session at OIHE.",
+    slug: "leadership-and-change-session"
   },
   {
     image: "/news_section/news_3.png",
-    date: "28 SEP 2024",
-    title: "New Partnership with ACS",
-    desc: "Professional accreditation for our IT programmes strengthened through a new strategic alliance."
+    date: "15 MAY 2026",
+    title: "Referencing & Avoiding Plagiarism",
+    desc: "Academic Learning Support Workshop designed to help students improve their academic writing skills and academic integrity.",
+    slug: "referencing-and-avoiding-plagiarism"
   }
 ];
 
@@ -48,7 +51,7 @@ export default function NewsEvents() {
               Latest News & Events.
             </h2>
           </div>
-          <Link href="#" className="text-[#0B1F4A] text-[14px] font-semibold flex items-center gap-2 border-b-2 border-[#0B1F4A] pb-1 hover:text-[#2463A7] hover:border-[#2463A7] transition-colors mb-1">
+          <Link href="/student-life/events" className="text-[#0B1F4A] text-[14px] font-semibold flex items-center gap-2 border-b-2 border-[#0B1F4A] pb-1 hover:text-[#2463A7] hover:border-[#2463A7] transition-colors mb-1">
             View All
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7" />
@@ -81,7 +84,7 @@ export default function NewsEvents() {
                 <p className="text-[#6B7280] text-[13px] leading-relaxed mb-8 flex-grow">
                   {item.desc}
                 </p>
-                <Link href="#" className="text-[#0B1F4A] text-[14px] font-bold flex items-center gap-2 border-b-2 border-[#0B1F4A] w-fit pb-1 hover:text-[#2463A7] hover:border-[#2463A7] transition-colors mt-auto">
+                <Link href={`/student-life/events/${item.slug}`} className="text-[#0B1F4A] text-[14px] font-bold flex items-center gap-2 border-b-2 border-[#0B1F4A] w-fit pb-1 hover:text-[#2463A7] hover:border-[#2463A7] transition-colors mt-auto">
                   Read More
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7" />
