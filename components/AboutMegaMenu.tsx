@@ -52,7 +52,7 @@ export default function AboutMegaMenu({ isActive, onClose }: Props) {
               <MegaMenuHeader title="Engage" />
               <ul className="space-y-[24px]">
                 {aboutData.engage.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Contact us" ? "/contact-us" : course === "Job Vacancy" ? "/about-us/careers" : course === "FAQ's" ? "/about-us/faqs" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href={course === "Blogs & Events" ? "/student-life/events" : course === "Contact us" ? "/contact-us" : course === "Job Vacancy" ? "/about-us/careers" : course === "FAQ's" ? "/about-us/faqs" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>

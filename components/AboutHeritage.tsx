@@ -34,7 +34,7 @@ export default function AboutHeritage() {
           <div className="w-full lg:w-[45%]">
             <div className="relative w-full aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
               <Image
-                src={require("../public/about-us/Library-Image.png")}
+                src="/about-us/Library-Image.png"
                 alt="Brochure Stand at Ozford"
                 fill
                 className="object-cover"

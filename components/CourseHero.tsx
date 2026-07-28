@@ -68,7 +68,7 @@ export default function CourseHero({
             {secondaryButtonText && (
               <a href={secondaryButtonHref} target={secondaryButtonHref.startsWith('http') || secondaryButtonHref.endsWith('.pdf') ? '_blank' : undefined} rel={secondaryButtonHref.startsWith('http') || secondaryButtonHref.endsWith('.pdf') ? 'noopener noreferrer' : undefined} className="border-2 border-white hover:border-white/60 hover:bg-white/5 text-white px-8 py-3 text-sm font-medium transition-colors flex items-center justify-center gap-2 w-full sm:w-auto">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_6200_2938)">
+                  <g clipPath="url(#clip0_6200_2938)">
                     <path d="M2.41406 16.6094C2.67236 17.4177 3.42161 18.0039 4.30375 18.0039H13.6955C14.5776 18.0039 15.3268 17.4177 15.5851 16.6094H2.41406Z" fill="white" />
                     <path d="M15.1006 2.89077L12.7905 0.580582C12.6952 0.485273 12.5921 0.40125 12.4824 0.328125V3.18615C12.4824 3.25119 12.5355 3.30396 12.6006 3.30396H15.4182C15.3324 3.15448 15.2258 3.01596 15.1006 2.89077Z" fill="white" />
                     <path d="M15.6823 4.36018H12.6006C11.9536 4.36018 11.4276 3.83414 11.4276 3.18751V0.000703125C11.4139 0 11.3998 0 11.3861 0H4.30434C3.20936 0 2.31836 0.891035 2.31836 1.98633V7.40384H15.6823L15.6823 4.36018Z" fill="white" />

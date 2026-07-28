@@ -12,7 +12,7 @@ export default function JoinTeamCTA() {
           Join our diverse global community of thinkers, innovators and leaders. We are always looking for dedicated professionals to join our faculty and administrative teams.
         </p>
         <Link
-          href="#"
+          href="/about-us/careers"
           className="bg-white text-[#0B1F4A] px-8 py-4 text-[14px]  font-semibold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"
         >
           View Opportunities

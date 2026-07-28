@@ -32,6 +32,7 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
                   else if (c.includes("pre-enrolment")) href = "/admission-entry/pre-enrolment";
                   else if (c.includes("brochure")) href = "/OIHE_Brochure_2026.pdf";
                   else if (c.includes("handbook")) href = "/OIHE_Student_Handbook_Jul_2026_1.pdf";
+                  else if (c.includes("terms")) href = "/terms";
                   else if (c.includes("tuition assurance") || c.includes("tution")) href = "/admission-entry/statement-of-tuition-assurance";
 
                   return (

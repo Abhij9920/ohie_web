@@ -31,7 +31,7 @@ const EducationIcon = () => (
 
 const LocationPinIcon = () => (
   <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8.16678 17.5007C9.71663 16.1622 14.332 11.8285 14.332 7.66728C14.332 5.89901 13.6297 4.20316 12.3796 2.9528C11.1295 1.70244 9.43393 1 7.666 1C5.89807 1 4.20254 1.70244 2.95243 2.9528C1.70231 4.20316 1 5.89901 1 7.66728C1 11.8285 5.61537 16.1622 7.16522 17.5007C7.3096 17.6093 7.48535 17.668 7.666 17.668C7.84665 17.668 8.0224 17.6093 8.16678 17.5007Z" stroke="#FAFAF7" stroke-width="2" stroke-linecap="round" />
+    <path d="M8.16678 17.5007C9.71663 16.1622 14.332 11.8285 14.332 7.66728C14.332 5.89901 13.6297 4.20316 12.3796 2.9528C11.1295 1.70244 9.43393 1 7.666 1C5.89807 1 4.20254 1.70244 2.95243 2.9528C1.70231 4.20316 1 5.89901 1 7.66728C1 11.8285 5.61537 16.1622 7.16522 17.5007C7.3096 17.6093 7.48535 17.668 7.666 17.668C7.84665 17.668 8.0224 17.6093 8.16678 17.5007Z" stroke="#FAFAF7" strokeWidth="2" strokeLinecap="round" />
   </svg>
 
 );
@@ -109,7 +109,7 @@ export default function AboutUsJourney() {
           <div className="flex-1 lg:w-[45%] flex flex-col mt-8 lg:mt-0">
             <div className="relative w-full aspect-[4/5] lg:h-full lg:min-h-[700px] flex-grow">
               <Image
-                src={require("../public/about-us/Campus-Building-Image.png")}
+                src="/about-us/Campus-Building-Image.png"
                 alt="Ozford Campus at 333 Queen Street"
                 fill
                 className="object-cover"

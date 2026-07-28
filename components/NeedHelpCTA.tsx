@@ -18,13 +18,13 @@ export default function NeedHelpCTA() {
         {/* Right Side - Buttons */}
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
-            href="#"
+            href="/contact-us"
             className="bg-white text-[#275F97] px-8 py-3 text-[14px] font-semibold hover:bg-gray-100 transition-colors text-center"
           >
             Contact Us
           </Link>
           <Link
-            href="#"
+            href="mailto:studentservices@ozfordinstituteofhighereducation.edu.au"
             className="bg-transparent border border-white text-white px-8 py-3 text-[14px] font-semibold hover:bg-white/10 transition-colors text-center"
           >
             Email Student Services

@@ -54,9 +54,9 @@ export default function CourseOverviewContent({
           <h2 className="font-serif text-[28px] md:text-[36px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>Overview</h2>
         </div>
 
-        <p className="text-[#4B5563] text-[16px] pt-5 font-normal leading-relaxed">
+        <div className="text-[#4B5563] text-[16px] pt-5 font-normal leading-relaxed">
           {overviewText}
-        </p>
+        </div>
 
         {overviewQuote && (
           <div className="border-l-[3px] border-[#2463A7] pl-4 md:pl-6 py-2 mt-8 md:mt-10 mb-12 lg:mb-40">

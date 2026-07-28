@@ -78,7 +78,7 @@ export default function WhatWeOffer() {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (
-    <section className="w-full bg-[#FAFAF7] py-[60px] md:py-[100px]">
+    <section id="explore" className="w-full bg-[#FAFAF7] py-[60px] md:py-[100px] scroll-mt-24">
       <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
 
         {/* Header */}

@@ -113,9 +113,9 @@ export default function EntryRequirementsContent() {
           <div className="w-full bg-white p-6 md:p-8 flex items-center gap-4 md:gap-6 border-l-[4px] border-[#2463A7] shadow-sm mb-16 md:mb-24">
             {/* Info Icon */}
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="48" fill="#2463A7" fill-opacity="0.0705882" />
-              <g clip-path="url(#clip0_6499_9021)">
-                <path d="M24 27.3317V23.9981M24 20.6645H24.0083M32.334 23.9981C32.334 28.6008 28.6028 32.3321 24 32.3321C19.3973 32.3321 15.666 28.6008 15.666 23.9981C15.666 19.3953 19.3973 15.6641 24 15.6641C28.6028 15.6641 32.334 19.3953 32.334 23.9981Z" stroke="#2463A7" stroke-width="2" stroke-linecap="round" />
+              <rect width="48" height="48" fill="#2463A7" fillOpacity="0.0705882" />
+              <g clipPath="url(#clip0_6499_9021)">
+                <path d="M24 27.3317V23.9981M24 20.6645H24.0083M32.334 23.9981C32.334 28.6008 28.6028 32.3321 24 32.3321C19.3973 32.3321 15.666 28.6008 15.666 23.9981C15.666 19.3953 19.3973 15.6641 24 15.6641C28.6028 15.6641 32.334 19.3953 32.334 23.9981Z" stroke="#2463A7" strokeWidth="2" strokeLinecap="round" />
               </g>
               <defs>
                 <clipPath id="clip0_6499_9021">

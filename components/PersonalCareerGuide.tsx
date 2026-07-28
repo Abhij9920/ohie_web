@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function PersonalCareerGuide() {
   return (
-    <section className="w-full bg-[#FAFAF7]">
+    <section id="coach" className="w-full bg-[#FAFAF7] scroll-mt-24">
       <div className="w-full flex flex-col lg:flex-row min-h-[500px]">
         {/* Left Side - Image */}
         <div className="w-full lg:w-[40%] relative lg:min-h-full">

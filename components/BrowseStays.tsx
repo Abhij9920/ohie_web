@@ -329,8 +329,8 @@ export default function BrowseStays() {
                                     <a href={stay.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[13px] font-semibold text-[#2463A7] hover:text-[#0B1F4A] transition-colors">
                                         View Details
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className='ml-1'>
-                                            <g clip-path="url(#clip0_6325_2404)">
-                                                <path d="M2.5 6.0004H9.5008M6.0004 9.5008L9.5008 6.0004L6.0004 2.5" stroke="#2463A7" stroke-width="2" stroke-linecap="round" />
+                                            <g clipPath="url(#clip0_6325_2404)">
+                                                <path d="M2.5 6.0004H9.5008M6.0004 9.5008L9.5008 6.0004L6.0004 2.5" stroke="#2463A7" strokeWidth="2" strokeLinecap="round" />
                                             </g>
                                             <defs>
                                                 <clipPath id="clip0_6325_2404">
