@@ -178,7 +178,7 @@ export default function BachelorOfBusinessAccounting() {
 
       {/* Overview & Entry Requirements */}
       <div className="w-full bg-[#F8F9FA] pb-16">
-        <div className="w-full max-w-[1440px] mx-auto px-4 xl:px-[100px]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
           <CourseOverviewContent {...currentInfo.overview} />
         </div>
       </div>
@@ -190,7 +190,7 @@ export default function BachelorOfBusinessAccounting() {
       </div>
 
       <div id="structure" className="scroll-mt-24 pt-16">
-        <div className="max-w-[1440px] mx-auto px-4 xl:px-[100px] mb-8">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px] mb-8">
           <h2 className="text-[28px] md:text-[36px] text-[#0B1F4A]" style={{ fontFamily: 'var(--font-dm-serif)', lineHeight: '110%' }}>Course Units</h2>
         </div>
         <CourseUnitsAccordion categories={bbaCategories} unitsData={bbaUnitsData} />
@@ -210,7 +210,7 @@ export default function BachelorOfBusinessAccounting() {
       </div>
 
       <div className="w-full bg-white py-16">
-        <div className="w-full max-w-[1440px] mx-auto px-4 xl:px-[100px] flex flex-col gap-16">
+        <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px] flex flex-col gap-16">
           <div id="workload" className="scroll-mt-24">
             <StudentWorkload />
           </div>
@@ -226,7 +226,7 @@ export default function BachelorOfBusinessAccounting() {
         <StudentInformationSection />
       </div>
 
-      <CourseCTA title="Ready to Begin Your Bachelor of Business Accounting Journey?" />
+      <CourseCTA title="Ready to Begin Your Bachelor of Business Accounting Journey?" secondaryButtonText="Enquire Now" secondaryButtonLink="/#explore-courses" />
 
       <Accreditations />
     </main>

@@ -111,7 +111,7 @@ export default function GalleryContent() {
 
   return (
     <section className="w-full bg-[#FAFAF7] py-10 md:py-16">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
         
         {/* Tabs Container */}
         <div className="flex flex-col sm:flex-row items-stretch border border-[#E6E6DF] bg-white mb-8 md:mb-10">

@@ -137,7 +137,7 @@ export default function FAQPage() {
       />
       
       <section className="w-full bg-[#FAFAF7] py-16 md:py-24">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px]">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
           <div className="max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm rounded-[12px] border border-[#E8E8E4]">
             <Accordion items={faqItems} />
           </div>

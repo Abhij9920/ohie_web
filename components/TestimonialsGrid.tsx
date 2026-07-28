@@ -408,7 +408,7 @@ export default function TestimonialsGrid() {
 
   return (
     <section className="w-full bg-[#FAFAF7] py-10 md:py-16 relative">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
           {testimonialsData.map((testimonial) => (
             <div

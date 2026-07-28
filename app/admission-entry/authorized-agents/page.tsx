@@ -17,7 +17,7 @@ export default function AuthorizedAgentsPage() {
       />
 
       <section className="w-full flex-grow py-16 md:py-24">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px]">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
           <div className="max-w-[800px]">
             <h2 className="text-[#1A2E20] text-[28px] md:text-[32px] italic mb-8" style={{ fontFamily: 'var(--font-dm-serif)' }}>
               Agent Directory

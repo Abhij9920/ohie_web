@@ -361,7 +361,7 @@ export default function IntakesPage() {
 
       {/* Description text below header */}
       <section className="w-full py-6 md:py-8">
-        <div className="max-w-[1440px] mx-auto px-4 text-center">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] text-center">
           <p className="text-[#0B1F4A] text-[14px] md:text-[15px]">
             Ozford Institute of Higher Education divides the academic year into three trimesters. Most students undertake<br className="hidden md:block" /> two trimesters each year.
           </p>
@@ -512,7 +512,7 @@ export default function IntakesPage() {
         </div>
       </section>
       <section className="w-full py-6 md:py-8 pb-4">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px]">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
           <div className="w-full border border-[#4D97E6] bg-[#FAFAF7] p-5 md:p-8 flex flex-col">
             <div className="flex flex-col md:flex-row md:items-center text-[#0B1F4A] text-[13px] font-medium mb-4 md:mb-5">
               <div className="flex items-center mb-2 md:mb-0">

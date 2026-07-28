@@ -43,7 +43,7 @@ const FooterLegalLink = ({ href, children }: { href: string; children: React.Rea
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B1F4A] text-white pt-[60px] pb-[20px] px-4 md:px-[80px] font-sans">
+    <footer className="bg-[#0B1F4A] text-white pt-[60px] pb-[20px] px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] font-sans">
       <div className="max-w-[1440px] mx-auto">
 
         {/* Top Section */}
@@ -209,13 +209,13 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
             <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
               {[
-                "Terms & Conditions",
-                "ESOS ACT",
-                "Privacy Statement",
-                "Disclaimer",
-                "Policies & Procedures"
-              ].map((label, idx) => (
-                <FooterLegalLink key={idx} href="#">{label}</FooterLegalLink>
+                { label: "Terms & Conditions", href: "/terms" },
+                { label: "ESOS ACT", href: "/student-life/esos-framework" },
+                { label: "Privacy Statement", href: "/about-us/privacy-statement" },
+                { label: "Disclaimer", href: "/about-us/disclaimer" },
+                { label: "Policies & Procedures", href: "/policies" }
+              ].map((link, idx) => (
+                <FooterLegalLink key={idx} href={link.href}>{link.label}</FooterLegalLink>
               ))}
             </div>
 

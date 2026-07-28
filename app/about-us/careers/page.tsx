@@ -25,7 +25,7 @@ export default function CareersPage() {
       />
       
       <section className="w-full bg-white py-16 md:py-24">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px]">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
           
           <div className="max-w-4xl flex flex-col gap-12">
             

@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react';
+import PageHeader from '@/components/PageHeader';
+import Accreditations from '@/components/Accreditations';
 
 const CampusSafetyPage = () => {
     const [openSection, setOpenSection] = useState<number | null>(1);
@@ -31,7 +33,7 @@ const CampusSafetyPage = () => {
 
                         <p className="mb-6">Consent is explained in full at the following websites:</p>
 
-                        <ul className="list-disc pl-6 mb-8 space-y-1 text-[#E8903A]">
+                        <ul className="list-disc pl-6 mb-8 space-y-1 text-[#4D97E6]">
                             <li>https://www.plannedparenthood.org/learn/sex-and-relationships/sexual-consent</li>
                             <li>https://sydney.edu.au/students/sexual-health-consent.html</li>
                             <li>https://aifs.gov.au/cfca/publications/age-consent-laws</li>
@@ -46,7 +48,7 @@ const CampusSafetyPage = () => {
                         </p>
 
                         <p className="mb-2 font-medium">Information adapted from:</p>
-                        <ul className="list-disc pl-6 mb-8 space-y-1 text-[#E8903A]">
+                        <ul className="list-disc pl-6 mb-8 space-y-1 text-[#4D97E6]">
                             <li>www.humanrightscommission.vic.gov.au/discrimination/sexual-harassment</li>
                             <li>https://au.reachout.com/articles/what-is-sexual-harassment</li>
                         </ul>
@@ -69,21 +71,21 @@ const CampusSafetyPage = () => {
 
                         <p className="mb-6">
                             <strong>Information adapted from:</strong>{" "}
-                            <a href="https://au.reachout.com/articles/what-is-sexual-assault" target="_blank" className="text-[#E8903A] hover:underline">
+                            <a href="https://au.reachout.com/articles/what-is-sexual-assault" target="_blank" className="text-[#4D97E6] hover:underline">
                                 https://au.reachout.com/articles/what-is-sexual-assault
                             </a>
                         </p>
 
                         <p className="mb-8">
                             (Information adapted from:{" "}
-                            <a href="https://www.1800respect.org.au/violence-and-abuse/sexual-assault-and-violence/" target="_blank" className="text-[#E8903A] hover:underline">
+                            <a href="https://www.1800respect.org.au/violence-and-abuse/sexual-assault-and-violence/" target="_blank" className="text-[#4D97E6] hover:underline">
                                 www.1800respect.org.au/violence-and-abuse/sexual-assault-and-violence/
                             </a>)
                         </p>
 
                         <p className="mb-8">
                             The{" "}
-                            <a href="https://www.police.vic.gov.au/sexual-offences" target="_blank" className="text-[#E8903A] hover:underline font-medium">
+                            <a href="https://www.police.vic.gov.au/sexual-offences" target="_blank" className="text-[#4D97E6] hover:underline font-medium">
                                 Victoria Police website
                             </a>{" "}
                             provides more information on what constitutes as <strong>sexual offences</strong>.
@@ -456,59 +458,71 @@ const CampusSafetyPage = () => {
     ];
 
     return (
-        <div className="font-sans bg-[#FAFAF7]">
+        <div className="font-sans bg-white">
             {/* Hero Section */}
-            <div className="bg-[#0a1f3d] text-white py-16">
-                <div className="max-w-7xl mx-auto px-6">
-                    <p className="text-blue-400 text-sm uppercase tracking-widest mb-2">
-                        SASH POLICY
-                    </p>
-                    <h1 className="text-5xl font-semibold leading-tight">
-                        Preventing, Reporting and Responding to Sexual Assault<br />
-                        and Sexual Harassment (SASH)
-                    </h1>
-                </div>
-            </div>
+            <PageHeader
+                breadcrumbs={[
+                    { label: 'Home', href: '/' },
+                    { label: 'Student Life', href: '#' },
+                    { label: 'Campus Safety And Sexual Misconduct', href: '/campus-safety' }
+                ]}
+                title={<>Campus Safety and Sexual<br />Misconduct</>}
+                hideUnderline={true}
+            />
 
-            <div className="max-w-7xl mx-auto px-6 py-12 flex gap-12">
+            <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px] py-8 sm:py-12 flex flex-col lg:flex-row gap-8 lg:gap-12">
                 {/* Main Content */}
                 <div className="flex-1">
                     <div className="prose max-w-none">
-                        <h2 className="text-3xl font-semibold mb-6">Overview</h2>
-                        <p className="text-lg leading-relaxed text-gray-700 mb-8">
+                        <div className="text-[12px] font-bold text-[#4D97E6] tracking-widest uppercase mb-6">SASH POLICY</div>
+
+                        <h1 className="text-[26px] md:text-[32px] text-[#0B1F4A] leading-[1.2] mb-8 md:mb-10 italic" style={{ fontFamily: 'var(--font-dm-serif)' }}>
+                            Preventing, Reporting and Responding to Sexual Assault<br className="hidden md:block" />and Sexual Harassment (SASH)
+                        </h1>
+
+                        <h2 className="text-[16px] font-semibold text-[#0B1F4A] mb-4">Overview</h2>
+
+                        <p className="text-[14px]  leading-relaxed text-[#333333] mb-6">
                             Change the Course report which was released by the Australian Human Rights Commission (AHRC) in 2017
                             identified the prevention of, and response to sexual assault and sexual harassment (SASH) as an area of
                             national focus across Australian universities.
                         </p>
 
-                        <h3 className="font-semibold mb-4">Key findings of the Change the Course report included:</h3>
-                        <ul className="list-disc pl-6 mb-8 space-y-2 text-gray-700">
+                        <h3 className="text-[14px]  font-semibold text-[#333333] mb-4">Key findings of the Change the Course report included:</h3>
+                        <ul className="list-disc pl-5 mb-6 text-[14px] space-y-3  text-[#333333] marker:text-[#4D97E6]">
                             <li>The prevalence of sexual harassment and sexual assault in university settings is unacceptably high</li>
                             <li>There is significant underreporting of sexual harassment and sexual assault to universities, and</li>
                             <li>Universities need to do more to prevent incidents from occurring, and respond appropriately.</li>
                         </ul>
 
-                        <p className="mb-10 text-gray-700 leading-relaxed">
-                            Oxford has a zero tolerance towards sexual harassment, sexual assault and any violence and treats all
-                            reports or concerns seriously and sensitively...
+                        <p className="mb-6 text-[14px] text-[#333333] leading-relaxed">
+                            Following the release of the report, Ozford Institute of Higher Education (Ozford) has undertaken significant work in improving the processes for the prevention of and response to sexual assault and sexual harassment on campus.
+                        </p>
+
+                        <p className="mb-10 text-[14px] text-[#333333] leading-relaxed">
+                            Ozford has a zero tolerance towards sexual harassment, sexual assault and any violence and treats all reports or concerns seriously and sensitively. If you are experiencing or have experienced any form of sexual harassment or sexual assault, support is also available.
                         </p>
                     </div>
 
                     {/* Accordion Sections */}
                     <div className="space-y-4">
                         {accordionItems.map((item) => (
-                            <div key={item.id} className="  overflow-hidden">
+                            <div key={item.id} className="bg-white overflow-hidden">
                                 <button
+                                    type="button"
                                     onClick={() => toggleSection(item.id)}
-                                    className={`w-full px-5 py-4 flex justify-between ${openSection === item.id ? 'border border-b-0 border-[#E0D9C8]' : 'border border-[#E0D9C8]'} items-center bg-[#FFFFFF] hover:bg-gray-50 transition-colors text-left`}
+                                    className={`w-full px-6 py-4 flex justify-between items-center text-left bg-white cursor-pointer transition-colors border ${openSection === item.id
+                                        ? 'border-[#E0D9C8] border-b-transparent'
+                                        : 'border-[#E0D9C8]'
+                                        }`}
                                 >
-                                    <span className="font-semibold text-lg">{item.title}</span>
-                                    <span className="text-2xl text-[#4D97E6]">
+                                    <span className="font-semibold text-[15px] text-[#0B1F4A]">{item.title}</span>
+                                    <span className="text-2xl font-light text-[#4D97E6] leading-none flex items-center justify-center">
                                         {openSection === item.id ? '−' : '+'}
                                     </span>
                                 </button>
                                 {openSection === item.id && (
-                                    <div className="px-8 pb-8 text-gray-600 leading-relaxed ">
+                                    <div className="px-6 pb-6 text-[14px] text-[#333333] leading-relaxed prose prose-sm max-w-none prose-a:text-[#4D97E6] prose-a:no-underline hover:prose-a:underline">
                                         {item.content}
                                     </div>
                                 )}
@@ -518,29 +532,39 @@ const CampusSafetyPage = () => {
                 </div>
 
                 {/* Right Sidebar */}
-                <div className="w-80 flex-shrink-0 space-y-8">
+                <div className="w-full lg:w-80 flex-shrink-0 space-y-8">
                     {/* Chat Widget */}
-                    <div className="bg-[#0a1f3d] text-white p-8 rounded-2xl">
-                        <div className="w-14 h-14 mb-6">
-                          <Image src="/message-circle.png" alt="Chat Icon" width={56} height={56} />
+                    <div className="bg-[#0B1F4A] text-white p-8 border-t-4 border-[#4D97E6]">
+                        <div className="mb-6">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.11323 23.3438C4.22761 22.8242 4.18395 22.2823 3.98789 21.7877C2.62347 18.9568 2.30276 15.7349 3.08234 12.6906C3.86192 9.64622 5.69169 6.97503 8.24881 5.14829C10.8059 3.32154 13.9261 2.45665 17.0588 2.70619C20.1914 2.95573 23.1353 4.30367 25.371 6.51219C27.6067 8.72072 28.9905 11.6479 29.2783 14.7773C29.5661 17.9066 28.7393 21.0371 26.944 23.6163C25.1486 26.1956 22.4999 28.0578 19.4653 28.8745C16.4307 29.6912 13.2051 29.4099 10.3577 28.0802C9.89039 27.9027 9.3826 27.8602 8.89227 27.9575L4.34125 29.2882C4.12171 29.3465 3.89093 29.3477 3.67079 29.2918C3.45066 29.2358 3.24846 29.1246 3.08337 28.9686C2.91829 28.8126 2.79579 28.617 2.72749 28.4004C2.65919 28.1838 2.64736 27.9533 2.69312 27.7308L4.11323 23.3438Z" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                            </svg>
                         </div>
 
-                        <h3 className="text-2xl font-semibold  font-dm-serif italic leading-tight mb-3">
+                        <h3 className="text-[24px]   italic leading-tight mb-3" style={{ fontFamily: 'var(--font-dm-serif)' }}>
                             Hi there! Have a<br />question?
                         </h3>
 
-                        <p className=" text-[#FAFAF7] mb-8 text-[1.02em]">
+                        <p className="text-[#FAFAF7] mb-8 text-[14px]">
                             Chat with us here.
                         </p>
 
-                        <button className="w-full bg-[#ff8a00] hover:bg-[#f57c00] text-white py-4  font-semibold transition-all duration-200 flex items-center justify-center gap-2">
+                        <button 
+                            type="button" 
+                            onClick={() => {
+                                if (typeof window !== 'undefined') {
+                                    window.dispatchEvent(new Event('open-custom-chat'));
+                                }
+                            }}
+                            className="w-full bg-[#4D97E6] text-white py-3 font-semibold transition-all duration-200 flex items-center justify-center gap-2 text-[14px]"
+                        >
                             Start Live Chat →
                         </button>
                     </div>
 
                     {/* Quick Links */}
-                    <div className=' border-[#E8903A] border-t-2 pt-6'>
-                        <h3 className="font-semibold text-[16px] mb-4 text-gray-800">Quick Links</h3>
+                    <div className='border-[#A3C7EB] border-t pt-6'>
+                        <h3 className="font-semibold text-[16px] mb-4 text-[#0B1F4A]">Quick Links</h3>
                         <div className="space-y-3">
                             {[
                                 "Student Services & Support",
@@ -551,7 +575,7 @@ const CampusSafetyPage = () => {
                                 <a
                                     key={link}
                                     href="#"
-                                    className="block text-[#0B1F4A] text-[14px] underline hover:underline font-medium py-1 transition-colors"
+                                    className="block text-[#0B1F4A] text-[14px] underline underline-offset-2 hover:text-[#0B1F4A] font-normal transition-colors"
                                 >
                                     {link}
                                 </a>
@@ -561,10 +585,7 @@ const CampusSafetyPage = () => {
                 </div>
             </div>
 
-            {/* Accreditations Section */}
-            <div className="bg-gray-50 py-16 border-t border-gray-100">
-              <Image src="/safety-footer.png" alt="Accreditations" width={1200} height={200} className="mx-auto" />
-            </div>
+            <Accreditations />
         </div>
     );
 };

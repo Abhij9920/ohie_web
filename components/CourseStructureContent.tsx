@@ -41,7 +41,7 @@ export default function CourseStructureContent({
 
   return (
     <section className="w-full bg-[#0A1A44] py-12 md:py-20">
-      <div className="max-w-[1440px] mx-auto px-4 xl:px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
         <div className="flex flex-col lg:grid lg:grid-cols-12 items-center gap-8 lg:gap-16">
 
           {/* Left Column - Titles */}

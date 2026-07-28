@@ -56,7 +56,7 @@ export default function CourseTabs({ tabs }: CourseTabsProps) {
           {/* Continuous Full-Width Border */}
           <div className="absolute bottom-0 left-0 w-full h-[1px] bg-[#4D97E6] z-0"></div>
 
-          <div className="max-w-[1440px] mx-auto px-4 xl:px-[100px] relative z-10">
+          <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px] relative z-10">
             <div className="flex overflow-x-auto overflow-y-hidden hide-scrollbar gap-6 md:gap-12">
               {tabs.map((tab) => {
                 const isActive = activeTabId === tab.id;

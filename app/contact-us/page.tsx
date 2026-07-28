@@ -26,7 +26,7 @@ export default function ContactUsPage() {
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-[#2463A7] opacity-5 blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-[#0B1F4A] opacity-5 blur-3xl pointer-events-none"></div>
 
-        <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px] relative z-10">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px] relative z-10">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             

@@ -12,7 +12,7 @@ export default function StudentLifeMegaMenu({ isActive, onClose }: Props) {
       className={`absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl transition-all duration-300 ease-in-out origin-top ${isActive ? 'opacity-100 visible scale-y-100' : 'opacity-0 invisible scale-y-0'
         } hidden lg:block`}
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
         <div className="flex pt-[12px] gap-8 lg:gap-12 pb-[42px]">
 
           <div className="flex-1 border-r border-[#E8E8E4] pr-8 lg:pr-12">
@@ -41,7 +41,7 @@ export default function StudentLifeMegaMenu({ isActive, onClose }: Props) {
               <MegaMenuHeader title="Key Dates" />
               <ul className="space-y-[24px]">
                 {studentLifeData.keyDates.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Intakes" ? "/student-life/intakes" : course === "Orientations" ? "/student-life/orientation" : course === "Events" ? "/student-life/events" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href={course === "Intakes" ? "/student-life/intakes" : course === "Orientations" ? "/student-life/orientation" : course === "Events" ? "/student-life/events" : course === "Fee Due Dates" ? "/fees#due-dates" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>
@@ -51,9 +51,17 @@ export default function StudentLifeMegaMenu({ isActive, onClose }: Props) {
             <div className="mt-[42px]">
               <MegaMenuHeader title="International Students" />
               <ul className="space-y-[24px]">
-                {studentLifeData.internationalStudent.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Apply" ? "/student-life/how-to-apply" : course === "Study in Melbourne Australia" ? "/about-us/study-in-melbourne" : course === "ESOS Framework" ? "/student-life/esos-framework" : "#"} onClick={onClose}>{course}</MegaMenuLink>
-                ))}
+                {studentLifeData.internationalStudent.map((course, idx) => {
+                  let href = "#";
+                  if (course === "Apply") href = "/student-life/how-to-apply";
+                  else if (course === "Study in Melbourne Australia") href = "/about-us/study-in-melbourne";
+                  else if (course === "ESOS Framework") href = "/student-life/esos-framework";
+                  else if (course === "Accommodation") href = "/student-life/accommodation";
+                  
+                  return (
+                    <MegaMenuLink key={idx} href={href} onClick={onClose}>{course}</MegaMenuLink>
+                  );
+                })}
               </ul>
             </div>
           </div>

@@ -156,7 +156,6 @@ export default function GditCoursePage() {
         description="Gain the leadership and multidisciplinary skills needed to innovate in the rapidly evolving fields of technology and science."
         backgroundImageUrl="/study/hero.png"
         primaryButtonText="Apply Now"
-        secondaryButtonText="Course Brochure"
       />
       <CourseStudentToggle value={studentType} onChange={setStudentType} />
       <CourseKeyInfo {...currentInfo.keyInfo} />
@@ -165,7 +164,7 @@ export default function GditCoursePage() {
 
       {/* Overview & Entry Requirements (both contained in CourseOverviewContent) */}
       <div className="w-full bg-[#F8F9FA] pb-16">
-        <div className="w-full max-w-[1440px] mx-auto px-4 xl:px-[100px]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
           <CourseOverviewContent {...currentInfo.overview} />
         </div>
       </div>
@@ -183,7 +182,7 @@ export default function GditCoursePage() {
         <StudentInformationSection />
       </div>
       
-      <CourseCTA title="Ready to Begin Your Graduate Diploma Journey?" />
+      <CourseCTA title="Ready to Begin Your Graduate Diploma in Information Technology Journey?" secondaryButtonText="Enquire Now" secondaryButtonLink="/#explore-courses" />
       <Accreditations />
 
     </main>

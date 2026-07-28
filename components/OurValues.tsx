@@ -96,7 +96,7 @@ const ValueCard = ({ icon, title, description }: ValueCardProps) => (
 export default function OurValues() {
   return (
     <section className="w-full bg-[#2463A7] py-[80px] md:py-[100px] lg:py-[120px]">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
 
         {/* Header */}
         <div className="flex flex-col items-center justify-center text-center mb-12 lg:mb-16">

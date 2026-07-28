@@ -79,7 +79,7 @@ export default function WhatWeOffer() {
 
   return (
     <section className="w-full bg-[#FAFAF7] py-[60px] md:py-[100px]">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
 
         {/* Header */}
         <div className="mb-10 md:mb-14">

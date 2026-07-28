@@ -127,7 +127,7 @@ export default function OrientationPage() {
       />
 
       <section className="w-full py-16 md:py-24">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px]">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-[120px] items-start">
 
             {/* Left Sidebar */}

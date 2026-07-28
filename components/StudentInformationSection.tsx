@@ -15,7 +15,7 @@ const infoLinks = [
 export default function StudentInformationSection() {
   return (
     <section className="w-full bg-[#0A1A44] py-16 lg:py-24">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px] flex flex-col lg:flex-row items-start lg:items-center">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px] flex flex-col lg:flex-row items-start lg:items-center">
         {/* Title Section */}
         <div className="w-full lg:w-[35%] mb-12 lg:mb-0">
           <h2 className="text-white text-[32px] md:text-[40px] font-bold tracking-tight">

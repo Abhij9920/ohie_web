@@ -12,7 +12,7 @@ export default function AboutMegaMenu({ isActive, onClose }: Props) {
       className={`absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl transition-all duration-300 ease-in-out origin-top ${isActive ? 'opacity-100 visible scale-y-100' : 'opacity-0 invisible scale-y-0'
         } hidden lg:block`}
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
         <div className="flex pt-[12px] gap-8 lg:gap-12 pb-[42px]">
 
           <div className="flex-1 border-r border-[#E8E8E4] pr-8 lg:pr-12">

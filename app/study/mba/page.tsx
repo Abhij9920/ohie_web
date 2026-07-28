@@ -44,7 +44,7 @@ export default function MbaCoursePage() {
               </svg>
               <div>Completion of an Australian Graduate Diploma (or equivalent) in a similar discipline</div>
             </div>
-            
+
             <div className="font-bold text-[#0B1F4A] mb-2">Applicants with no formal qualifications</div>
             <div>See special or/and alternative entry</div>
           </div>
@@ -165,15 +165,18 @@ export default function MbaCoursePage() {
         backgroundImageUrl="/study/hero.png"
         primaryButtonText="Apply Now"
         secondaryButtonText="Course Brochure"
+        primaryButtonHref="https://ozford.meshedhe.com.au/"
+        secondaryButtonHref="/MBA.pdf"
+
       />
       <CourseStudentToggle value={studentType} onChange={setStudentType} />
       <CourseKeyInfo {...currentInfo.keyInfo} />
-      
+
       <CourseTabs tabs={tabs} />
 
       {/* Overview & Entry Requirements (both contained in CourseOverviewContent) */}
       <div className="w-full bg-[#F8F9FA] pb-16">
-        <div className="w-full max-w-[1440px] mx-auto px-4 xl:px-[100px]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
           <CourseOverviewContent {...currentInfo.overview} />
         </div>
       </div>
@@ -190,8 +193,8 @@ export default function MbaCoursePage() {
       <div id="student-info">
         <StudentInformationSection />
       </div>
-      
-      <CourseCTA title="Ready to Begin Your MBA Journey?" />
+
+      <CourseCTA title="Ready to Begin Your MBA Journey?" secondaryButtonText="Download Prospectus" secondaryButtonLink="/policy/MBA.pdf" />
       <Accreditations />
 
     </main>

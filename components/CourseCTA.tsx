@@ -15,8 +15,8 @@ export default function CourseCTA({
   description = "Join our diverse global community of innovators and leaders. Applications are now open for the next intake in Melbourne.",
   primaryButtonText = "Apply Now",
   primaryButtonLink = "/student-life/how-to-apply",
-  secondaryButtonText = "Download Prospectus",
-  secondaryButtonLink = "#"
+  secondaryButtonText,
+  secondaryButtonLink
 }: CourseCTAProps) {
   return (
     <section className="w-full bg-[#0A1A44] border-t border-white/10 py-12 md:py-16 px-4 flex justify-center items-center">
@@ -40,12 +40,16 @@ export default function CourseCTA({
             {primaryButtonText}
           </Link>
 
-          <Link
-            href={secondaryButtonLink}
-            className="bg-transparent border border-white/60 hover:border-white hover:bg-white hover:text-[#0A1A44] text-white font-medium text-[15px] px-8 py-3.5 transition-colors duration-300 text-center min-w-[200px]"
-          >
-            {secondaryButtonText}
-          </Link>
+          {secondaryButtonText && secondaryButtonLink && (
+            <Link
+              href={secondaryButtonLink}
+              target={secondaryButtonLink.endsWith('.pdf') ? '_blank' : undefined}
+              rel={secondaryButtonLink.endsWith('.pdf') ? 'noopener noreferrer' : undefined}
+              className="bg-transparent border border-white/60 hover:border-white hover:bg-white hover:text-[#0A1A44] text-white font-medium text-[15px] px-8 py-3.5 transition-colors duration-300 text-center min-w-[200px]"
+            >
+              {secondaryButtonText}
+            </Link>
+          )}
         </div>
       </div>
     </section>

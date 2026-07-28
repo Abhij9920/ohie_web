@@ -46,7 +46,7 @@ export default function AboutUsJourney() {
 
   return (
     <section className="w-full bg-[#FAFAF7] py-[60px] md:py-[100px] lg:py-[120px]">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
 
           {/* Left Column (Content) */}

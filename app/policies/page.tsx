@@ -562,7 +562,7 @@ export default function PoliciesPage() {
 
       {/* Privacy Statement Banner */}
       <div className="w-full bg-[#2463A7] py-8 md:py-16">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px] flex flex-col md:flex-row items-center justify-between gap-6 md:gap-16">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px] flex flex-col md:flex-row items-center justify-between gap-6 md:gap-16">
           <div className="w-full md:w-[35%]">
             <h2
               className="text-white text-[32px] md:text-[40px] italic"
@@ -581,7 +581,7 @@ export default function PoliciesPage() {
 
       <div className="min-h-screen bg-white font-sans">
         {/* Main Content Area */}
-        <div className="max-w-7xl mx-auto px-6 pt-8 pb-16">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] pt-8 pb-16">
           {/* Search Bar */}
           <div className="flex justify-center mb-10 md:mb-28">
             <div className="w-full max-w-[700px] flex">
@@ -607,9 +607,9 @@ export default function PoliciesPage() {
             </div>
           </div>
 
-          <div className="flex  gap-10">
+          <div className="flex flex-col lg:flex-row gap-10">
             {/* Sidebar Categories */}
-            <div className="w-72 flex-shrink-0 sticky top-24 self-start">
+            <div className="w-full lg:w-72 flex-shrink-0 lg:sticky top-24 self-start z-10">
               <div className="bg-[#0B1F4A] text-white">
                 {/* Header */}
                 <div className="px-8 pt-8 pb-4">
@@ -651,13 +651,13 @@ export default function PoliciesPage() {
                     {category.policies.map((policy, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center justify-between bg-white border-b border-[#E8E8E4] hover:border-[#E8E8E4] px-8 py-[18px] group transition-all"
+                        className="flex flex-col md:flex-row md:items-center items-start justify-between bg-white border-b border-[#E8E8E4] hover:border-[#E8E8E4] px-6 md:px-8 py-5 md:py-[18px] group transition-all gap-4 md:gap-0"
                       >
-                        <p className="text-[14px] leading-relaxed text-[#0B1F4A] pr-8 ">
+                        <p className="text-[14px] leading-relaxed text-[#0B1F4A] md:pr-8 w-full md:w-auto font-medium md:font-normal">
                           {policy.title}
                         </p>
 
-                        <div className="flex items-center gap-3 flex-wrap justify-end">
+                        <div className="flex items-center gap-2 md:gap-3 flex-wrap md:justify-end w-full md:w-auto">
                           {policy.buttons.map((btn, i) => (
                             <PolicyButton
                               key={i}
@@ -676,20 +676,20 @@ export default function PoliciesPage() {
 
         {/* Bottom CTA Section */}
         <div className="bg-[#0B1F4A] py-16 text-white w-full">
-          <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-left">
-              <h3 className="text-[36px] text-white italic mb-2" style={{ fontFamily: 'var(--font-dm-serif)' }}>
+          <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="text-left text-center md:text-left">
+              <h3 className="text-[28px] md:text-[36px] text-white italic mb-2" style={{ fontFamily: 'var(--font-dm-serif)' }}>
                 Looking for a specific document?
               </h3>
-              <p className="text-[#4D97E6] text-[15px] font-sans">
+              <p className="text-[#4D97E6] text-[14px] md:text-[15px] font-sans">
                 Contact us if you cannot find the policy you are looking for.
               </p>
             </div>
-            <div className="flex items-center gap-4">
-              <a href="/contact-us" className="bg-[#4D97E6] text-[#0B1F4A] hover:bg-[#3b85d4] px-8 py-3 text-[14px] font-medium transition-colors text-center">
+            <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
+              <a href="/contact-us" className="w-full sm:w-auto bg-[#4D97E6] text-[#0B1F4A] hover:bg-[#3b85d4] px-8 py-3 text-[14px] font-medium transition-colors text-center">
                 Contact Us
               </a>
-              <a href="mailto:compliance@oihe.edu.au" className="border border-white text-white hover:bg-white/10 px-8 py-3 text-[14px] font-medium transition-colors text-center">
+              <a href="mailto:compliance@oihe.edu.au" className="w-full sm:w-auto border border-white text-white hover:bg-white/10 px-8 py-3 text-[14px] font-medium transition-colors text-center">
                 Email Compliance Team
               </a>
             </div>

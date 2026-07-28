@@ -51,7 +51,7 @@ const VisionCard = ({ icon, title, description }: VisionCardProps) => (
 export default function PhilosophyVision() {
   return (
     <section className="w-full bg-white py-[60px] md:py-[80px]">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {visionData.map((data, idx) => (
             <VisionCard key={idx} {...data} />

@@ -12,7 +12,7 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
       className={`absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl transition-all duration-300 ease-in-out origin-top ${isActive ? 'opacity-100 visible scale-y-100' : 'opacity-0 invisible scale-y-0'
         } hidden lg:block`}
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
         <div className="flex pt-[12px] gap-12">
 
           <div className="flex-1 flex gap-12 pb-[42px]">
@@ -55,6 +55,7 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
                     else if (c.includes("tuition assurance") || c.includes("tution")) href = "/admission-entry/statement-of-tuition-assurance";
                     else if (c.includes("handbook")) href = "/OIHE_Student_Handbook_Jul_2026_1.pdf";
                     else if (c.includes("policies")) href = "/policies";
+                    else if (c === "pay fees" || c === "payment methods") href = "/fees#payment-methods";
                     else if (c.includes("fee") || c.includes("payment")) href = "/fees";
                     
                     return (

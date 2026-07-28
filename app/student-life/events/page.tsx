@@ -15,7 +15,7 @@ export default function EventsPage() {
       <EventsHero />
 
       <section className="flex-1 w-full pt-12">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px]">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
           <EventCard
             day="09"
             monthYear="JULY 2026"
@@ -29,7 +29,7 @@ export default function EventsPage() {
 
       {/* All Events Section */}
       <section className="w-full pb-16 pt-16 md:pt-24 bg-[#FAFAF7]">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px]">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
           {/* Header Line */}
           <div className="flex items-center gap-6 mb-10">
             <h2 className="text-[11px] font-bold text-[#4D97E6] tracking-widest uppercase shrink-0">

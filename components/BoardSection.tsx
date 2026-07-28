@@ -16,7 +16,7 @@ export default function BoardSection({ smallTitle, mainTitle, theme = 'light', c
 
   return (
     <section className={`w-full ${bgColorClass} py-16 md:py-24 `}>
-      <div className="max-w-[1440px] mx-auto px-4 xl:px-[100px]">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
 
         {/* Section Headings */}
         <div className="mb-12">

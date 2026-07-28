@@ -17,7 +17,7 @@ export default function StatementOfTuitionAssuranceContent() {
 
       <section className="w-full bg-white">
         {/* Image Container */}
-        <div className="w-full max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
           <img
             src="/student.png"
             alt="Students Graduation"
