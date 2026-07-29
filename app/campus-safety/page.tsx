@@ -1,6 +1,5 @@
 'use client';
 
-import Accreditations from '@/components/Accreditations';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import PageHeader from '@/components/PageHeader';
@@ -550,8 +549,8 @@ const CampusSafetyPage = () => {
                             Chat with us here.
                         </p>
 
-                        <button 
-                            type="button" 
+                        <button
+                            type="button"
                             onClick={() => {
                                 if (typeof window !== 'undefined') {
                                     window.dispatchEvent(new Event('open-custom-chat'));
