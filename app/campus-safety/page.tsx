@@ -1,5 +1,6 @@
 'use client';
 
+import Accreditations from '@/components/Accreditations';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import PageHeader from '@/components/PageHeader';
@@ -338,7 +339,7 @@ const CampusSafetyPage = () => {
                             <a
                                 href="https://bodytalk.org.au/relationships/respectful-relationships/"
                                 target="_blank"
-                                className="text-[#E8903A] hover:underline"
+                                className="text-[#4D97E6] hover:underline"
                             >
                                 https://bodytalk.org.au/relationships/respectful-relationships/
                             </a>
@@ -447,7 +448,7 @@ const CampusSafetyPage = () => {
                         <a
                             href="https://au.reachout.com/tough-times/abuse-and-violence"
                             target="_blank"
-                            className="text-[#E8903A] hover:text-[#D77B00] hover:underline font-medium"
+                            className="text-[#4D97E6] hover:text-[#D77B00] hover:underline font-medium"
                         >
                             https://au.reachout.com/tough-times/abuse-and-violence
                         </a>
