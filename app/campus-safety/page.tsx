@@ -470,7 +470,7 @@ const CampusSafetyPage = () => {
                 hideUnderline={true}
             />
 
-            <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px] py-8 sm:py-12 flex flex-col lg:flex-row gap-8 lg:gap-12">
+            <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] py-8 sm:py-12 flex flex-col lg:flex-row gap-8 lg:gap-12">
                 {/* Main Content */}
                 <div className="flex-1">
                     <div className="prose max-w-none">

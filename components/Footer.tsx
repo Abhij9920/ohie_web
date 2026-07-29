@@ -43,8 +43,8 @@ const FooterLegalLink = ({ href, children }: { href: string; children: React.Rea
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B1F4A] text-white pt-[60px] pb-[20px] px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] font-sans">
-      <div className="max-w-[1440px] mx-auto">
+    <footer className="bg-[#0B1F4A] text-white pt-[60px] pb-[20px] font-sans">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
 
         {/* Top Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-[40px]">

@@ -7,7 +7,7 @@ export default function CourseBanner() {
       <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row">
 
         {/* Left Content Area */}
-        <div className="w-full lg:w-[55%] xl:w-[60%] p-6 md:p-8 mb-[40px] lg:mb-[66px] flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+        <div className="w-full lg:w-[55%] xl:w-[60%] p-6 md:p-8 lg:pl-[80px] xl:pl-[100px] mb-[40px] lg:mb-[66px] flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
 
           {/* Logo */}
           <div className="mb-8 flex justify-center lg:justify-start w-full">

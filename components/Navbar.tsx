@@ -220,7 +220,7 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <nav className="w-full bg-white border-b border-gray-100">
-        <div className=" mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
           <div className="flex justify-between items-center my-[14px]">
             {/* Logo Section */}
             <div className="flex-shrink-0 flex items-center">

@@ -74,7 +74,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="relative w-full py-[60px] md:py-[80px] lg:py-[100px] px-4 md:px-[40px] lg:px-[80px] overflow-hidden bg-[#F8FAFC]">
+    <section className="relative w-full py-[60px] md:py-[80px] lg:py-[100px] overflow-hidden bg-[#F8FAFC]">
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0 flex justify-center overflow-hidden pointer-events-none">
@@ -88,7 +88,7 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-[1440px] mx-auto">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
 
         {/* Header Area */}
         <div className="flex flex-col items-start mb-12">

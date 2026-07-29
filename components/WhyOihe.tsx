@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function WhyOihe() {
   return (
     <section className="w-full bg-white relative pt-[60px] pb-[120px] md:pt-[90px] md:pb-[160px] lg:pb-48 overflow-hidden">
-      <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-start px-6 relative z-10">
+      <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-start px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] relative z-10">
 
         {/* Left Side - Image */}
         <div className="w-full lg:w-1/2 relative flex items-center justify-center lg:justify-start lg:-ml-4 xl:-ml-12 mb-1 lg:mb-0 z-10">

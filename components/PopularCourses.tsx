@@ -122,8 +122,8 @@ export default function PopularCourses() {
 
   return (
     <>
-      <section id="explore-courses" className="relative w-full bg-[#FAFAF7] py-[60px] md:py-[80px] lg:py-[100px] px-4 md:px-[40px] lg:px-[100px] overflow-hidden">
-        <div className="relative z-10 max-w-[1440px] mx-auto">
+      <section id="explore-courses" className="relative w-full bg-[#FAFAF7] py-[60px] md:py-[80px] lg:py-[100px] overflow-hidden">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
 
           {/* Header Section */}
           <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-[40px]">
@@ -164,6 +164,7 @@ export default function PopularCourses() {
                     src={course.image}
                     alt={course.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>

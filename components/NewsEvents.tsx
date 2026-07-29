@@ -27,7 +27,7 @@ const newsItems = [
 
 export default function NewsEvents() {
   return (
-    <section className="relative w-full py-[60px] md:py-[80px] lg:py-[100px] px-4 md:px-[40px] lg:px-[80px] overflow-hidden bg-[#F2F2F2]">
+    <section className="relative w-full py-[60px] md:py-[80px] lg:py-[100px] overflow-hidden bg-[#F2F2F2]">
 
       {/* Background Map Image */}
       <div className="absolute inset-0 z-0 mix-blend-multiply">
@@ -39,7 +39,7 @@ export default function NewsEvents() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1440px] mx-auto">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
 
         {/* Header Area */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end text-center md:text-left mb-12 gap-6">
