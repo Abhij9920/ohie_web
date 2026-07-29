@@ -126,6 +126,8 @@ export default function MitCoursePage() {
         backgroundImageUrl="/study/hero.png"
         primaryButtonText="Apply Now"
         secondaryButtonText="Course Brochure"
+        primaryButtonHref="https://ozford.meshedhe.com.au/"
+        secondaryButtonHref="/MIT.pdf"
       />
 
       <CourseStudentToggle value={studentType} onChange={setStudentType} />
@@ -134,7 +136,7 @@ export default function MitCoursePage() {
 
       {/* Overview & Entry Requirements (both contained in CourseOverviewContent) */}
       <div className="w-full bg-[#F8F9FA] pb-16">
-        <div className="w-full max-w-[1440px] mx-auto px-4 xl:px-[100px]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
           <CourseOverviewContent {...currentInfo.overview} />
         </div>
       </div>
@@ -152,7 +154,7 @@ export default function MitCoursePage() {
         <StudentInformationSection />
       </div>
 
-      <CourseCTA />
+      <CourseCTA title="Ready to Begin Your MIT Journey?" secondaryButtonText="Download Prospectus" secondaryButtonLink="/MIT.pdf" />
       <Accreditations />
 
     </main>

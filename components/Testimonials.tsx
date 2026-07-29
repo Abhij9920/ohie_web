@@ -4,23 +4,44 @@ import { useState, useEffect } from "react";
 
 const testimonialsData = [
   {
-    quote: "The Master of IT programme gave me the exact skills I needed to secure a position at a top Australian tech firm. The faculty are truly world-class.",
-    name: "James Anderson",
-    title: "Master of IT"
+    quote: "This college has been a great place for me to start my journey and work towards my future goals. From the moment I joined, I felt welcomed and supported by the lecturers and staff.",
+    name: "Mr Devlin Venedict",
+    title: "Bachelor of Business",
+    image: "/testimonials/img1.webp"
   },
   {
-    quote: "I loved the flexible study options. As a working professional, being able to balance my MBA with my career was crucial for my success.",
-    name: "Priya Sharma",
-    title: "MBA Graduate"
+    quote: "Ozford has provided a positive and supportive learning environment. The teachers are passionate, friendly, and always willing to help.",
+    name: "Thuc Quy Bui",
+    title: "ELICOS and High School",
+    image: "/testimonials/img2.webp"
   },
   {
-    quote: "Melbourne is an incredible city for students. OIHE made my transition to international study seamless and rewarding beyond expectations.",
-    name: "Chen Wei",
-    title: "Bachelor of Business"
+    quote: "Studying at OZFORD has been an incredible journey of growth and discovery. The learning experience goes far beyond textbooks — it encourages critical thinking, collaboration, and real-world application.",
+    name: "Nick Nguyen",
+    title: "ELICOS and High School",
+    image: "/testimonials/img3.webp"
+  },
+  {
+    quote: "Studying at Ozford Institute of Higher Education has been an incredibly rewarding journey. The academic environment is both inspiring and empowering.",
+    name: "Ridhima Shokeen",
+    title: "BBA",
+    image: "/testimonials/img4.webp"
+  },
+  {
+    quote: "While studying in Ozford, it was so much fun. The teachers were so co-operative, more like friends. Not only they teach us the necessary knowledge, they always motivate us.",
+    name: "Ms. Ratna GT",
+    title: "Master of Professional Accounting",
+    image: "/testimonials/img5.webp"
+  },
+  {
+    quote: "Reminiscing over my days at Ozford brought back many happy memories: with a dynamic and quirky teaching team, I really established a bond with those who were looking after us.",
+    name: "Enzo",
+    title: "VCE",
+    image: "/testimonials/img6.webp"
   }
 ];
 
-// Duplicate the array to have 6 items for the carousel to scroll through
+// Duplicate the array to have enough items for the carousel to scroll through smoothly
 const testimonials = [...testimonialsData, ...testimonialsData];
 
 export default function Testimonials() {
@@ -33,10 +54,10 @@ export default function Testimonials() {
       else if (window.innerWidth < 1024) setItemsPerView(2);
       else setItemsPerView(3);
     };
-    
+
     // Set initial value
     handleResize();
-    
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -54,7 +75,7 @@ export default function Testimonials() {
 
   return (
     <section className="relative w-full py-[60px] md:py-[80px] lg:py-[100px] px-4 md:px-[40px] lg:px-[80px] overflow-hidden bg-[#F8FAFC]">
-      
+
       {/* Background Image */}
       <div className="absolute inset-0 z-0 flex justify-center overflow-hidden pointer-events-none">
         <div className="w-full max-w-[1440px] h-full relative">
@@ -68,7 +89,7 @@ export default function Testimonials() {
       </div>
 
       <div className="relative z-10 max-w-[1440px] mx-auto">
-        
+
         {/* Header Area */}
         <div className="flex flex-col items-start mb-12">
           <h4 className="text-[10px] font-semibold text-[#2463A7] tracking-widest uppercase mb-4">
@@ -81,7 +102,7 @@ export default function Testimonials() {
 
         {/* Testimonials Carousel Wrapper */}
         <div className="overflow-hidden mb-12 -mx-4 px-4">
-          <div 
+          <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
           >
@@ -96,13 +117,16 @@ export default function Testimonials() {
                       {item.quote}
                     </p>
                   </div>
-                  <div className="mt-8">
-                    <p className="text-[#0B1F4A] text-[14px] font-bold">
-                      {item.name}
-                    </p>
-                    <p className="text-[#2463A7] font-semibold text-[12px] mt-0.5">
-                      {item.title}
-                    </p>
+                  <div className="mt-8 flex items-center gap-4">
+
+                    <div>
+                      <p className="text-[#0B1F4A] text-[14px] font-bold">
+                        {item.name}
+                      </p>
+                      <p className="text-[#2463A7] font-semibold text-[12px] mt-0.5">
+                        {item.title}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -112,7 +136,7 @@ export default function Testimonials() {
 
         {/* Carousel Controls */}
         <div className="flex items-center justify-center gap-6">
-          <button 
+          <button
             onClick={prevSlide}
             disabled={currentIndex === 0}
             className={`w-[42px] h-[42px] bg-white rounded-full border border-gray-200 flex items-center justify-center transition-all shadow-sm ${currentIndex === 0 ? 'text-gray-300 cursor-not-allowed' : 'text-gray-500 hover:bg-gray-50 hover:shadow-md cursor-pointer'}`}
@@ -127,17 +151,16 @@ export default function Testimonials() {
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`rounded-full transition-all duration-300 ${
-                  currentIndex === idx 
-                    ? "w-5 h-1.5 bg-[#2463A7]" 
+                className={`rounded-full transition-all duration-300 ${currentIndex === idx
+                    ? "w-5 h-1.5 bg-[#2463A7]"
                     : "w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400"
-                }`}
+                  }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}
           </div>
 
-          <button 
+          <button
             onClick={nextSlide}
             disabled={currentIndex === maxIndex}
             className={`w-[42px] h-[42px] rounded-full flex items-center justify-center transition-all shadow-md ${currentIndex === maxIndex ? 'bg-gray-300 text-gray-100 cursor-not-allowed' : 'bg-[#2463A7] text-white hover:bg-[#1C4D82] hover:shadow-lg shadow-[#2463A7]/30 cursor-pointer'}`}

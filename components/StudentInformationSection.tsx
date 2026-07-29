@@ -2,20 +2,20 @@ import React from 'react';
 import Link from 'next/link';
 
 const infoLinks = [
-  { label: 'How to Apply', href: '#' },
-  { label: 'Authorized Agents', href: '#' },
-  { label: 'Intakes & Trimester Dates', href: '#' },
-  { label: 'Fees & Scholarships', href: '#' },
-  { label: 'Pathways', href: '#' },
-  { label: 'Terms & Conditions', href: '#' },
-  { label: 'Policies & Procedures', href: '#' },
-  { label: 'FAQ\'s', href: '#' },
+  { label: 'How to Apply', href: '/admission-entry/how-to-apply' },
+  { label: 'Authorized Agents', href: '/admission-entry/authorized-agents' },
+  { label: 'Intakes & Trimester Dates', href: '/student-life/intakes' },
+  { label: 'Fees & Scholarships', href: '/fees' },
+  { label: 'Pathways', href: '/admission-entry/pathways' },
+  { label: 'Terms & Conditions', href: '/terms' },
+  { label: 'Policies & Procedures', href: '/policies' },
+  { label: 'FAQ\'s', href: '/about-us/faqs' },
 ];
 
 export default function StudentInformationSection() {
   return (
     <section className="w-full bg-[#0A1A44] py-16 lg:py-24">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-[100px] flex flex-col lg:flex-row items-start lg:items-center">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px] flex flex-col lg:flex-row items-start lg:items-center">
         {/* Title Section */}
         <div className="w-full lg:w-[35%] mb-12 lg:mb-0">
           <h2 className="text-white text-[32px] md:text-[40px] font-bold tracking-tight">

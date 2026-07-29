@@ -138,7 +138,7 @@ export default function GdeceCoursePage() {
 
       {/* Overview & Entry Requirements */}
       <div className="w-full bg-[#F8F9FA] pb-16">
-        <div className="w-full max-w-[1440px] mx-auto px-4 xl:px-[100px]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
           <CourseOverviewContent {...currentInfo.overview} />
         </div>
       </div>
@@ -156,7 +156,7 @@ export default function GdeceCoursePage() {
         <StudentInformationSection />
       </div>
 
-      <CourseCTA />
+      <CourseCTA title="Ready to Begin Your Graduate Diploma in Early Childhood Education Journey?" secondaryButtonText="Enquire Now" secondaryButtonLink="/#explore-courses" />
       
       <Accreditations />
     </main>

@@ -9,3 +9,16 @@ export const ArrowRight = ({ color = "#477EFF" }: { color?: string }) => (
     <path d="M1 5.0838H9.1676M5.0838 9.1676L9.1676 5.0838L5.0838 1" stroke={color} strokeWidth="2" strokeLinecap="round" />
   </svg>
 );
+
+export const ChevronRight = ({ className = "w-4 h-4 text-gray-500" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9 18l6-6-6-6" />
+  </svg>
+);
+
+export const ChevronLeft = ({ className = "w-4 h-4 text-gray-500" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M15 18l-6-6 6-6" />
+  </svg>
+);
+

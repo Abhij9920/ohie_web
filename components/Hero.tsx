@@ -11,7 +11,7 @@ const marqueeItems = [
 
 const Dot = () => (
   <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M7.07069 -0.00352633V7.06755H-0.000379916V-0.00352633H7.07069Z" fill="#2463A7"/>
+    <path d="M7.07069 -0.00352633V7.06755H-0.000379916V-0.00352633H7.07069Z" fill="#2463A7" />
   </svg>
 );
 
@@ -47,13 +47,13 @@ export default function Hero() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-[16px] sm:gap-[24px] w-full sm:w-auto">
           <Link
-            href="#"
+            href="#explore-courses"
             className="bg-[#2463A7] bg-opacity-[0.65] rounded-sm hover:bg-opacity-100 text-white text-[14px] sm:text-[16px] font-medium px-[24px] py-[12px] sm:px-[40px] sm:py-[14px] transition-all duration-300 w-full sm:w-auto text-center"
           >
             Explore Courses
           </Link>
           <Link
-            href="#"
+            href="/about-us/study-in-melbourne"
             className="bg-transparent border border-white hover:bg-white/10 text-white text-[14px] sm:text-[16px] font-medium px-[24px] py-[12px] sm:px-[40px] sm:py-[14px] transition-all duration-300 w-full sm:w-auto text-center"
           >
             Learn More

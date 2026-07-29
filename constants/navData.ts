@@ -19,12 +19,11 @@ export const postgradCourses = [
 ];
 
 export const undergradCourses = [
-  { name: "Bachelor of Business", href: "#" },
-  { name: "Bachelor of Information Technology", href: "#" },
   { name: "Bachelor of Cyber Security", href: "/study/bcs" },
   { name: "Bachelor of Information Systems", href: "/study/bis" },
-  { name: "Diploma of Business", href: "#" },
-  { name: "Diploma of Information Technology", href: "#" }
+  { name: "Bachelor of Business (Accounting)", href: "/study/bba" },
+  { name: "Bachelor of Business", href: "/study/bbus" },
+  { name: "Diploma of Business", href: "/study/dipbus" }
 ];
 
 export const studentLifeData = {
@@ -33,21 +32,23 @@ export const studentLifeData = {
     "OIHE (Moodle)",
     "Policies & Procedures",
     "Our People",
-    "Life at Ozford"
+
   ],
   support: [
+    "Student Services & Support",
     "Career Hub",
     "Endorsement",
     "Campus Safety & Sexual Misconduct",
-    "Key Dates"
+
   ],
-  intakes: [
+  keyDates: [
+    "Intakes",
     "Fee Due Dates",
     "Orientations",
     "Events",
-    "International Students"
   ],
-  apply: [
+  internationalStudent: [
+    "Apply",
     "Accommodation",
     "Study in Melbourne Australia",
     "ESOS Framework"
@@ -67,9 +68,9 @@ export const admissionData = {
     "Student Handbook",
     "Policies & Procedures",
     "Statement of Tuition Assurance",
-    "Information"
   ],
-  applyNow: [
+  information: [
+    "Apply Now",
     "Pay Fees",
     "Payment Methods",
     "Fee Help",
@@ -87,22 +88,22 @@ export const aboutData = {
     "Testimonials",
     "Our Stories",
     "Policies & Procedures",
-    "Life at Ozford"
   ],
-  support: [
+  lifeAtOzford: [
+    "Student Services & Support",
     "Career Hub",
     "Endorsement",
-    "Campus Safety & Sexual Misconduct",
-    "Terms & Policies"
+    "Campus Safety & Sexual Misconduct"
   ],
-  terms: [
+  termsAndPolicies: [
+    "Terms & Conditions",
     "ESOS Act",
     "Privacy Statement",
     "Disclaimer",
-    "Policies & Procedures",
-    "Engage"
+    "Policies & Procedures"
   ],
-  blogs: [
+  engage: [
+    "Blogs & Events",
     "Contact us",
     "Job Vacancy",
     "FAQ's"

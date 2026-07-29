@@ -137,11 +137,11 @@ export default function GcitCoursePage() {
   const currentInfo = info[studentType];
 
   const tabs = [
-    { id: 'overview', label: 'Overview', content: <CourseOverviewContent {...currentInfo.overview} /> },
-    { id: 'entry', label: 'Entry Requirements', content: <div>Entry Requirements Content</div> },
-    { id: 'structure', label: 'Course Structure', content: <CourseStructureContent {...currentInfo.structure} /> },
-    { id: 'assessment', label: 'Assessment Methods', content: <div>Assessment Methods Content</div> },
-    { id: 'student-info', label: 'Student Information', content: <div>Student Information Content</div> },
+    { id: 'overview', label: 'Overview' },
+    { id: 'entry', label: 'Entry Requirements' },
+    { id: 'structure', label: 'Course Structure' },
+    { id: 'assessment', label: 'Assessment Methods' },
+    { id: 'information', label: 'Student Information' }
   ];
 
   return (
@@ -162,25 +162,27 @@ export default function GcitCoursePage() {
 
       {/* Overview & Entry Requirements */}
       <div className="w-full bg-[#F8F9FA] pb-16">
-        <div className="w-full max-w-[1440px] mx-auto px-4 xl:px-[100px]">
-          <CourseOverviewContent {...currentInfo.overview} />
+        <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px]">
+          <CourseOverviewContent {...currentInfo.overview} academicTitle="Entry Requirements" />
         </div>
       </div>
 
-      <div id="structure">
+      <div id="structure" className="scroll-mt-24">
         <CourseStructureContent {...currentInfo.structure} />
-        <CourseUnitsAccordion categories={gcitCategories} unitsData={gcitUnitsData} />
+        <div className="pt-16">
+          <CourseUnitsAccordion categories={gcitCategories} unitsData={gcitUnitsData} />
+        </div>
       </div>
 
-      <div id="assessment">
+      <div id="assessment" className="scroll-mt-24">
         <AssessmentMethods />
       </div>
 
-      <div id="student-info">
+      <div id="information" className="scroll-mt-24">
         <StudentInformationSection />
       </div>
 
-      <CourseCTA />
+      <CourseCTA title="Ready to Begin Your Graduate Certificate in Information Technology Journey?" secondaryButtonText="Enquire Now" secondaryButtonLink="/#explore-courses" />
       
       <Accreditations />
     </main>
