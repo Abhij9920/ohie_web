@@ -59,8 +59,8 @@ export default function WhyOiheContent() {
         </div>
       </ImageTextRow>
 
-      <section className="w-full bg-[#FAFAF7] py-12 md:py-20 px-4 md:px-8 xl:px-[100px]">
-        <div className="max-w-[1440px] mx-auto">
+      <section className="w-full bg-[#FAFAF7] py-12 md:py-20">
+        <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
           {/* Header */}
           <div className="mb-8">
             <span className="text-[#2463A7] text-[12px] font-bold tracking-wider uppercase mb-2 block">

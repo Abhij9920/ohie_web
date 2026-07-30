@@ -35,7 +35,7 @@ export default function CourseCTA({
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 w-full sm:w-auto">
           <Link
             href={primaryButtonLink}
-            className="bg-[#5698ED] hover:bg-[#4887D9] text-white font-medium text-[15px] px-8 py-3.5 transition-colors duration-300 text-center min-w-[200px]"
+            className="bg-[#5698ED] hover:bg-[#4887D9] text-white font-medium text-[15px] px-8 py-3.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-center min-w-[200px]"
           >
             {primaryButtonText}
           </Link>

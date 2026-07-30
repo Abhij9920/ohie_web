@@ -22,19 +22,19 @@ const CoffeeIcon = () => (
 
 const PeopleIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16.0011 21V19C16.0011 17.9391 15.5797 16.9217 14.8295 16.1716C14.0792 15.4214 13.0618 15 12.0008 15H6.00032C4.93937 15 3.92187 15.4214 3.17167 16.1716C2.42146 16.9217 2 17.9391 2 19V21M16.0011 3.12793C16.8589 3.3503 17.6186 3.85119 18.161 4.55199C18.7033 5.25279 18.9976 6.11382 18.9976 6.99993C18.9976 7.88604 18.7033 8.74707 18.161 9.44787C17.6186 10.1487 16.8589 10.6496 16.0011 10.8719M22.0016 20.9999V18.9999C22.0009 18.1136 21.7059 17.2527 21.1629 16.5522C20.6199 15.8517 19.8596 15.3515 19.0014 15.1299M13.0009 7C13.0009 9.20914 11.2099 11 9.00056 11C6.79124 11 5.00024 9.20914 5.00024 7C5.00024 4.79086 6.79124 3 9.00056 3C11.2099 3 13.0009 4.79086 13.0009 7Z" stroke="white" strokeWidth="2" strokeLinecap="round" />
+    <path d="M16.0011 21V19C16.0011 17.9391 15.5797 16.9217 14.8295 16.1716C14.0792 15.4214 13.0618 15 12.0008 15H6.00032C4.93937 15 3.92187 15.4214 3.17167 16.1716C2.42146 16.9217 2 17.9391 2 19V21M16.0011 3.12793C16.8589 3.3503 17.6186 3.85119 18.161 4.55199C18.7033 5.25279 18.9976 6.11382 18.9976 6.99993C18.9976 7.88604 18.7033 8.74707 18.161 9.44787C17.6186 10.1487 16.0011 10.8719M22.0016 20.9999V18.9999C22.0009 18.1136 21.7059 17.2527 21.1629 16.5522C20.6199 15.8517 19.8596 15.3515 19.0014 15.1299M13.0009 7C13.0009 9.20914 11.2099 11 9.00056 11C6.79124 11 5.00024 9.20914 5.00024 7C5.00024 4.79086 6.79124 3 9.00056 3C11.2099 3 13.0009 4.79086 13.0009 7Z" stroke="white" strokeWidth="2" strokeLinecap="round" />
   </svg>
 )
 
 export default function WhyStudyInMelbourne() {
   return (
-    <section className="w-full bg-[#0B1F4A] py-10 md:py-16 lg:py-24 px-4 md:px-8 xl:px-[100px]">
-      <div className="max-w-[1440px] mx-auto">
+    <section className="w-full bg-white py-10 md:py-16 lg:py-24">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
 
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 lg:gap-12 mb-10 md:mb-16 lg:mb-24">
           <div className="flex-1 w-full lg:w-auto">
-            <span className="text-[#FFFFF] text-[12px] md:text-[14px] font-bold tracking-wider uppercase mb-3 block">
+            <span className="text-[#FFFFFF] text-[12px] md:text-[14px] font-bold tracking-wider uppercase mb-3 block">
               Academic Heartland
             </span>
             <h2 className="text-white text-[32px] md:text-[38px] lg:text-[44px] leading-tight" style={{ fontFamily: 'var(--font-dm-serif)' }}>
@@ -80,7 +80,7 @@ export default function WhyStudyInMelbourne() {
 
         {/* Image */}
         <div className="w-full relative min-h-[250px] md:min-h-[400px] lg:min-h-[600px]">
-          <Image src="/study_mel/img2.png" alt="Melbourne Skyline" fill className="object-cover" />
+          <Image src="/study_mel/melbourne_skyline.png" alt="Melbourne Skyline" fill className="object-cover" sizes="100vw" quality={100} priority />
         </div>
       </div>
     </section>

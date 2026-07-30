@@ -14,17 +14,15 @@ export default function EventsPage() {
     <main className="w-full bg-[#FAFAF7] min-h-screen flex flex-col">
       <EventsHero />
 
-      <section className="flex-1 w-full pt-12">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
-          <EventCard
-            day="09"
-            monthYear="JULY 2026"
-            title="Melbourne Career Expo 2026"
-            dateRange="July 09, 2026 - July 19, 2026"
-            venue="Melbourne Convention & Exhibition Centre, Melbourne"
-            href="/student-life/events/melbourne-career-expo-2026"
-          />
-        </div>
+      <section className="flex-1 w-full">
+        <EventCard
+          day="09"
+          monthYear="JULY 2026"
+          title="Melbourne Career Expo 2026"
+          dateRange="July 09, 2026 - July 19, 2026"
+          venue="Melbourne Convention & Exhibition Centre, Melbourne"
+          href="/student-life/events/melbourne-career-expo-2026"
+        />
       </section>
 
       {/* All Events Section */}

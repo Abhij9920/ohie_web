@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ScrollReveal from "./ScrollReveal";
 
 const newsItems = [
   {
@@ -62,36 +63,38 @@ export default function NewsEvents() {
         {/* News Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {newsItems.map((item, idx) => (
-            <div key={idx} className="flex flex-col group">
-              {/* Card Image */}
-              <div className="w-full h-[240px] relative overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+            <ScrollReveal key={idx} delay={idx * 0.1}>
+              <div className="flex flex-col group h-full bg-white shadow-sm border border-transparent hover:shadow-xl hover:border-gray-100 transition-all duration-300">
+                {/* Card Image */}
+                <div className="w-full h-[240px] relative overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
 
-              {/* Card Content */}
-              <div className="flex flex-col flex-grow p-6 lg:p-8 items-center md:items-start text-center md:text-left">
-                <span className="text-[#2463A7] text-[11px] font-[family-name:var(--font-geist-sans)] font-semibold tracking-widest uppercase mb-3">
-                  {item.date}
-                </span>
-                <h3 className="text-[#0B1F4A] text-[18px] font-[family-name:var(--font-dm-serif)] mb-3 leading-tight">
-                  {item.title}
-                </h3>
-                <p className="text-[#6B7280] text-[13px] leading-relaxed mb-8 flex-grow">
-                  {item.desc}
-                </p>
-                <Link href={`/student-life/events/${item.slug}`} className="text-[#0B1F4A] text-[14px] font-bold flex items-center gap-2 border-b-2 border-[#0B1F4A] w-fit pb-1 hover:text-[#2463A7] hover:border-[#2463A7] transition-colors mt-auto">
-                  Read More
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </Link>
+                {/* Card Content */}
+                <div className="flex flex-col flex-grow p-6 lg:p-8 items-center md:items-start text-center md:text-left">
+                  <span className="text-[#2463A7] text-[11px] font-[family-name:var(--font-geist-sans)] font-semibold tracking-widest uppercase mb-3">
+                    {item.date}
+                  </span>
+                  <h3 className="text-[#0B1F4A] text-[18px] font-[family-name:var(--font-dm-serif)] mb-3 leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#6B7280] text-[13px] leading-relaxed mb-8 flex-grow">
+                    {item.desc}
+                  </p>
+                  <Link href={`/student-life/events/${item.slug}`} className="text-[#0B1F4A] text-[14px] font-bold flex items-center gap-2 border-b-2 border-[#0B1F4A] w-fit pb-1 hover:text-[#2463A7] hover:border-[#2463A7] transition-colors mt-auto">
+                    Read More
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 

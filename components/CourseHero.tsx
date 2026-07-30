@@ -59,7 +59,7 @@ export default function CourseHero({
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href={primaryButtonHref} target={primaryButtonHref.startsWith('http') || primaryButtonHref.endsWith('.pdf') ? '_blank' : undefined} rel={primaryButtonHref.startsWith('http') || primaryButtonHref.endsWith('.pdf') ? 'noopener noreferrer' : undefined} className="bg-[#4F8CE6] hover:bg-[#3B7BE0] text-white px-8 py-3 text-[14px] font-medium transition-colors flex items-center justify-center gap-2 w-full sm:w-auto">
+            <a href={primaryButtonHref} target={primaryButtonHref.startsWith('http') || primaryButtonHref.endsWith('.pdf') ? '_blank' : undefined} rel={primaryButtonHref.startsWith('http') || primaryButtonHref.endsWith('.pdf') ? 'noopener noreferrer' : undefined} className="bg-[#4F8CE6] hover:bg-[#3B7BE0] text-white px-8 py-3 text-[14px] font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto">
               {primaryButtonText}
               <svg width="11" height="9" viewBox="79 2.5 10 8.5" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M82.843 10.6016L86.903 6.24756V7.31156L82.843 3.02756H84.761L88.093 6.42956V7.12956L84.761 10.6016H82.843ZM79.357 7.52156V6.09356H86.791V7.52156H79.357Z" fill="currentColor" />

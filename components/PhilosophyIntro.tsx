@@ -18,8 +18,8 @@ export default function PhilosophyIntro() {
           </div>
 
           {/* Right Button */}
-          <div className="flex-shrink-0 flex justify-start lg:justify-end w-full lg:w-auto">
-            <Link href="/student-life/how-to-apply" className="inline-flex items-center justify-center bg-[#4D97E6] text-white font-semibold text-[15px] px-10 py-4 hover:bg-[#3B7BBF] transition-colors">
+          <div className="flex justify-center md:justify-start">
+            <Link href="/student-life/how-to-apply" className="inline-flex items-center justify-center bg-[#4D97E6] text-white font-semibold text-[15px] px-10 py-4 hover:bg-[#3B7BBF] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               Apply Now
               <svg className="ml-2 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>

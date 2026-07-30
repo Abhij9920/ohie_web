@@ -148,8 +148,8 @@ export default function GalleryContent() {
                 
                 {item.type === 'video' && (
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-[56px] h-[56px] sm:w-[72px] sm:h-[72px] bg-[#FF0000] rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="ml-1 sm:ml-2 sm:w-[28px] sm:h-[28px]">
+                    <div className="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] bg-[#FF0000] rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="white" className="ml-1 w-[16px] h-[16px] sm:w-[20px] sm:h-[20px]">
                         <polygon points="5 3 19 12 5 21 5 3"></polygon>
                       </svg>
                     </div>

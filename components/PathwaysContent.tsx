@@ -15,8 +15,8 @@ export default function PathwaysContent() {
         hideUnderline={true}
       />
 
-      <section className="w-full bg-white py-12 md:py-20 px-4 md:px-8 xl:px-[100px] min-h-[50vh]">
-        <div className="max-w-[1000px] mx-auto flex flex-col items-center">
+      <section className="w-full bg-white py-12 md:py-20 min-h-[50vh]">
+        <div className="w-full max-w-[1000px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] flex flex-col items-center">
           
           {/* Diagram Image */}
           <div className="relative w-full max-w-[800px] mb-12">

@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center gap-[16px] sm:gap-[24px] w-full sm:w-auto">
           <Link
             href="#explore-courses"
-            className="bg-[#2463A7] bg-opacity-[0.65] rounded-sm hover:bg-opacity-100 text-white text-[14px] sm:text-[16px] font-medium px-[24px] py-[12px] sm:px-[40px] sm:py-[14px] transition-all duration-300 w-full sm:w-auto text-center"
+            className="bg-[#2463A7] bg-opacity-[0.65] rounded-sm hover:bg-opacity-100 text-white text-[14px] sm:text-[16px] font-medium px-[24px] py-[12px] sm:px-[40px] sm:py-[14px] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg w-full sm:w-auto text-center"
           >
             Explore Courses
           </Link>

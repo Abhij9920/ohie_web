@@ -127,8 +127,8 @@ export default function HowToApplyContent() {
         hideUnderline={true}
       />
 
-      <section className="w-full bg-[#FAFAF7] py-12 md:py-20 px-4 md:px-8 xl:px-[100px] min-h-[50vh]">
-        <div className="max-w-[1440px] mx-auto">
+      <section className="w-full bg-[#FAFAF7] py-12 md:py-20 min-h-[50vh]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
           <div className="w-full">
             <Accordion items={steps} />
           </div>

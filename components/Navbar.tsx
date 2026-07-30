@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown, ChevronRight, ChevronLeft } from "./Icons";
 import { navLinks } from "@/constants/navData";
 import StudyMegaMenu from "./StudyMegaMenu";
@@ -167,6 +167,20 @@ const mobileNavData: MobileNavItem[] = [
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const headerRef = useRef<HTMLElement>(null);
+
+  // Close dropdown on click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   // Stack for multi-level mobile drill-down navigation
   const [menuStack, setMenuStack] = useState<{ title: string; items: MobileNavItem[] }[]>([
@@ -213,7 +227,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="w-full bg-white z-50 relative">
+    <header ref={headerRef} className="w-full bg-white z-50 sticky top-0 shadow-sm transition-all duration-300">
       {/* Top Utility Bar (Dark Blue) */}
 
 
@@ -250,7 +264,7 @@ export default function Navbar() {
                         setActiveDropdown(null);
                       }
                     }}
-                    className={`text-[14px] font-medium flex items-center transition-colors duration-200 ${activeDropdown === link.name ? "text-[#0B1F4A]" : "text-[#2D2D2D] hover:text-[#0B1F4A]"
+                    className={`text-[14px] font-medium flex items-center transition-colors duration-200 ${activeDropdown === link.name ? "text-blue-500 underline underline-offset-4" : "text-[#2D2D2D] hover:text-blue-500 hover:underline hover:underline-offset-4"
                       }`}
                   >
                     {link.name}
@@ -269,7 +283,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center">
               <Link
                 href="/admission-entry/how-to-apply"
-                className="bg-[#0B1F4A] hover:bg-[#081530] text-white text-[14px] font-medium px-[36px] py-[12px] transition-colors duration-300"
+                className="bg-[#0B1F4A] hover:bg-[#081530] text-white text-[14px] font-medium px-[36px] py-[12px] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 Apply Now
               </Link>
@@ -395,7 +409,7 @@ export default function Navbar() {
                   href="https://ozford.meshedhe.com.au/Publics/PublicsPages/StudentApply/pp_Application_Step0.aspx"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center items-center bg-[#0B1F4A] hover:bg-[#081530] text-white text-[15px] font-medium py-3.5 px-6 transition-colors w-full rounded-sm"
+                  className="flex justify-center items-center bg-[#0B1F4A] hover:bg-[#081530] text-white text-[15px] font-medium py-3.5 px-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg w-full rounded-sm"
                   onClick={handleCloseMobileMenu}
                 >
                   Apply Now

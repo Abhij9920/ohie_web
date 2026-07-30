@@ -157,7 +157,7 @@ const PathwayColumn = ({ title, subtitle, steps, footerText, buttonText, buttonL
     {/* Footer action */}
     <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-between items-center gap-4 pl-2">
       <p className="text-[#6B7280] text-[13px] sm:text-[14px] text-center sm:text-left">{footerText}</p>
-      <Link href={buttonLink} className="w-full sm:w-auto bg-[#4D97E6] hover:bg-[#3B82F6] text-white text-[14px] font-medium px-6 py-3 transition-colors flex justify-center items-center gap-2 whitespace-nowrap">
+      <Link href={buttonLink} className="w-full sm:w-auto bg-[#4D97E6] hover:bg-[#3B82F6] text-white text-[14px] font-medium px-6 py-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex justify-center items-center gap-2 whitespace-nowrap">
         {buttonText} <span>&rarr;</span>
       </Link>
     </div>
@@ -166,8 +166,8 @@ const PathwayColumn = ({ title, subtitle, steps, footerText, buttonText, buttonL
 
 export default function AdmissionsPathway() {
   return (
-    <section className="w-full bg-[#F9FAFB] py-16 md:py-24 px-4 md:px-8 xl:px-[100px]">
-      <div className="max-w-[1440px] mx-auto">
+    <section className="w-full bg-[#FAFAF7] py-12 md:py-20">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
 
         {/* Section Header */}
         <div className="mb-8 md:mb-12 text-center lg:text-left">

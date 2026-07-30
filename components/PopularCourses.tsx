@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import ScrollReveal from "./ScrollReveal";
 
 const tabs = ["IT", "Business", "Accounting", "Early Childhood"];
 
@@ -157,55 +158,57 @@ export default function PopularCourses() {
           {/* Cards Grid */}
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
             {filteredCourses.map((course, idx) => (
-              <div key={idx} className="bg-white border-[#E8E8E4] border-2 flex flex-col group hover:shadow-xl transition-shadow duration-300">
-                {/* Image */}
-                <div className="relative w-full h-[240px] overflow-hidden">
-                  <Image
-                    src={course.image}
-                    alt={course.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
+              <ScrollReveal key={idx} delay={idx * 0.1}>
+                <div className="bg-white border-[#E8E8E4] border-2 flex flex-col group hover:shadow-xl transition-shadow duration-300 h-full">
+                  {/* Image */}
+                  <div className="relative w-full h-[240px] overflow-hidden">
+                    <Image
+                      src={course.image}
+                      alt={course.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
 
-                {/* Card Body */}
-                <div className="p-[24px] md:p-[32px] flex flex-col flex-1">
-                  <span className="text-[#2463A7] text-[10px] font-semibold tracking-wider uppercase mb-[12px] md:mb-[16px]">
-                    {course.level}
-                  </span>
-
-                  <h3 className="text-[#0B1F4A] text-[20px] md:text-[22px] font-[family-name:var(--font-dm-serif)] leading-[1.2] mb-[12px] md:mb-[16px]">
-                    {course.title}
-                  </h3>
-
-                  <p className="text-[#6B7280] text-[13px] font-sans leading-relaxed mb-[40px] flex-1">
-                    {course.description}
-                  </p>
-
-                  {/* Footer */}
-                  <div className="flex items-center justify-between mt-auto">
-                    <span className="text-[#2463A7] text-[12px] font-medium">
-                      {course.duration}
+                  {/* Card Body */}
+                  <div className="p-[24px] md:p-[32px] flex flex-col flex-1">
+                    <span className="text-[#2463A7] text-[10px] font-semibold tracking-wider uppercase mb-[12px] md:mb-[16px]">
+                      {course.level}
                     </span>
 
-                    <Link
-                      href={course.href}
-                      className="flex flex-col group text-[#0B1F4A] hover:text-[#2463A7] transition-colors w-fit"
-                    >
-                      <div className="flex items-center text-[13px] font-semibold mb-[4px]">
-                        View Course
-                        <svg className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <h3 className="text-[#0B1F4A] text-[20px] md:text-[22px] font-[family-name:var(--font-dm-serif)] leading-[1.2] mb-[12px] md:mb-[16px]">
+                      {course.title}
+                    </h3>
+
+                    <p className="text-[#6B7280] text-[13px] font-sans leading-relaxed mb-[40px] flex-1">
+                      {course.description}
+                    </p>
+
+                    {/* Footer */}
+                    <div className="flex items-center justify-between mt-auto">
+                      <span className="text-[#2463A7] text-[12px] font-medium">
+                        {course.duration}
+                      </span>
+
+                      <Link
+                        href={course.href}
+                        className="flex flex-col group text-[#0B1F4A] hover:text-[#2463A7] transition-colors w-fit"
+                      >
+                        <div className="flex items-center text-[13px] font-semibold mb-[4px]">
+                          View Course
+                          <svg className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </div>
+                        <svg width="91" height="1" viewBox="0 0 91 1" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#0B1F4A] group-hover:text-[#2463A7] transition-colors">
+                          <rect width="91" height="1" fill="currentColor" />
                         </svg>
-                      </div>
-                      <svg width="91" height="1" viewBox="0 0 91 1" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#0B1F4A] group-hover:text-[#2463A7] transition-colors">
-                        <rect width="91" height="1" fill="currentColor" />
-                      </svg>
-                    </Link>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 

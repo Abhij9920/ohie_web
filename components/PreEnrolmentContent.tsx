@@ -14,8 +14,8 @@ export default function PreEnrolmentContent() {
         title="Pre-Enrolment"
       />
 
-      <section className="w-full bg-[#FAFAF7] py-12 md:py-20 px-4 md:px-8 xl:px-[100px] min-h-[50vh]">
-        <div className="max-w-[1440px] mx-auto">
+      <section className="w-full bg-[#FAFAF7] py-12 md:py-20 min-h-[50vh]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
           <h2 className="text-[#1A1D1A] text-[28px] md:text-[36px] italic mb-6 md:mb-8" style={{ fontFamily: 'var(--font-dm-serif)' }}>
             Prepare for your study journey with OIHE
           </h2>
@@ -220,7 +220,7 @@ export default function PreEnrolmentContent() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {/* Card 1: PDF Guide */}
-              <a href="https://ozford.edu.au/documents/427/OIHE_Student_Handbook_May_2026.pdf" target="_blank" rel="noopener noreferrer" className="group block bg-white border border-[#4D97E6] p-6 md:p-8 flex items-center justify-between hover:shadow-md transition-all rounded-[4px]">
+              <a href="/OIHE_Student_Handbook_Jul_2026_1.pdf" target="_blank" rel="noopener noreferrer" className="group block bg-white border border-[#4D97E6] p-6 md:p-8 flex items-center justify-between hover:shadow-md transition-all rounded-[4px]">
                 <div className="flex items-center gap-6">
                   <div className="w-[48px] h-[48px] bg-[#EAF2FA] rounded-[4px] flex items-center justify-center shrink-0">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

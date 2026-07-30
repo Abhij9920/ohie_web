@@ -522,7 +522,7 @@ const CampusSafetyPage = () => {
                                     </span>
                                 </button>
                                 {openSection === item.id && (
-                                    <div className="px-6 pb-6 text-[14px] text-[#333333] leading-relaxed prose prose-sm max-w-none prose-a:text-[#4D97E6] prose-a:no-underline hover:prose-a:underline">
+                                    <div className="px-6 pb-6 text-[14px] text-[#333333] leading-relaxed prose prose-sm max-w-none prose-a:text-[#4D97E6] prose-a:no-underline hover:prose-a:underline border-l border-r border-b border-[#E0D9C8]">
                                         {item.content}
                                     </div>
                                 )}

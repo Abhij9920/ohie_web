@@ -121,8 +121,8 @@ export default function WhatWeOffer() {
 
                   {/* Plus/Minus Icon */}
                   <div className={`${isOpen ? 'text-white' : 'text-[#4D97E6]'}`}>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7 2V12M2 7H12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform duration-300">
+                      <path d={isOpen ? "M2 7H12" : "M7 2V12M2 7H12"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                     </svg>
                   </div>
                 </button>

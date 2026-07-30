@@ -67,8 +67,8 @@ export default function EventCard({ day, monthYear, title, dateRange, venue, hre
         </div>
 
         {/* Right Button */}
-        <div className="mt-4 md:mt-0 shrink-0">
-          <Link href={href} className="inline-flex items-center justify-center bg-[#4D97E6] hover:bg-[#3a7bc2] text-white px-8 py-3.5 text-[14px] font-medium transition-colors">
+        <div className="flex justify-end mt-6 md:mt-0">
+          <Link href={href} className="inline-flex items-center justify-center bg-[#4D97E6] hover:bg-[#3a7bc2] text-white px-8 py-3.5 text-[14px] font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             Read More →
           </Link>
         </div>

@@ -23,11 +23,12 @@ export default function LiveInAustralia() {
             <p>
               Australia is among the happiest countries in the world (World Happiness Report 2017) and we have four of the 30 best cities in the world for students (QS Top University Rankings 2017), you are sure to enjoy your time here.
             </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link href="https://www.studyinaustralia.gov.au/" target="_blank" rel="noopener noreferrer" className="bg-[#0B1F4A] hover:bg-[#152e6d] text-white text-[14px] font-semibold px-8 py-3.5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                Discover More Source
+              </Link>
+            </div>
           </div>
-
-          <Link href="https://www.studyinaustralia.gov.au/" target="_blank" rel="noopener noreferrer" className="bg-[#0B1F4A] hover:bg-[#152e6d] text-white text-[14px] font-semibold px-8 py-3.5 transition-colors">
-            Go To Source
-          </Link>
         </div>
 
         {/* Right Image */}

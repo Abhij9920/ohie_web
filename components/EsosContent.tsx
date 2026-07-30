@@ -457,14 +457,14 @@ export default function EsosContent() {
               ))}
             </div>
 
-            <Link href="https://forms.ozford.edu.au/t/cujUAwCHoqus" className="inline-flex items-center justify-center bg-[#2463A7] text-white px-8 py-3 text-[14px] font-bold hover:bg-[#1A4B82] transition-colors">
+            <Link href="https://forms.ozford.edu.au/t/cujUAwCHoqus" className="inline-flex items-center justify-center bg-[#2463A7] text-white px-8 py-3 text-[14px] font-bold hover:bg-[#1A4B82] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               APPLY NOW
             </Link>
           </div>
         </div>
 
         {/* Right Column (Sidebar) */}
-        <div className="w-full lg:w-[360px] shrink-0 flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start">
+        <div className="w-full lg:w-[360px] shrink-0 flex flex-col gap-6">
 
           {/* Provider Box */}
           <div className="bg-[#0B1F4A] text-white p-6 md:p-8 rounded-[4px] shadow-md">

@@ -41,7 +41,7 @@ export default function GetJobReady() {
           <div>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-[#4D97E6] hover:bg-[#3A7ECA] transition-colors text-white font-medium text-[15px] px-8 py-4 rounded-sm"
+              className="inline-flex items-center justify-center bg-[#4D97E6] hover:bg-[#3A7ECA] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-white font-medium text-[15px] px-8 py-4 rounded-sm"
             >
               Book an Appointment &rarr;
             </Link>

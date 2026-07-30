@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface MilestoneData {
   year: string;
@@ -132,12 +135,30 @@ const TimelineItem = ({ item, isLeft }: { item: MilestoneData, isLeft: boolean }
     <div className="w-full pl-[64px] pr-4 md:px-0 md:w-[45%] relative">
 
       {/* Mobile Dot */}
-      <div className="absolute left-[24px] w-[14px] h-[14px] bg-[#4D97E6] rounded-full transform -translate-x-1/2 z-10 top-[40px] md:hidden"></div>
+      <motion.div 
+        className="absolute left-[24px] w-[14px] h-[14px] bg-[#4D97E6] rounded-full transform -translate-x-1/2 z-10 top-[40px] md:hidden"
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ delay: 0.2, type: "spring" }}
+      ></motion.div>
 
       {/* Desktop Dot */}
-      <div className={`hidden md:block absolute top-1/2 w-[16px] h-[16px] bg-[#4D97E6] rounded-full transform -translate-y-1/2 z-10 ${isLeft ? '-right-[16px]' : '-left-[16px]'}`}></div>
+      <motion.div 
+        className={`hidden md:block absolute top-1/2 w-[16px] h-[16px] bg-[#4D97E6] rounded-full transform -translate-y-1/2 z-10 ${isLeft ? '-right-[16px]' : '-left-[16px]'}`}
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ delay: 0.2, type: "spring" }}
+      ></motion.div>
 
-      <div className="bg-[#FAFAF71A] border border-[#FAFAF733] rounded-[16px] p-6 text-left hover:bg-[#FAFAF726] transition-colors relative">
+      <motion.div 
+        className="bg-[#FAFAF71A] border border-[#FAFAF733] rounded-[16px] p-6 text-left hover:bg-[#FAFAF726] transition-colors relative"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+      >
         <div className="mb-4">
           {item.icon}
         </div>
@@ -145,7 +166,7 @@ const TimelineItem = ({ item, isLeft }: { item: MilestoneData, isLeft: boolean }
         <p className="text-[#FAFAF7] text-[13px] md:text-[14px] leading-[1.6]">
           {item.text}
         </p>
-      </div>
+      </motion.div>
     </div>
   </div>
 );
@@ -168,7 +189,13 @@ export default function AboutMilestones() {
         {/* Timeline Container */}
         <div className="relative max-w-[1200px] mx-auto">
           {/* Vertical Line */}
-          <div className="absolute left-[24px] md:left-1/2 top-0 bottom-0 w-[1px] bg-[#FAFAF733] md:-translate-x-1/2"></div>
+          <motion.div 
+            className="absolute left-[24px] md:left-1/2 top-0 bottom-0 w-[1px] bg-[#FAFAF733] md:-translate-x-1/2 origin-top"
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+          ></motion.div>
 
           <div className="flex flex-col">
             {milestonesData.map((item, idx) => (

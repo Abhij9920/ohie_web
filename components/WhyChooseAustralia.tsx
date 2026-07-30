@@ -66,8 +66,8 @@ export default function WhyChooseAustralia() {
   ];
 
   return (
-    <section className="w-full bg-white py-10 md:py-16 lg:py-24 px-4 md:px-8 xl:px-[100px]">
-      <div className="max-w-[1440px] mx-auto">
+    <section className="w-full bg-white py-10 md:py-16 lg:py-24">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
         <div className="mb-8 md:mb-12">
           <span className="text-[#2463A7] text-[12px] md:text-[14px] font-bold tracking-wider uppercase mb-3 block">
             Global Destination

@@ -25,8 +25,8 @@ export default function StatementOfTuitionAssuranceContent() {
           />
         </div>
 
-        <div className="w-full bg-[#FAFAF7] px-4 md:px-8 xl:px-[100px]">
-          <div className="max-w-[1440px] py-12 md:py-16 lg:py-20 mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12">
+        <div className="w-full bg-[#FAFAF7]">
+          <div className="w-full max-w-[1440px] px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] py-12 md:py-16 lg:py-20 mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12">
 
             {/* Left Content */}
             <div className="flex-1 max-w-[650px]">
@@ -46,28 +46,27 @@ export default function StatementOfTuitionAssuranceContent() {
               </p>
             </div>
 
-            {/* Right Content - Download Card */}
-            <div className="w-full lg:w-auto min-w-[300px] md:min-w-[450px]">
-              <div className="bg-white border border-[#E5E8E2] py-10 px-8  flex items-center  shadow-sm">
-                <a
-                  href="/Directors_Declaration.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#2D68A8] hover:bg-[#1f4a70] text-white text-[14px] font-semibold px-8 py-3.5 flex items-center justify-center gap-3 transition-colors uppercase tracking-wide w-full md:w-auto"
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  Download Declaration
-                </a>
-              </div>
+            {/* Right Content - Download Button */}
+            <div className="w-full lg:w-auto min-w-[300px] md:min-w-[450px] flex items-center justify-start lg:justify-end">
+              <a
+                href="/Directors_Declaration.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#2D68A8] hover:bg-[#1f4a70] text-white text-[14px] font-semibold px-8 py-3.5 flex items-center justify-center gap-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg uppercase tracking-wide w-full md:w-auto inline-flex"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                Download Declaration
+              </a>
             </div>
 
           </div>
         </div>
 
         {/* Guarantee & Framework Section */}
-        <div className="w-full bg-white mx-auto px-4 md:px-8 xl:px-[100px] py-12 md:py-16 lg:py-24">
+        <div className="w-full bg-white py-12 md:py-16 lg:py-24">
+          <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
           <h4 className="text-[#2463A7] text-[13px] font-bold tracking-wider uppercase mb-4">
             GUARANTEE & FRAMEWORK
           </h4>
@@ -99,16 +98,17 @@ export default function StatementOfTuitionAssuranceContent() {
                 <path d="M39.6672 28.0035C39.6672 34.4474 34.4435 39.6711 27.9996 39.6711M39.6672 28.0035C39.6672 21.5597 34.4435 16.3359 27.9996 16.3359M39.6672 28.0035H16.332M27.9996 39.6711C21.5558 39.6711 16.332 34.4474 16.332 28.0035M27.9996 39.6711C25.0037 36.5254 23.3326 32.3477 23.3326 28.0035C23.3326 23.6594 25.0037 19.4817 27.9996 16.3359M27.9996 39.6711C30.9956 36.5254 32.6667 32.3477 32.6667 28.0035C32.6667 23.6594 30.9956 19.4817 27.9996 16.3359M27.9996 16.3359C21.5558 16.3359 16.332 21.5597 16.332 28.0035" stroke="#4D97E6" strokeWidth="2" strokeLinecap="round" />
               </svg>
 
-
               <h3 className="text-[#1C1D1C] text-[24px] mt-3" style={{ fontFamily: 'var(--font-dm-serif)' }}>
-                Overseas students studying on a student visa.              </h3>
+                  Overseas students studying on a student visa.
+                </h3>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Domestic Students - Tuition Assurance Section */}
-        <div className="w-full bg-[#FAFAFA] px-4 md:px-8 xl:px-[100px] py-12 md:py-16 lg:py-24 border-t border-[#EAEAE6]">
-          <div className="max-w-[1480px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16">
+        <div className="w-full bg-[#FAFAFA] py-12 md:py-16 lg:py-24 border-t border-[#EAEAE6]">
+          <div className="w-full max-w-[1480px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] flex flex-col lg:flex-row gap-12 lg:gap-16">
 
             {/* Left Content */}
             <div className="flex-1 max-w-[800px] border-b lg:border-none border-[#EAEAE6] pb-10 lg:pb-0 mb-4 lg:mb-0">
@@ -234,18 +234,18 @@ export default function StatementOfTuitionAssuranceContent() {
         </div>
 
         {/* Overseas Students Section */}
-        <div className="w-full bg-white px-4 md:px-8 xl:px-[100px] py-12 md:py-16 lg:py-24 border-t border-[#EAEAE6]">
-          <div className="max-w-[1480px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16">
+        <div className="w-full bg-white py-12 md:py-16 lg:py-24 border-t border-[#EAEAE6]">
+          <div className="w-full max-w-[1480px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] flex flex-col xl:flex-row gap-12 lg:gap-16">
 
             {/* Left Content */}
-            <div className="flex-1 max-w-[800px] border-b lg:border-none border-[#EAEAE6] pb-10 lg:pb-0 mb-4 lg:mb-0">
+            <div className="flex-1 max-w-[800px] border-b xl:border-none border-[#EAEAE6] pb-10 xl:pb-0 mb-4 xl:mb-0">
               <div className="flex items-center gap-4 mb-6">
-                <svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
                   <path d="M10.3324 8.00023V12.667M10.3324 17.3339H10.3441M19.6648 13.8343C19.6648 19.6678 15.5819 22.5846 10.729 24.2763C10.4749 24.3624 10.1989 24.3583 9.94744 24.2646C5.08292 22.5846 1 19.6678 1 13.8343V5.66734C1 5.35791 1.1229 5.06116 1.34167 4.84236C1.56045 4.62356 1.85716 4.50064 2.16655 4.50064C4.49965 4.50064 7.41602 3.10059 9.44582 1.3272C9.69296 1.11603 10.0073 1 10.3324 1C10.6575 1 10.9718 1.11603 11.219 1.3272C13.2604 3.11226 16.1651 4.50064 18.4982 4.50064C18.8076 4.50064 19.1044 4.62356 19.3231 4.84236C19.5419 5.06116 19.6648 5.35791 19.6648 5.66734V13.8343Z" stroke="#2463A7" strokeWidth="2" strokeLinecap="round" />
                 </svg>
 
 
-                <h2 className="text-[#1C1D1C] text-[28px] md:text-[32px] lg:text-[36px]" style={{ fontFamily: 'var(--font-dm-serif)' }}>
+                <h2 className="text-[#1C1D1C] text-[28px] md:text-[32px] lg:text-[36px] whitespace-nowrap" style={{ fontFamily: 'var(--font-dm-serif)' }}>
                   Overseas Students <span className="font-normal text-[#999] px-2">—</span> Tuition Protection Service (TPS)
                 </h2>
               </div>
@@ -305,7 +305,7 @@ export default function StatementOfTuitionAssuranceContent() {
             </div>
 
             {/* Right Content - Support Card */}
-            <div className="w-full lg:w-[420px]">
+            <div className="w-full xl:w-[420px] xl:mt-[72px]">
               <div className="bg-white border border-[#E5E8E2] p-8 md:p-10 shadow-sm sticky top-[120px]">
                 <div className="flex items-center gap-4 mb-6">
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

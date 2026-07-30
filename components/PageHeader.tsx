@@ -81,10 +81,10 @@ export default function PageHeader({ breadcrumbs, title, quote, description, rig
   // Standard PageHeader layout
   return (
     <div className="w-full bg-[#0B1F4A] pt-[60px] pb-[80px] md:pt-[80px] md:pb-[100px]">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
 
         {/* Left Side: Breadcrumbs and Title */}
-        <div className="flex-1">
+        <div className="flex-1 max-w-[800px]">
           {renderContent()}
         </div>
 

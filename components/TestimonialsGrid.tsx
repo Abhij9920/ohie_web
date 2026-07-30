@@ -444,7 +444,7 @@ export default function TestimonialsGrid() {
       {selectedTestimonial && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onClick={() => setSelectedTestimonial(null)}>
           <div className="bg-white w-full max-w-[800px] max-h-[90vh] overflow-y-auto rounded shadow-2xl relative border-t-[4px] border-[#4D97E6]" onClick={e => e.stopPropagation()}>
-            <button className="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-800 transition-colors" onClick={() => setSelectedTestimonial(null)}>
+            <button className="absolute top-4 right-4 p-2 text-gray-500 hover:text-gray-800 transition-colors cursor-pointer" onClick={() => setSelectedTestimonial(null)}>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M1 1l12 12M1 13L13 1"></path>
               </svg>

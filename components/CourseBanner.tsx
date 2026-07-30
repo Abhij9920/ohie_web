@@ -7,7 +7,7 @@ export default function CourseBanner() {
       <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row">
 
         {/* Left Content Area */}
-        <div className="w-full lg:w-[55%] xl:w-[60%] p-6 md:p-8 lg:pl-[80px] xl:pl-[100px] mb-[40px] lg:mb-[66px] flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+        <div className="w-full lg:w-[55%] xl:w-[60%] px-4 md:px-[40px] lg:pl-[80px] xl:pl-[100px] lg:pr-[60px] py-[60px] md:py-[80px] lg:py-[100px] flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
 
           {/* Logo */}
           <div className="mb-8 flex justify-center lg:justify-start w-full">
@@ -135,7 +135,7 @@ export default function CourseBanner() {
           </div>
 
           {/* Enroll Button */}
-          <Link href="https://ozford.meshedhe.com.au/Publics/PublicsPages/StudentApply/pp_Application_Step0.aspx" className="bg-[#4D97E6] text-white px-6 py-3 md:px-8 md:py-4 text-[14px] font-semibold hover:bg-[#4D97E6] transition-colors w-fit flex items-center gap-3 ">
+          <Link href="https://ozford.meshedhe.com.au/Publics/PublicsPages/StudentApply/pp_Application_Step0.aspx" className="bg-[#4D97E6] text-white px-6 py-3 md:px-8 md:py-4 text-[14px] font-semibold hover:bg-[#3B7BBF] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg w-fit flex items-center gap-3">
             Enroll Now
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7" />
@@ -145,13 +145,15 @@ export default function CourseBanner() {
         </div>
 
         {/* Right Image Area */}
-        <div className="w-full lg:w-[45%] relative min-h-[300px] md:min-h-[400px] lg:min-h-full">
-          <Image
-            src="/cousre_banner.png"
-            alt="Early Childhood Education"
-            fill
-            className="object-cover object-center  p-6 "
-          />
+        <div className="w-full lg:w-[45%] relative min-h-[300px] md:min-h-[400px] lg:min-h-full p-4 md:p-6 lg:p-8 flex items-stretch justify-center">
+          <div className="relative w-full h-full min-h-[300px] max-w-[800px] overflow-hidden">
+            <Image
+              src="/cousre_banner.png"
+              alt="Early Childhood Education"
+              fill
+              className="object-cover object-center"
+            />
+          </div>
         </div>
       </div>
     </section>
