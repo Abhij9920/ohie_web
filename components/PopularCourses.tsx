@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
 
 const tabs = ["IT", "Business", "Accounting", "Early Childhood"];
@@ -145,41 +145,8 @@ const allCourses = [
 
 export default function PopularCourses() {
   const [activeTab, setActiveTab] = useState(tabs[0]);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
-  const scrollRef = useRef<HTMLDivElement>(null);
 
   const filteredCourses = allCourses.filter(course => course.category === activeTab);
-
-  const updateScrollButtons = () => {
-    if (scrollRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(Math.ceil(scrollLeft + clientWidth) < scrollWidth);
-    }
-  };
-
-  useEffect(() => {
-    // Small delay to ensure DOM is fully painted before checking scroll width
-    const timeout = setTimeout(updateScrollButtons, 100);
-    window.addEventListener("resize", updateScrollButtons);
-    return () => {
-      clearTimeout(timeout);
-      window.removeEventListener("resize", updateScrollButtons);
-    };
-  }, [activeTab]);
-
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -380, behavior: "smooth" });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 380, behavior: "smooth" });
-    }
-  };
 
   return (
     <>
@@ -203,10 +170,7 @@ export default function PopularCourses() {
                 {tabs.map((tab) => (
                   <button
                     key={tab}
-                    onClick={() => {
-                      setActiveTab(tab);
-                      if (scrollRef.current) scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
-                    }}
+                    onClick={() => setActiveTab(tab)}
                     className={`text-[14px] font-sans pb-2 transition-colors ${
                       activeTab === tab
                         ? "text-[#0B1F4A] font-bold border-b-[2px] border-[#2463A7]"
@@ -220,35 +184,13 @@ export default function PopularCourses() {
             </div>
           </div>
 
-          {/* Cards Slider Wrapper */}
+          {/* Cards Grid */}
           <div className="relative">
-            {/* Navigation Arrows positioned in the middle */}
-            {canScrollLeft && (
-              <button 
-                onClick={scrollLeft}
-                className="absolute left-[-20px] md:left-[-30px] lg:left-[-40px] top-[45%] -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-lg border border-[#E8E8E4] flex items-center justify-center text-[#0B1F4A] hover:bg-[#0B1F4A] hover:text-white transition-colors cursor-pointer"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-              </button>
-            )}
-            {canScrollRight && (
-              <button 
-                onClick={scrollRight}
-                className="absolute right-[-20px] md:right-[-30px] lg:right-[-40px] top-[45%] -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#0B1F4A] shadow-lg border border-[#E8E8E4] flex items-center justify-center text-white hover:bg-white hover:text-[#0B1F4A] transition-colors cursor-pointer"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-              </button>
-            )}
-
-            {/* Cards Slider */}
             <div 
-              ref={scrollRef}
-              onScroll={updateScrollButtons}
-              className="relative z-10 flex gap-[30px] overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8 pt-4"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] pb-8 pt-4"
             >
               {filteredCourses.map((course, idx) => (
-                <ScrollReveal key={idx} delay={idx * 0.1} className="flex-none w-[300px] md:w-[350px] lg:w-[calc(33.333%-20px)] snap-start">
+                <ScrollReveal key={idx} delay={idx * 0.1} className="w-full">
                   <div className="bg-white border-[#E8E8E4] border-2 flex flex-col group hover:shadow-xl transition-shadow duration-300 h-full w-full">
                     {/* Image */}
                     <div className="relative w-full h-[240px] overflow-hidden">
