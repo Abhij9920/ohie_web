@@ -63,7 +63,11 @@ export default function MitCoursePage() {
         englishRequirement: (
           <>
             IELTS score of a minimum of 6.5 with no band less than 6.0 or equivalent<br />
-            <a href="#" className="underline">( check IELTS equivalence )</a>
+            <a href="#english-requirements" onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById('english-requirements');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }} className="underline hover:text-white transition-colors cursor-pointer">( check IELTS equivalence )</a>
           </>
         ) as any,
         location: "333, Queen Street Melbourne VIC 3000\n433 Boundary Street, Spring Hill QLD 4000",

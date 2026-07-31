@@ -79,7 +79,11 @@ export default function MbaCoursePage() {
         englishRequirement: (
           <>
             IELTS score of a minimum of 6.5 with no band less than 6.0 or equivalent<br />
-            <a href="#" className="underline">( check IELTS equivalence )</a>
+            <a href="#english-requirements" onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById('english-requirements');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }} className="underline hover:text-white transition-colors cursor-pointer">( check IELTS equivalence )</a>
           </>
         ) as any,
         courseRequirement: "9 core units plus 7 electives"

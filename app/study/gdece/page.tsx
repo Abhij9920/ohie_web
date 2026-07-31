@@ -74,7 +74,16 @@ export default function GdeceCoursePage() {
         studyMode: "Full-time, face to face",
         location: "333, Queen Street Melbourne VIC 3000",
         intakes: "March, April, August, September, December, 2026",
-        englishRequirement: "IELTS (academic): minimum overall score of 6.5, with no band score less than 6.0, or equivalent.",
+        englishRequirement: (
+          <>
+            IELTS (academic): minimum overall score of 6.5, with no band score less than 6.0, or equivalent.<br />
+            <a href="#english-requirements" onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById('english-requirements');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }} className="underline hover:text-white transition-colors cursor-pointer">( check IELTS equivalence )</a>
+          </>
+        ) as any,
         courseRequirement: "8 core units"
       },
       overview: {

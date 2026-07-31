@@ -70,7 +70,11 @@ export default function GcmCoursePage() {
         englishRequirement: (
           <>
             IELTS score of a minimum of 6.0, with no band less than 6.0, or equivalent<br />
-            <a href="#" className="underline">( check IELTS equivalence )</a>
+            <a href="#english-requirements" onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById('english-requirements');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }} className="underline hover:text-white transition-colors cursor-pointer">( check IELTS equivalence )</a>
           </>
         ) as any,
         courseRequirement: "2 core units plus 2 electives. The Graduate Certificate in Management allows articulation into the Master of Business Administration (MBA) and Master of Professional Accounting (MPA)."

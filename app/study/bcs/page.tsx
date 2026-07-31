@@ -65,7 +65,16 @@ export default function BcsCoursePage() {
         studyMode: "Full-time, face to face",
         location: "333, Queen Street Melbourne VIC 3000",
         intakes: "March, April, August, September, December, 2026",
-        englishRequirement: "IELTS (academic): minimum overall score of 6.0, with no band score less than 5.5, or equivalent.",
+        englishRequirement: (
+          <>
+            IELTS (academic): minimum overall score of 6.0, with no band score less than 5.5, or equivalent.<br />
+            <a href="#english-requirements" onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById('english-requirements');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }} className="underline hover:text-white transition-colors cursor-pointer">( check IELTS equivalence )</a>
+          </>
+        ) as any,
         courseRequirement: "21 core units plus 3 elective units, or 1 elective unit and an internship"
       },
       overview: {

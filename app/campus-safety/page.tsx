@@ -35,9 +35,21 @@ const CampusSafetyPage = () => {
                         <p className="mb-6">Consent is explained in full at the following websites:</p>
 
                         <ul className="list-disc pl-6 mb-8 space-y-1 text-[#4D97E6]">
-                            <li>https://www.plannedparenthood.org/learn/sex-and-relationships/sexual-consent</li>
-                            <li>https://sydney.edu.au/students/sexual-health-consent.html</li>
-                            <li>https://aifs.gov.au/cfca/publications/age-consent-laws</li>
+                            <li>
+                                <a href="https://www.plannedparenthood.org/learn/sex-and-relationships/sexual-consent" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                                    https://www.plannedparenthood.org/learn/sex-and-relationships/sexual-consent
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://sydney.edu.au/students/sexual-health-consent.html" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                                    https://sydney.edu.au/students/sexual-health-consent.html
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://aifs.gov.au/cfca/publications/age-consent-laws" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                                    https://aifs.gov.au/cfca/publications/age-consent-laws
+                                </a>
+                            </li>
                         </ul>
 
                         <h3 className="text-xl font-semibold mb-4">Sexual harassment</h3>
@@ -50,8 +62,16 @@ const CampusSafetyPage = () => {
 
                         <p className="mb-2 font-medium">Information adapted from:</p>
                         <ul className="list-disc pl-6 mb-8 space-y-1 text-[#4D97E6]">
-                            <li>www.humanrightscommission.vic.gov.au/discrimination/sexual-harassment</li>
-                            <li>https://au.reachout.com/articles/what-is-sexual-harassment</li>
+                            <li>
+                                <a href="https://www.humanrightscommission.vic.gov.au/discrimination/sexual-harassment" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                                    www.humanrightscommission.vic.gov.au/discrimination/sexual-harassment
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://au.reachout.com/articles/what-is-sexual-harassment" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                                    https://au.reachout.com/articles/what-is-sexual-harassment
+                                </a>
+                            </li>
                         </ul>
 
                         <h3 className="text-xl font-semibold mb-4">Sexual assault</h3>
