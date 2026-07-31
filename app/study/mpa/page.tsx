@@ -151,7 +151,8 @@ export default function MpaCoursePage() {
         backgroundImageUrl="/study/hero.png"
         primaryButtonText="Apply Now"
         secondaryButtonText="Course Brochure"
-        secondaryButtonHref="/MPA.pdf"
+        secondaryButtonHref="/policy/MPA.pdf"
+        tertiaryButtonText="Enquire"
       />
       <CourseStudentToggle value={studentType} onChange={setStudentType} />
       <CourseKeyInfo {...currentInfo.keyInfo} />

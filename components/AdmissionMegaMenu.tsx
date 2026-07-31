@@ -73,6 +73,7 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
             title={<>Your journey to<br />excellence starts here.</>}
             linkText="Start Your Application"
             linkHref="/admission-entry/how-to-apply"
+            onClick={onClose}
             className="mt-[42px]"
           />
 

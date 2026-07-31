@@ -1,23 +1,11 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import PageHeader from '@/components/PageHeader';
 import Accordion, { AccordionItem } from '@/components/Accordion';
 import Accreditations from '@/components/Accreditations';
 
 export default function OrientationPage() {
-  const [activeSection, setActiveSection] = useState('higher-education');
-
-  const scrollToSection = (id: string) => {
-    setActiveSection(id);
-    const element = document.getElementById(id);
-    if (element) {
-      // Offset for a sticky header if you have one, or just smooth scroll
-      const y = element.getBoundingClientRect().top + window.scrollY - 100;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
-
   const accordionItems: AccordionItem[] = [
     {
       title: "Orientation",
@@ -127,43 +115,9 @@ export default function OrientationPage() {
       />
 
       <section className="w-full py-16 md:py-24">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-[120px] items-start">
-
-            {/* Left Sidebar */}
-            <div className="hidden lg:block w-[200px] flex-shrink-0 pt-6 sticky top-[100px]">
-              <div className="flex flex-col border-l-2 border-[#E5E8E2]">
-                <button 
-                  onClick={() => scrollToSection('higher-education')}
-                  className={`text-left py-2 px-6 text-[13px] font-semibold tracking-wider relative transition-colors ${activeSection === 'higher-education' ? 'text-[#0B1F4A]' : 'text-[#8F9499] hover:text-[#0B1F4A]'}`}
-                >
-                  Higher Education
-                  {activeSection === 'higher-education' && (
-                    <span className="absolute left-[-2px] top-0 bottom-0 w-[2px] bg-[#4D97E6]"></span>
-                  )}
-                </button>
-                <button 
-                  onClick={() => scrollToSection('if-any-other')}
-                  className={`text-left py-2 px-6 text-[13px] font-semibold tracking-wider relative transition-colors ${activeSection === 'if-any-other' ? 'text-[#0B1F4A]' : 'text-[#8F9499] hover:text-[#0B1F4A]'}`}
-                >
-                  If Any Other
-                  {activeSection === 'if-any-other' && (
-                    <span className="absolute left-[-2px] top-0 bottom-0 w-[2px] bg-[#4D97E6]"></span>
-                  )}
-                </button>
-              </div>
-            </div>
-
-            {/* Main Content */}
-            <div className="flex-1 max-w-[800px]">
-              <div id="higher-education" className="scroll-mt-[100px]">
-                <Accordion items={accordionItems} />
-              </div>
-
-              {/* Placeholder for "If Any Other" section */}
-              <div id="if-any-other" className="scroll-mt-[100px]"></div>
-            </div>
-
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] flex justify-start">
+          <div className="w-full max-w-[800px]">
+            <Accordion items={accordionItems} />
           </div>
         </div>
       </section>

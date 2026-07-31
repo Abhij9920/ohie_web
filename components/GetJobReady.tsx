@@ -40,7 +40,7 @@ export default function GetJobReady() {
           {/* Button */}
           <div>
             <Link
-              href="/contact"
+              href="/contact-us"
               className="inline-flex items-center justify-center bg-[#4D97E6] hover:bg-[#3A7ECA] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-white font-medium text-[15px] px-8 py-4 rounded-sm"
             >
               Book an Appointment &rarr;

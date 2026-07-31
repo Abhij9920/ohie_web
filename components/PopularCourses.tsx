@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import ScrollReveal from "./ScrollReveal";
 
 const tabs = ["IT", "Business", "Accounting", "Early Childhood"];
@@ -11,7 +11,7 @@ const allCourses = [
   // IT
   {
     category: "IT",
-    image: "/prg/it_1.png",
+    image: "/prg/it_main.png",
     level: "POSTGRADUATE",
     title: "Master of Information Technology",
     description: "Advanced computing and system analysis for modern enterprise environments.",
@@ -30,17 +30,35 @@ const allCourses = [
   {
     category: "IT",
     image: "/prg/it_3.png",
+    level: "POSTGRADUATE",
+    title: "Graduate Certificate in Information Technology",
+    description: "Gain core IT competencies to advance your technical career.",
+    duration: "0.5 Years · On Campus",
+    href: "/study/gcit",
+  },
+  {
+    category: "IT",
+    image: "/gallery/img1.png",
     level: "UNDERGRADUATE",
     title: "Bachelor of Cyber Security",
     description: "Protecting digital infrastructure and mitigating cyber threats in the modern age.",
     duration: "3 Years · On Campus",
     href: "/study/bcs",
   },
+  {
+    category: "IT",
+    image: "/gallery/img2.png",
+    level: "UNDERGRADUATE",
+    title: "Bachelor of Information Systems",
+    description: "Develop robust IT solutions to drive modern businesses forward.",
+    duration: "3 Years · On Campus",
+    href: "/study/bis",
+  },
   
   // Business
   {
     category: "Business",
-    image: "/prg/business_1.png",
+    image: "/prg/business_main.png",
     level: "POSTGRADUATE",
     title: "Master of Business Administration",
     description: "Strategic leadership and management for future-focused global executives.",
@@ -59,17 +77,35 @@ const allCourses = [
   {
     category: "Business",
     image: "/prg/business_3.png",
+    level: "POSTGRADUATE",
+    title: "Graduate Certificate in Management",
+    description: "A foundational step towards mastering global business strategies.",
+    duration: "0.5 Years · On Campus",
+    href: "/study/gcm",
+  },
+  {
+    category: "Business",
+    image: "/prg/bbus.png",
     level: "UNDERGRADUATE",
     title: "Bachelor of Business",
     description: "Comprehensive business education to prepare you for the corporate world.",
     duration: "3 Years · On Campus",
     href: "/study/bbus",
   },
+  {
+    category: "Business",
+    image: "/prg/dipbus.png",
+    level: "UNDERGRADUATE",
+    title: "Diploma of Business",
+    description: "A pathway into a successful business or accounting career.",
+    duration: "1 Year · On Campus",
+    href: "/study/dipbus",
+  },
 
   // Accounting
   {
     category: "Accounting",
-    image: "/prg/accounting_1.png",
+    image: "/prg/accounting_main.png",
     level: "POSTGRADUATE",
     title: "Master of Professional Accounting",
     description: "Advanced accounting principles for aspiring professional accountants.",
@@ -85,17 +121,17 @@ const allCourses = [
     duration: "3 Years · On Campus",
     href: "/study/bba",
   },
-  {
-    category: "Accounting",
-    image: "/prg/accounting_1.png",
-    level: "UNDERGRADUATE",
-    title: "Diploma of Business",
-    description: "A pathway into a successful business or accounting career.",
-    duration: "1 Year · On Campus",
-    href: "/study/dipbus",
-  },
 
   // Early Childhood
+  {
+    category: "Early Childhood",
+    image: "/prg/ece_main.png",
+    level: "POSTGRADUATE",
+    title: "Graduate Diploma in Early Childhood Education",
+    description: "Develop practical skills for nurturing early childhood development.",
+    duration: "1 Year · On Campus",
+    href: "/study/gdece",
+  },
   {
     category: "Early Childhood",
     image: "/prg/ece_1.png",
@@ -105,21 +141,45 @@ const allCourses = [
     duration: "2 Years · On Campus",
     href: "/study/mtec",
   },
-  {
-    category: "Early Childhood",
-    image: "/prg/ece_1.png",
-    level: "POSTGRADUATE",
-    title: "Graduate Diploma in Early Childhood Education",
-    description: "Develop practical skills for nurturing early childhood development.",
-    duration: "1 Year · On Campus",
-    href: "/study/gdece",
-  },
 ];
 
 export default function PopularCourses() {
   const [activeTab, setActiveTab] = useState(tabs[0]);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const filteredCourses = allCourses.filter(course => course.category === activeTab);
+
+  const updateScrollButtons = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(Math.ceil(scrollLeft + clientWidth) < scrollWidth);
+    }
+  };
+
+  useEffect(() => {
+    // Small delay to ensure DOM is fully painted before checking scroll width
+    const timeout = setTimeout(updateScrollButtons, 100);
+    window.addEventListener("resize", updateScrollButtons);
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("resize", updateScrollButtons);
+    };
+  }, [activeTab]);
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -380, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 380, behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -137,79 +197,110 @@ export default function PopularCourses() {
               </h2>
             </div>
 
-            {/* Tabs */}
-            <div className="flex flex-wrap items-center gap-4 md:gap-[32px] mt-6 lg:mt-0">
-              {tabs.map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`text-[14px] font-sans pb-2 transition-colors ${
-                    activeTab === tab
-                      ? "text-[#0B1F4A] font-medium border-b-[2px] border-[#2463A7]"
-                      : "text-[#6B7280] font-normal cursor-pointer hover:text-[#0B1F4A]"
-                  }`}
-                >
-                  {tab}
-                </button>
-              ))}
+            {/* Tabs & Navigation */}
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-6 lg:gap-8 mt-6 lg:mt-0">
+              <div className="flex flex-wrap items-center gap-4 md:gap-[32px]">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => {
+                      setActiveTab(tab);
+                      if (scrollRef.current) scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+                    }}
+                    className={`text-[14px] font-sans pb-2 transition-colors ${
+                      activeTab === tab
+                        ? "text-[#0B1F4A] font-bold border-b-[2px] border-[#2463A7]"
+                        : "text-[#6B7280] font-normal cursor-pointer hover:text-[#0B1F4A]"
+                    }`}
+                  >
+                    {tab}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Cards Grid */}
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
-            {filteredCourses.map((course, idx) => (
-              <ScrollReveal key={idx} delay={idx * 0.1}>
-                <div className="bg-white border-[#E8E8E4] border-2 flex flex-col group hover:shadow-xl transition-shadow duration-300 h-full">
-                  {/* Image */}
-                  <div className="relative w-full h-[240px] overflow-hidden">
-                    <Image
-                      src={course.image}
-                      alt={course.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
+          {/* Cards Slider Wrapper */}
+          <div className="relative">
+            {/* Navigation Arrows positioned in the middle */}
+            {canScrollLeft && (
+              <button 
+                onClick={scrollLeft}
+                className="absolute left-[-20px] md:left-[-30px] lg:left-[-40px] top-[45%] -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-lg border border-[#E8E8E4] flex items-center justify-center text-[#0B1F4A] hover:bg-[#0B1F4A] hover:text-white transition-colors cursor-pointer"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+            )}
+            {canScrollRight && (
+              <button 
+                onClick={scrollRight}
+                className="absolute right-[-20px] md:right-[-30px] lg:right-[-40px] top-[45%] -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#0B1F4A] shadow-lg border border-[#E8E8E4] flex items-center justify-center text-white hover:bg-white hover:text-[#0B1F4A] transition-colors cursor-pointer"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            )}
 
-                  {/* Card Body */}
-                  <div className="p-[24px] md:p-[32px] flex flex-col flex-1">
-                    <span className="text-[#2463A7] text-[10px] font-semibold tracking-wider uppercase mb-[12px] md:mb-[16px]">
-                      {course.level}
-                    </span>
+            {/* Cards Slider */}
+            <div 
+              ref={scrollRef}
+              onScroll={updateScrollButtons}
+              className="relative z-10 flex gap-[30px] overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8 pt-4"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {filteredCourses.map((course, idx) => (
+                <ScrollReveal key={idx} delay={idx * 0.1} className="flex-none w-[300px] md:w-[350px] lg:w-[calc(33.333%-20px)] snap-start">
+                  <div className="bg-white border-[#E8E8E4] border-2 flex flex-col group hover:shadow-xl transition-shadow duration-300 h-full w-full">
+                    {/* Image */}
+                    <div className="relative w-full h-[240px] overflow-hidden">
+                      <Image
+                        src={course.image}
+                        alt={course.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
 
-                    <h3 className="text-[#0B1F4A] text-[20px] md:text-[22px] font-[family-name:var(--font-dm-serif)] leading-[1.2] mb-[12px] md:mb-[16px]">
-                      {course.title}
-                    </h3>
-
-                    <p className="text-[#6B7280] text-[13px] font-sans leading-relaxed mb-[40px] flex-1">
-                      {course.description}
-                    </p>
-
-                    {/* Footer */}
-                    <div className="flex items-center justify-between mt-auto">
-                      <span className="text-[#2463A7] text-[12px] font-medium">
-                        {course.duration}
+                    {/* Card Body */}
+                    <div className="p-[24px] md:p-[32px] flex flex-col flex-1">
+                      <span className="text-[#2463A7] text-[10px] font-semibold tracking-wider uppercase mb-[12px] md:mb-[16px]">
+                        {course.level}
                       </span>
 
-                      <Link
-                        href={course.href}
-                        className="flex flex-col group text-[#0B1F4A] hover:text-[#2463A7] transition-colors w-fit"
-                      >
-                        <div className="flex items-center text-[13px] font-semibold mb-[4px]">
-                          View Course
-                          <svg className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <h3 className="text-[#0B1F4A] text-[20px] md:text-[22px] font-[family-name:var(--font-dm-serif)] leading-[1.2] mb-[12px] md:mb-[16px]">
+                        {course.title}
+                      </h3>
+
+                      <p className="text-[#6B7280] text-[13px] font-sans leading-relaxed mb-[40px] flex-1">
+                        {course.description}
+                      </p>
+
+                      {/* Footer */}
+                      <div className="flex items-center justify-between mt-auto">
+                        <span className="text-[#2463A7] text-[12px] font-medium">
+                          {course.duration}
+                        </span>
+
+                        <Link
+                          href={course.href}
+                          className="flex flex-col group text-[#0B1F4A] hover:text-[#2463A7] transition-colors w-fit"
+                        >
+                          <div className="flex items-center text-[13px] font-semibold mb-[4px]">
+                            View Course
+                            <svg className="w-3 h-3 ml-1 transition-transform group-hover:translate-x-1" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                          </div>
+                          <svg width="91" height="1" viewBox="0 0 91 1" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#0B1F4A] group-hover:text-[#2463A7] transition-colors">
+                            <rect width="91" height="1" fill="currentColor" />
                           </svg>
-                        </div>
-                        <svg width="91" height="1" viewBox="0 0 91 1" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#0B1F4A] group-hover:text-[#2463A7] transition-colors">
-                          <rect width="91" height="1" fill="currentColor" />
-                        </svg>
-                      </Link>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
 
         </div>

@@ -99,8 +99,8 @@ const milestonesData: MilestoneData[] = [
     </svg>
   },
   {
-    year: "2010", text: "Pathways options opened for direct entry pathways into Australian universities", icon: <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="44" height="44" rx="12" fill="#2463A7" fillOpacity="0.101961" />
+    year: "2010", text: "Partnerships developed for direct entry pathways to Australian universities", icon: <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      < rect width="44" height="44" rx="12" fill="#2463A7" fillOpacity="0.101961" />
       <g clipPath="url(#clip0_6512_97)">
         <path d="M20.1681 22.9131C20.5618 23.4393 21.064 23.8748 21.6408 24.1899C22.2176 24.505 22.8553 24.6924 23.5109 24.7394C24.1664 24.7863 24.8244 24.6917 25.4402 24.462C26.056 24.2323 26.6152 23.8729 27.0798 23.4081L29.8298 20.6581C30.6647 19.7936 31.1267 18.6359 31.1162 17.4341C31.1058 16.2324 30.6238 15.0828 29.774 14.2331C28.9242 13.3833 27.7746 12.9012 26.5729 12.8908C25.3712 12.8804 24.2134 13.3423 23.349 14.1772L21.7723 15.7447M23.835 21.08C23.4413 20.5537 22.9391 20.1182 22.3623 19.8031C21.7855 19.488 21.1478 19.3006 20.4922 19.2537C19.8367 19.2067 19.1787 19.3013 18.5629 19.531C17.9471 19.7607 17.388 20.1201 16.9233 20.585L14.1733 23.335C13.3384 24.1994 12.8764 25.3571 12.8869 26.5589C12.8973 27.7606 13.3794 28.9102 14.2291 29.76C15.0789 30.6097 16.2285 31.0918 17.4302 31.1022C18.632 31.1127 19.7897 30.6507 20.6541 29.8158L22.2216 28.2483" stroke="#4D97E6" strokeWidth="2" strokeLinecap="round" />
       </g>
@@ -109,10 +109,10 @@ const milestonesData: MilestoneData[] = [
           <rect width="22" height="22" fill="white" transform="translate(11 11)" />
         </clipPath>
       </defs>
-    </svg>
+    </svg >
   },
   {
-    year: "2007", text: "Launch of first VET Certificate of Applied Learning (VCAL) program at Ozford", icon: <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    year: "2007", text: "Launch of Victorian Certificate of Applied Learning (VCAL) program launched", icon: <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="44" height="44" rx="12" fill="#2463A7" fillOpacity="0.101961" />
       <path d="M16.499 18.3333H13.7488C13.5056 18.3333 13.2725 18.2368 13.1005 18.0648C12.9286 17.8929 12.832 17.6598 12.832 17.4167V15.5833C12.832 15.0971 13.0252 14.6308 13.369 14.287C13.7129 13.9432 14.1792 13.75 14.6655 13.75H26.5831C27.0694 13.75 27.5358 13.9432 27.8796 14.287C28.2234 14.6308 28.4166 15.0971 28.4166 15.5833V26.5833M14.6655 13.75C15.1518 13.75 15.6181 13.9432 15.962 14.287C16.3058 14.6308 16.499 15.0971 16.499 15.5833V28.4167C16.499 28.9029 16.6922 29.3692 17.036 29.713C17.3798 30.0568 17.8462 30.25 18.3325 30.25M18.3325 30.25H29.3334C29.8196 30.25 30.286 30.0568 30.6298 29.713C30.9737 29.3692 31.1668 28.9029 31.1668 28.4167V27.5C31.1668 27.2569 31.0702 27.0237 30.8983 26.8518C30.7264 26.6799 30.4932 26.5833 30.2501 26.5833H21.0827C20.8396 26.5833 20.6064 26.6799 20.4345 26.8518C20.2625 27.0237 20.166 27.2569 20.166 27.5V28.4167C20.166 28.9029 19.9728 29.3692 19.6289 29.713C19.2851 30.0568 18.8187 30.25 18.3325 30.25Z" stroke="#4D97E6" strokeWidth="2" strokeLinecap="round" />
     </svg>
@@ -135,7 +135,7 @@ const TimelineItem = ({ item, isLeft }: { item: MilestoneData, isLeft: boolean }
     <div className="w-full pl-[64px] pr-4 md:px-0 md:w-[45%] relative">
 
       {/* Mobile Dot */}
-      <motion.div 
+      <motion.div
         className="absolute left-[24px] w-[14px] h-[14px] bg-[#4D97E6] rounded-full transform -translate-x-1/2 z-10 top-[40px] md:hidden"
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -144,7 +144,7 @@ const TimelineItem = ({ item, isLeft }: { item: MilestoneData, isLeft: boolean }
       ></motion.div>
 
       {/* Desktop Dot */}
-      <motion.div 
+      <motion.div
         className={`hidden md:block absolute top-1/2 w-[16px] h-[16px] bg-[#4D97E6] rounded-full transform -translate-y-1/2 z-10 ${isLeft ? '-right-[16px]' : '-left-[16px]'}`}
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -152,7 +152,7 @@ const TimelineItem = ({ item, isLeft }: { item: MilestoneData, isLeft: boolean }
         transition={{ delay: 0.2, type: "spring" }}
       ></motion.div>
 
-      <motion.div 
+      <motion.div
         className="bg-[#FAFAF71A] border border-[#FAFAF733] rounded-[16px] p-6 text-left hover:bg-[#FAFAF726] transition-colors relative"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -189,7 +189,7 @@ export default function AboutMilestones() {
         {/* Timeline Container */}
         <div className="relative max-w-[1200px] mx-auto">
           {/* Vertical Line */}
-          <motion.div 
+          <motion.div
             className="absolute left-[24px] md:left-1/2 top-0 bottom-0 w-[1px] bg-[#FAFAF733] md:-translate-x-1/2 origin-top"
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}

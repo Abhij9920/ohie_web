@@ -141,10 +141,10 @@ const SidebarLinksSection = ({ title, links, activeLink }: { title: string, link
     <ul className="space-y-5">
       {links.map((link, idx) => {
         const isActive = activeLink === link;
-        
+
         let href = "#";
         if (link === 'ESOS Framework') href = "/student-life/esos-framework";
-        if (link === 'ESOS Act') href = "/student-life/esos-framework";
+        if (link === 'ESOS Act') href = "https://www.legislation.gov.au/F2017L01182/latest/text";
         if (link === 'Statement of Tuition Assurance') href = "/admission-entry/statement-of-tuition-assurance";
         if (link === 'Privacy Statement') href = "/about-us/privacy-statement";
         if (link === 'Disclaimer') href = "/about-us/disclaimer";
@@ -154,7 +154,7 @@ const SidebarLinksSection = ({ title, links, activeLink }: { title: string, link
         if (link === 'Our People') href = "/about-us/our-people";
         if (link === 'Student Services & Support') href = "/student-life/student-services-support";
         if (link === 'Contact Us') href = "/contact-us";
-        
+
         if (link === 'TEQSA') href = "https://www.teqsa.gov.au/";
         if (link === 'CRICOS Register') href = "https://cricos.education.gov.au/";
         if (link === 'Tuition Protection Service') href = "https://www.tps.gov.au/";
@@ -165,8 +165,8 @@ const SidebarLinksSection = ({ title, links, activeLink }: { title: string, link
 
         return (
           <li key={idx}>
-            <Link 
-              href={href} 
+            <Link
+              href={href}
               target={isExternal ? "_blank" : undefined}
               rel={isExternal ? "noopener noreferrer" : undefined}
               className={`flex items-center gap-3 text-[14px] transition-colors group ${isActive ? 'text-[#2463A7] font-bold' : 'text-[#1A1A1A] font-medium hover:text-[#2463A7]'}`}
@@ -409,7 +409,7 @@ export default function EsosContent() {
                   Ozford has internal and external feedback and complaints processes in place as required under the National Code 2018. If you have a concern or complaint, you are encouraged to contact the Student Services team in the first instance.
                 </p>
                 <p>
-                  If you are not satisfied with the outcome of an internal process, you have the right to access an external feedback and complaints process. Details are outlined in <Link href="#" className="text-[#4D97E6] font-semibold hover:underline">Ozford's Policies and Procedures</Link>.
+                  If you are not satisfied with the outcome of an internal process, you have the right to access an external feedback and complaints process. Details are outlined in <Link href="/policies" className="text-[#4D97E6] font-semibold hover:underline">Ozford's Policies and Procedures</Link>.
                 </p>
               </div>
 
@@ -488,16 +488,16 @@ export default function EsosContent() {
               links={['ESOS Framework', 'ESOS Act', 'Statement of Tuition Assurance', 'Privacy Statement', 'Disclaimer', 'Policies & Procedures']}
               activeLink="ESOS Framework"
             />
-            
+
             <div className="w-full h-[1px] bg-[#EAEAE6]"></div>
-            
+
             <SidebarLinksSection
               title="About Ozford"
               links={['About Us', 'Our Philosophy', 'Our People', 'Student Services & Support', 'Contact Us']}
             />
-            
+
             <div className="w-full h-[1px] bg-[#EAEAE6]"></div>
-            
+
             <SidebarLinksSection
               title="Useful Links"
               links={['TEQSA', 'CRICOS Register', 'Tuition Protection Service', 'Department of Home Affairs', 'OSHC Information']}

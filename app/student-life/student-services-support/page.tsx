@@ -18,7 +18,7 @@ const supportItems: AccordionItem[] = [
     content: (
       <>
         Ozford staff will provide you with academic and additional support throughout your time with us, doing everything possible to help you excel and maximize your potential. This is particulary important for international students in helping them to adjust to studying in Australia. Students can make an appointment to see an academic advisor or alternatively, students are welcomed to make arrangements with their teachers, trainers or lecturers.{' '}
-        <a href="#" className="text-[#4D97E6] hover:underline">read more</a>
+        {/* <a href="#" className="text-[#4D97E6] hover:underline">read more</a> */}
       </>
     )
   },
@@ -35,35 +35,35 @@ const supportItems: AccordionItem[] = [
     content: 'Melbourne is a wonderful city packed with events and activities such as arts and cultural festivals, live music, exhibitions, theatre shows, sports and clubs for students. Ozford actively promotes and encourages students to explore the range of events and activities. See the What’s On in Melbourne noticeboard and sign up to Ozford Life online to connect with other students and receive further information. Ozford also offers discounted onsite gym membership for students. Ozford in partnership with a number of non-profitable organisations offer students the opportunity to contribute to the community in a number of ways. Students have the chance to participate in the promotion of various great causes, fund-raising opportunities and events.'
   },
   {
-    title: 'CAREER SUPPORT',
+    title: 'STUDENT SUCCESS PROGRAM',
     content: 'Ozford recognises that supporting our students in developing their career goals is an integral part of their learning journey. We provide an on-campus Job Ready Training program and placement for all students. The training program provides students with guidance about the job application process, résumé writing, interview techniques and employment updates. Individual appointments can also be organised for students to meet the Student Success Coach for personalised support.'
   },
   {
-    title: 'PAYMENT OPTIONS',
+    title: 'FLEXIBLE PAYMENT OPTIONS',
     content: 'Ozford provides flexible payment options to suit your financial needs. Feel free to discuss your needs with the on-campus Accounts Officer.'
   },
   {
-    title: 'STUDENT SERVICES CENTRE',
+    title: 'GENERAL SUPPORT',
     content: 'The Student Services Centre is a one-stop place for you to request information and seek assistance for general or student administration matters. You are welcomed to drop by, call or email your questions to the Student Services staff.'
   },
   {
-    title: 'OVERSEAS STUDENT HEALTH COVER (OSHC)',
+    title: 'MEDICAL AND HEALTH COVER',
     content: 'Ozford can arrange Overseas Student Health Cover (OSHC) on your behalf. OSHC provides you with the peace of mind that you have access to medical services to help you maintain your health and wellbeing. Students can request this service at the time of application. You can collect the OSHC card from our Enrolment Officer after orientation day.'
   },
   {
-    title: 'COUNSELLING & WELLBEING',
+    title: 'STUDENT WELLBEING AND PERSONAL COUNSELLING',
     content: 'Ozford Institute of Higher Education (OIHE) is committed to providing a safe, inclusive, and supportive learning environment for all students. Students experiencing personal, emotional, academic, health, or wellbeing concerns are encouraged to contact Student Services for confidential support and guidance. OIHE can also refer students to appropriate external counselling and professional support services where required. Support is available to assist students throughout their studies and overall student experience at OIHE.'
   },
   {
-    title: 'AIRPORT RECEPTION',
+    title: 'AIRPORT PICK-UP SERVICES',
     content: 'Ozford can arrange for students to be met at the airport and taken to their accommodation. You need to indicate that you would like this service when filling in the enrolment application form.'
   },
   {
-    title: 'HOMESTAY ACCOMMODATION',
+    title: 'ACCOMMODATION ARRANGEMENT',
     content: (
       <>
         Ozford can arrange homestay accommodation according to your preferences. Living in a homestay is a great way to learn about the local culture and lifestyle, and to improve your English.{' '}
-        <a href="#" className="text-[#4D97E6] hover:underline">Read more</a>
+        <a href="/student-life/accommodation" className="text-[#4D97E6] hover:underline">Read more</a>
       </>
     )
   }

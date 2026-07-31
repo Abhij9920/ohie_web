@@ -165,8 +165,8 @@ export default function MbaCoursePage() {
         backgroundImageUrl="/study/hero.png"
         primaryButtonText="Apply Now"
         secondaryButtonText="Course Brochure"
-        primaryButtonHref="https://ozford.meshedhe.com.au/"
-        secondaryButtonHref="/MBA.pdf"
+        secondaryButtonHref="/policy/MBA.pdf"
+        tertiaryButtonText="Enquire"
 
       />
       <CourseStudentToggle value={studentType} onChange={setStudentType} />

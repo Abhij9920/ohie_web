@@ -26,7 +26,7 @@ interface MegaMenuLinkProps {
 
 export const MegaMenuLink = ({ href, children, onClick }: MegaMenuLinkProps) => {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = pathname === href || (href.includes('#') && pathname === href.split('#')[0]);
   const isExternal = href.startsWith('http') || href.endsWith('.pdf');
 
   const linkContent = (
@@ -75,14 +75,15 @@ interface MegaMenuRightBannerProps {
   linkText: string;
   linkHref: string;
   className?: string;
+  onClick?: () => void;
 }
 
-export const MegaMenuRightBanner = ({ show = true, title, linkText, linkHref, className = "" }: MegaMenuRightBannerProps) => {
+export const MegaMenuRightBanner = ({ show = true, title, linkText, linkHref, className = "", onClick }: MegaMenuRightBannerProps) => {
   if (!show) return null;
   return (
     <div className={`w-[260px] flex-shrink-0 mb-[36px] bg-[#0B1F4A] px-[20px] flex flex-col justify-start py-[32px]  ${className}`}>
       <h2 className="text-white text-[18px] font-[family-name:var(--font-dm-serif)] italic mb-[12px] leading-tight">{title}</h2>
-      <Link href={linkHref} className="text-[12px] font-medium flex items-center text-[#04C9ED] hover:text-white transition-colors">
+      <Link href={linkHref} onClick={onClick} className="text-[12px] font-medium flex items-center text-[#04C9ED] hover:text-white transition-colors">
         {linkText} <span className="ml-2"><ArrowRight color="currentColor" /></span>
       </Link>
     </div>

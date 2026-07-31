@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import PageHeader from '@/components/PageHeader';
 import Accreditations from '@/components/Accreditations';
@@ -565,21 +566,19 @@ const CampusSafetyPage = () => {
                     {/* Quick Links */}
                     <div className='border-[#A3C7EB] border-t pt-6'>
                         <h3 className="font-semibold text-[16px] mb-4 text-[#0B1F4A]">Quick Links</h3>
-                        <div className="space-y-3">
-                            {[
-                                "Student Services & Support",
-                                "Career Hub",
-                                "Policies & Procedures",
-                                "Contact Us"
-                            ].map((link) => (
-                                <a
-                                    key={link}
-                                    href="#"
-                                    className="block text-[#0B1F4A] text-[14px] underline underline-offset-2 hover:text-[#0B1F4A] font-normal transition-colors"
-                                >
-                                    {link}
-                                </a>
-                            ))}
+                        <div className="space-y-3 flex flex-col">
+                            <Link href="/student-life/student-services-support" className="text-[#0B1F4A] text-[14px] underline underline-offset-2 hover:text-[#4D97E6] font-normal transition-colors">
+                                Student Services & Support
+                            </Link>
+                            <Link href="/student-life/career-hub" className="text-[#0B1F4A] text-[14px] underline underline-offset-2 hover:text-[#4D97E6] font-normal transition-colors">
+                                Career Hub
+                            </Link>
+                            <Link href="/policies" className="text-[#0B1F4A] text-[14px] underline underline-offset-2 hover:text-[#4D97E6] font-normal transition-colors">
+                                Policies & Procedures
+                            </Link>
+                            <Link href="/contact-us" className="text-[#0B1F4A] text-[14px] underline underline-offset-2 hover:text-[#4D97E6] font-normal transition-colors">
+                                Contact Us
+                            </Link>
                         </div>
                     </div>
                 </div>

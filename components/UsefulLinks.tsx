@@ -36,19 +36,19 @@ export default function UsefulLinks() {
       icon: <InfoIcon />,
       title: "Study in Melbourne",
       desc: "Official guide to living and studying in Victoria",
-      href: "#"
+      href: "http://www.studymelbourne.vic.gov.au/"
     },
     {
       icon: <MapIcon />,
       title: "Visit Melbourne",
       desc: "Explore sights, culture, events, and destinations",
-      href: "#"
+      href: "http://www.visitmelbourne.com/"
     },
     {
       icon: <BusIcon />,
       title: "Public Transport Victoria",
       desc: "Plan routes, view timetables, and ticketing details",
-      href: "#"
+      href: "http://ptv.vic.gov.au/"
     }
   ];
 
@@ -66,7 +66,7 @@ export default function UsefulLinks() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {links.map((link, idx) => (
-            <Link key={idx} href={link.href} className="flex items-center p-4 xl:p-6 border border-[#E5E5E0] hover:shadow-md transition-all group bg-white min-h-[140px] xl:min-h-[160px]">
+            <Link key={idx} href={link.href} target='_blank' className="flex items-center  p-4 xl:p-6 border border-[#E5E5E0] hover:shadow-md transition-all group bg-white min-h-[140px] xl:min-h-[160px]">
 
               {/* Icon Box */}
               <div className="w-[50px] h-[50px] xl:w-[60px] xl:h-[60px] bg-[#2463A71A] flex items-center justify-center shrink-0 mr-4 xl:mr-6">

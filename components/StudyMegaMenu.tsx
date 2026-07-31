@@ -49,6 +49,7 @@ export default function StudyMegaMenu({ isActive, onClose }: StudyMegaMenuProps)
             title={<>Shaping tomorrow's<br />leaders, today.</>}
             linkText="Explore All Programmes"
             linkHref="/study"
+            onClick={onClose}
             className="mt-[42px]"
           />
 
