@@ -28,7 +28,7 @@ const PeopleIcon = () => (
 
 export default function WhyStudyInMelbourne() {
   return (
-    <section className="w-full bg-white py-10 md:py-16 lg:py-24">
+    <section className="w-full bg-[#0B1F4A] py-10 md:py-16 lg:py-24">
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
 
         {/* Header */}
@@ -80,7 +80,7 @@ export default function WhyStudyInMelbourne() {
 
         {/* Image */}
         <div className="w-full relative min-h-[250px] md:min-h-[400px] lg:min-h-[600px]">
-          <Image src="/study_mel/melbourne_skyline.png" alt="Melbourne Skyline" fill className="object-cover" sizes="100vw" quality={100} priority />
+          <Image src="/study_mel/melbourne_skyline_4k.jpg" alt="Melbourne Skyline" fill className="object-cover" sizes="100vw" quality={100} priority unoptimized />
         </div>
       </div>
     </section>

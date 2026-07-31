@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, ChevronRight, ChevronLeft } from "./Icons";
 import { navLinks } from "@/constants/navData";
@@ -165,9 +166,39 @@ const mobileNavData: MobileNavItem[] = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeLinkOverride, setActiveLinkOverride] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
+
+  // Sync active link override with URL search params after navigation
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const search = window.location.search;
+      if (search.includes('ref=about')) setActiveLinkOverride('About Us');
+      else if (search.includes('ref=student')) setActiveLinkOverride('Student Life');
+      else if (search.includes('ref=admission')) setActiveLinkOverride('Admission');
+      else setActiveLinkOverride(null);
+    }
+  }, [pathname]);
+
+  const isLinkActive = (linkName: string) => {
+    if (!pathname) return false;
+    
+    // Check if there's a ref override
+    if (activeLinkOverride) {
+      return linkName === activeLinkOverride;
+    }
+
+    // Default canonical paths
+    if (linkName === "Home") return pathname === "/";
+    if (linkName === "Study") return pathname.startsWith("/study");
+    if (linkName === "Student Life") return pathname.startsWith("/student-life") || pathname.startsWith("/campus-safety");
+    if (linkName === "Admission") return pathname.startsWith("/admission-entry") || pathname.startsWith("/fees");
+    if (linkName === "About Us") return pathname.startsWith("/about-us") || pathname.startsWith("/policies") || pathname.startsWith("/terms") || pathname.startsWith("/contact-us");
+    return false;
+  };
 
   // Close dropdown on click outside
   useEffect(() => {
@@ -229,8 +260,55 @@ export default function Navbar() {
   return (
     <header ref={headerRef} className="w-full bg-white z-50 sticky top-0 shadow-sm transition-all duration-300">
       {/* Top Utility Bar (Dark Blue) */}
+      <div className="w-full bg-[#0B1F4A] text-white hidden md:block">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px]">
+          <div className="flex justify-between items-center py-2.5 text-[13px]">
+            {/* Contact Info */}
+            <div className="flex items-center space-x-6">
+              <a href="tel:+61386637188" className="flex items-center hover:text-gray-300 transition-colors">
+                <svg className="w-3.5 h-3.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                +61 3 86637188
+              </a>
+              <a href="mailto:info@ozford.edu.au" className="flex items-center hover:text-gray-300 transition-colors">
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                info@ozford.edu.au
+              </a>
+            </div>
 
-
+            {/* Quick Links */}
+            <div className="flex items-center space-x-6">
+              <Link href="/contact-us" className="hover:text-gray-300 transition-colors">Contact</Link>
+              <div className="relative group">
+                <button className="flex items-center hover:text-gray-300 transition-colors py-1 cursor-pointer">
+                  Login
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {/* Dropdown */}
+                <div className="absolute right-0 top-full mt-0 w-[220px] bg-white text-[#2D2D2D] shadow-lg rounded-sm overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
+                  <a href="https://mail.ozford.edu.au/owa/" target="_blank" rel="noopener noreferrer" className="block px-5 py-3.5 text-[13px] hover:bg-[#F8FAFC] hover:text-[#2463A7] border-b border-gray-50 transition-colors">
+                    Webmail
+                  </a>
+                  <a href="https://oihe.ozford.edu.au/login/index.php" target="_blank" rel="noopener noreferrer" className="block px-5 py-3.5 text-[13px] hover:bg-[#F8FAFC] hover:text-[#2463A7] border-b border-gray-50 transition-colors">
+                    OIHE (Moodle)
+                  </a>
+                  <a href="https://selfservice.ozford.edu.au:9251/authorization.do" target="_blank" rel="noopener noreferrer" className="block px-5 py-3.5 text-[13px] hover:bg-[#F8FAFC] hover:text-[#2463A7] border-b border-gray-50 transition-colors">
+                    Self Service (Staff Login)
+                  </a>
+                  <a href="https://ozford.edu.au/agent-login/" target="_blank" rel="noopener noreferrer" className="block px-5 py-3.5 text-[13px] hover:bg-[#F8FAFC] hover:text-[#2463A7] transition-colors">
+                    Agent
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Main Navbar */}
       <nav className="w-full bg-white border-b border-gray-100">
@@ -264,8 +342,11 @@ export default function Navbar() {
                         setActiveDropdown(null);
                       }
                     }}
-                    className={`text-[14px] font-medium flex items-center transition-colors duration-200 ${activeDropdown === link.name ? "text-blue-500 underline underline-offset-4" : "text-[#2D2D2D] hover:text-blue-500 hover:underline hover:underline-offset-4"
-                      }`}
+                    className={`text-[14px] font-medium flex items-center transition-colors duration-200 ${
+                      activeDropdown === link.name || isLinkActive(link.name)
+                        ? "text-blue-500"
+                        : "text-[#2D2D2D] hover:text-blue-500"
+                    }`}
                   >
                     {link.name}
                     <span

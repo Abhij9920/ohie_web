@@ -20,7 +20,7 @@ export default function AboutMegaMenu({ isActive, onClose }: Props) {
             <MegaMenuHeader title="About Ozford" />
             <ul className="space-y-[24px]">
               {aboutData.aboutOzford.map((course, idx) => (
-                <MegaMenuLink key={idx} href={course === "About us" ? "/about-us" : course === "Our Philosophy" ? "/about-us/our-philosophy" : course === "Our People" ? "/about-us/our-people" : course === "Gallery" ? "/about-us/gallery" : course === "Testimonials" ? "/about-us/testimonials" : course === "Our Stories" ? "/about-us/our-stories" : course === "Policies & Procedures" ? "/policies" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                <MegaMenuLink key={idx} href={course === "About us" ? "/about-us" : course === "Our Philosophy" ? "/about-us/our-philosophy" : course === "Our People" ? "/about-us/our-people" : course === "Gallery" ? "/about-us/gallery" : course === "Testimonials" ? "/about-us/testimonials" : course === "Our Stories" ? "/about-us/our-stories" : course === "Policies & Procedures" ? "/policies?ref=about" : "#"} onClick={onClose}>{course}</MegaMenuLink>
               ))}
             </ul>
           </div>
@@ -30,7 +30,7 @@ export default function AboutMegaMenu({ isActive, onClose }: Props) {
               <MegaMenuHeader title="Life at Ozford" />
               <ul className="space-y-[24px]">
                 {aboutData.lifeAtOzford.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Student Services & Support" ? "/student-life/student-services-support" : course === "Career Hub" ? "/student-life/career-hub" : course === "Endorsement" ? "/student-life/endorsement" : course === "Campus Safety & Sexual Misconduct" ? "/campus-safety" : course === "Terms & Policies" ? "/terms" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href={course === "Student Services & Support" ? "/student-life/student-services-support?ref=about" : course === "Career Hub" ? "/student-life/career-hub?ref=about" : course === "Endorsement" ? "/student-life/endorsement?ref=about" : course === "Campus Safety & Sexual Misconduct" ? "/campus-safety?ref=about" : course === "Terms & Policies" ? "/terms?ref=about" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>
@@ -41,7 +41,7 @@ export default function AboutMegaMenu({ isActive, onClose }: Props) {
               <MegaMenuHeader title="Terms & Policies" />
               <ul className="space-y-[24px]">
                 {aboutData.termsAndPolicies.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Policies & Procedures" ? "/policies" : course === "ESOS Act" ? "/student-life/esos-framework" : course === "Terms & Conditions" ? "/terms" : course === "Privacy Statement" ? "/about-us/privacy-statement" : course === "Disclaimer" ? "/about-us/disclaimer" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href={course === "Policies & Procedures" ? "/policies?ref=about" : course === "ESOS Act" ? "/student-life/esos-framework?ref=about" : course === "Terms & Conditions" ? "/terms?ref=about" : course === "Privacy Statement" ? "/about-us/privacy-statement?ref=about" : course === "Disclaimer" ? "/about-us/disclaimer?ref=about" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>
@@ -52,7 +52,7 @@ export default function AboutMegaMenu({ isActive, onClose }: Props) {
               <MegaMenuHeader title="Engage" />
               <ul className="space-y-[24px]">
                 {aboutData.engage.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Blogs & Events" ? "/student-life/events" : course === "Contact us" ? "/contact-us" : course === "Job Vacancy" ? "/about-us/careers" : course === "FAQ's" ? "/about-us/faqs" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                  <MegaMenuLink key={idx} href={course === "Blogs & Events" ? "/student-life/events?ref=about" : course === "Contact us" ? "/contact-us?ref=about" : course === "Job Vacancy" ? "/about-us/careers?ref=about" : course === "FAQ's" ? "/about-us/faqs?ref=about" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>

@@ -66,16 +66,16 @@ export default function UsefulLinks() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {links.map((link, idx) => (
-            <Link key={idx} href={link.href} className="flex items-center p-6 border border-[#E5E5E0] hover:shadow-md transition-all group bg-white min-h-[160px]">
+            <Link key={idx} href={link.href} className="flex items-center p-4 xl:p-6 border border-[#E5E5E0] hover:shadow-md transition-all group bg-white min-h-[140px] xl:min-h-[160px]">
 
               {/* Icon Box */}
-              <div className="w-[60px] h-[60px] bg-[#2463A71A] flex items-center justify-center shrink-0 mr-6">
+              <div className="w-[50px] h-[50px] xl:w-[60px] xl:h-[60px] bg-[#2463A71A] flex items-center justify-center shrink-0 mr-4 xl:mr-6">
                 {link.icon}
               </div>
 
               {/* Text Content */}
-              <div className="flex-1 min-w-0 pr-4">
-                <h3 className="text-[#0B1F4A] text-[20px] md:text-[22px] font-normal mb-2 leading-tight whitespace-pre-line" style={{ fontFamily: 'var(--font-dm-serif)' }}>
+              <div className="flex-1 min-w-0 pr-2">
+                <h3 className="text-[#0B1F4A] text-[18px] md:text-[22px] lg:text-[14px] xl:text-[17px] 2xl:text-[20px] font-normal mb-1 md:mb-2 leading-tight whitespace-nowrap" style={{ fontFamily: 'var(--font-dm-serif)' }}>
                   {link.title}
                 </h3>
                 <p className="text-[#6B7280] text-[13px] leading-relaxed">

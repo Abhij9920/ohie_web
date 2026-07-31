@@ -19,7 +19,7 @@ export default function Hero() {
   return (
     <div className="relative w-full min-h-[500px] md:min-h-[600px] lg:min-h-[750px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 animate-bg">
         <Image
           src="/hero_bg.png"
           alt="Ozford Campus Background"
@@ -35,17 +35,17 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-8 text-center max-w-[1100px] mx-auto mt-3">
 
         {/* Main Heading */}
-        <h1 className="text-white text-[40px] md:text-[56px] lg:text-[72px] font-normal font-[family-name:var(--font-dm-serif)] leading-[1.1] mb-[16px]">
+        <h1 className="text-white text-[40px] md:text-[56px] lg:text-[72px] font-normal font-[family-name:var(--font-dm-serif)] leading-[1.1] mb-[16px] animate-text-1">
           Shape Your Future at Ozford Institute of Higher Education
         </h1>
 
         {/* Sub Heading */}
-        <p className="text-white text-[16px] md:text-[18px] lg:text-[22px] font-normal font-sans mb-10 max-w-4xl">
+        <p className="text-white text-[16px] md:text-[18px] lg:text-[22px] font-normal font-sans mb-10 max-w-4xl animate-text-2">
           World-class education, professionally recognised <br className="hidden sm:block" /> qualifications, and a launchpad for your career.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-[16px] sm:gap-[24px] w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-center gap-[16px] sm:gap-[24px] w-full sm:w-auto animate-buttons">
           <Link
             href="#explore-courses"
             className="bg-[#2463A7] bg-opacity-[0.65] rounded-sm hover:bg-opacity-100 text-white text-[14px] sm:text-[16px] font-medium px-[24px] py-[12px] sm:px-[40px] sm:py-[14px] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg w-full sm:w-auto text-center"
@@ -67,8 +67,21 @@ export default function Hero() {
           0% { transform: translateX(0%); }
           100% { transform: translateX(-50%); }
         }
+        @keyframes fade-in {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes fade-slide-up {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-bg { animation: fade-in 1.2s ease-out both; }
+        .animate-text-1 { animation: fade-slide-up 0.8s ease-out 0.6s both; }
+        .animate-text-2 { animation: fade-slide-up 0.8s ease-out 0.9s both; }
+        .animate-buttons { animation: fade-slide-up 0.8s ease-out 1.2s both; }
+        .animate-marquee { animation: fade-slide-up 0.8s ease-out 1.5s both; }
       `}</style>
-      <div className="absolute bottom-0 left-0 w-full bg-[#0B1F4A] overflow-hidden py-[16px] z-20">
+      <div className="absolute bottom-0 left-0 w-full bg-[#0B1F4A] overflow-hidden py-[16px] z-20 animate-marquee">
         <div className="flex w-fit" style={{ animation: 'custom-marquee 25s linear infinite' }}>
           <div className="flex items-center gap-[40px] pr-[40px]">
             {marqueeItems.map((item, idx) => (
