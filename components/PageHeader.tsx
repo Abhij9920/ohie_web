@@ -59,20 +59,38 @@ export default function PageHeader({ breadcrumbs, title, quote, description, rig
   // If rightImage is provided, use the split full-bleed layout
   if (rightImage) {
     return (
-      <section className="w-full flex flex-col lg:flex-row min-h-[400px]">
-        {/* Left Column (Content) */}
-        <div className="w-full lg:w-[60%] bg-[#0B1F4A] flex flex-col justify-center px-6 md:px-12 xl:px-[120px] py-[60px] md:py-[80px]">
-          {renderContent()}
+      <section className="relative w-full min-h-[300px] lg:min-h-[400px] flex">
+        {/* Background split for full bleed */}
+        <div className="absolute inset-0 flex flex-col lg:flex-row">
+          <div className="w-full lg:w-[60%] h-full bg-[#0B1F4A]"></div>
+          <div className="w-full lg:w-[40%] h-full relative hidden lg:block">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={rightImage}
+              alt={typeof title === 'string' ? title : "Page Header Image"}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
         </div>
 
-        {/* Right Column (Image) */}
-        <div className="w-full lg:w-[40%] relative min-h-[300px] lg:min-h-full">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={rightImage}
-            alt={typeof title === 'string' ? title : "Page Header Image"}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+        {/* Foreground Content Container - Aligned with the rest of the site */}
+        <div className="relative w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] flex flex-col lg:flex-row">
+          
+          {/* Left Column (Content) */}
+          <div className="w-full lg:w-[60%] flex flex-col justify-center py-[60px] md:py-[80px] lg:pr-[40px] xl:pr-[80px]">
+            {renderContent()}
+          </div>
+
+          {/* Mobile Image (Visible only on small screens below content) */}
+          <div className="w-full h-[300px] relative lg:hidden mt-auto">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={rightImage}
+              alt={typeof title === 'string' ? title : "Page Header Image"}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+
         </div>
       </section>
     );

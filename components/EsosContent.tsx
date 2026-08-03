@@ -185,8 +185,8 @@ const SidebarLinksSection = ({ title, links, activeLink }: { title: string, link
 
 export default function EsosContent() {
   return (
-    <section className="w-full bg-[#FAFAF7] py-12 md:py-20 px-4 md:px-8 xl:px-[100px]">
-      <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16">
+    <section className="w-full bg-[#FAFAF7] py-12 md:py-20">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] flex flex-col lg:flex-row gap-12 lg:gap-16">
 
         {/* Left Column (Main Content) */}
         <div className="flex-1 lg:max-w-[900px]">

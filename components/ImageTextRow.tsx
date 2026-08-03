@@ -23,8 +23,8 @@ export default function ImageTextRow({
   const isImageLeft = imagePosition === 'left';
 
   return (
-    <section className={`w-full ${backgroundColor} py-12 md:py-20 px-4 md:px-8 xl:px-[100px]`}>
-      <div className={`max-w-[1440px] mx-auto flex flex-col-reverse lg:flex-row gap-12 lg:gap-16 items-start ${isImageLeft ? 'lg:flex-row-reverse' : ''}`}>
+    <section className={`w-full ${backgroundColor} py-12 md:py-20`}>
+      <div className={`w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] flex flex-col-reverse lg:flex-row gap-12 lg:gap-16 items-start ${isImageLeft ? 'lg:flex-row-reverse' : ''}`}>
         
         {/* Content Column */}
         <div className="flex-1 lg:max-w-[800px] w-full">
