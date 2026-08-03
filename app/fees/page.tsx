@@ -17,7 +17,7 @@ const PaymentMethods = () => {
             title: "Online Payment – Institute of Higher Education",
             content: (
                 <div className="pt-2 pb-6 px-6">
-                    <a href="https://www.payway.com.au/hpp/enter-payment-details/5uWo7BXJOGt1hHgNX0cGBA/enter-payment-details" className="text-[#4D97E6] text-[16px] hover:underline mb-6 block font-medium">
+                    <a href="http://www.payway.com.au/MakePayment?BillerCode=140145" className="text-[#4D97E6] text-[16px] hover:underline mb-6 block font-medium">
                         Click here to make a payment
                     </a>
                     <h5 className="text-[12px] font-bold text-[#0B1F4A] uppercase tracking-wider mb-3">SECURITY POLICY</h5>

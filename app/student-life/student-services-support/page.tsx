@@ -10,7 +10,7 @@ const supportItems: AccordionItem[] = [
     title: 'ORIENTATION AND TRANSITION SUPPORT',
     content: (
       <>
-        As a new student, you will be welcomed with an orientation program during your first week at Ozford. The orientation program involves familiarisation with living and studying in Melbourne and Ozford, and an opportunity for social interaction with new and current students. For more details - <DynamicHostLink pathname="/student-life/orientation/higher-education" />
+        As a new student, you will be welcomed with an orientation program during your first week at Ozford. The orientation program involves familiarisation with living and studying in Melbourne and Ozford, and an opportunity for social interaction with new and current students. For more details - <DynamicHostLink pathname="/student-life/orientation" />
       </>
     )
   },
