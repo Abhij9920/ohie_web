@@ -2,6 +2,7 @@ import React from 'react';
 import PageHeader from './PageHeader';
 import Accordion from './Accordion';
 import Link from 'next/link';
+import DynamicHostLink from './DynamicHostLink';
 
 export default function HowToApplyContent() {
   const steps = [
@@ -9,7 +10,7 @@ export default function HowToApplyContent() {
       title: "YOUR APPLICATION",
       content: (
         <ul className="list-disc pl-5 space-y-2 text-[#4A524A]">
-          <li>Read through the OIHE Course Guide <a href="/documents/207/OIHE-Brochure-A3-20250429.pdf" className="text-[#4D97E6] hover:underline" target="_blank" rel="noopener noreferrer">(Download Pdf)</a> and course information at <a href="https://www.ozford.edu.au/higher-education" className="text-[#4D97E6] hover:underline" target="_blank" rel="noopener noreferrer">www.ozford.edu.au/higher-education</a></li>
+          <li>Read through the OIHE Course Guide <a href="/documents/207/OIHE-Brochure-A3-20250429.pdf" className="text-[#4D97E6] hover:underline" target="_blank" rel="noopener noreferrer">(Download Pdf)</a> and course information at <DynamicHostLink pathname="/#explore-courses" /></li>
           <li>Choose your course – Diploma of Business, Bachelor of Business, Bachelor of Business (Accounting).</li>
           <li>Apply online <Link href="/student-life/how-to-apply" className="text-[#4D97E6] hover:underline">(click here)</Link></li>
           <li>Attach certified copies of supportive documents required in English</li>

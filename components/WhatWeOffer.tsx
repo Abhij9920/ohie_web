@@ -15,9 +15,9 @@ const servicesData: { title: string, icon: React.ReactNode, items: { text: strin
       { text: "Seek advice on finding work", type: "bullet" },
       { text: "Get help creating a CV & cover letter", type: "bullet" },
       { text: "Practice interview techniques", type: "bullet" },
-      { text: "OZFOLIO", type: "bullet-bold" },
-      { text: "Volunteer Placements", type: "bullet-bold" },
-      { text: "Employability Workshop", type: "bullet-bold" }
+      { text: "OZFOLIO", type: "bold-no-bullet" },
+      { text: "Volunteer Placements", type: "bold-no-bullet" },
+      { text: "Employability Workshop", type: "bold-no-bullet" }
     ]
   },
   {
@@ -141,10 +141,8 @@ export default function WhatWeOffer() {
 
                         return (
                           <li key={idx} className="flex items-start gap-4">
-                            {isBullet ? (
+                            {isBullet && (
                               <span className="w-1.5 h-1.5 rounded-full bg-[#4D97E6] mt-[7px] flex-shrink-0"></span>
-                            ) : (
-                              <span className="w-1.5 flex-shrink-0"></span>
                             )}
                             <span 
                               className={`leading-relaxed ${

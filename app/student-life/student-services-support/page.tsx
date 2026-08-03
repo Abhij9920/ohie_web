@@ -3,13 +3,14 @@ import PageHeader from '@/components/PageHeader';
 import Accordion, { AccordionItem } from '@/components/Accordion';
 import NeedHelpCTA from '@/components/NeedHelpCTA';
 import Accreditations from '@/components/Accreditations';
+import DynamicHostLink from '@/components/DynamicHostLink';
 
 const supportItems: AccordionItem[] = [
   {
     title: 'ORIENTATION AND TRANSITION SUPPORT',
     content: (
       <>
-        As a new student, you will be welcomed with an orientation program during your first week at Ozford. The orientation program involves familiarisation with living and studying in Melbourne and Ozford, and an opportunity for social interaction with new and current students. For more details - <a href="https://ozford.edu.au/admissions/orientations/higher-education/" className="text-[#4D97E6] hover:underline break-all" target="_blank" rel="noopener noreferrer">https://ozford.edu.au/admissions/orientations/higher-education/</a>
+        As a new student, you will be welcomed with an orientation program during your first week at Ozford. The orientation program involves familiarisation with living and studying in Melbourne and Ozford, and an opportunity for social interaction with new and current students. For more details - <DynamicHostLink pathname="/student-life/orientation/higher-education" />
       </>
     )
   },
