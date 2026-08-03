@@ -24,15 +24,15 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
                   const c = course.toLowerCase();
                   let href = "#";
                   if (c.includes("why oihe")) href = "/admission-entry/why-oihe";
-                  else if (c.includes("intakes")) href = "/student-life/intakes";
+                  else if (c.includes("intakes")) href = "/student-life/intakes?ref=admission";
                   else if (c.includes("how to apply")) href = "/admission-entry/how-to-apply";
-                  else if (c.includes("policies")) href = "/policies";
-                  else if (c.includes("orientation")) href = "/student-life/orientation";
+                  else if (c.includes("policies")) href = "/policies?ref=admission";
+                  else if (c.includes("orientation")) href = "/student-life/orientation?ref=admission";
                   else if (c.includes("entry requirements")) href = "/admission-entry/entry-requirements";
                   else if (c.includes("pre-enrolment")) href = "/admission-entry/pre-enrolment";
                   else if (c.includes("brochure")) href = "/OIHE_Brochure_2026.pdf";
                   else if (c.includes("handbook")) href = "/OIHE_Student_Handbook_Jul_2026_1.pdf";
-                  else if (c.includes("terms")) href = "/terms";
+                  else if (c.includes("terms")) href = "/terms?ref=admission";
                   else if (c.includes("tuition assurance") || c.includes("tution")) href = "/admission-entry/statement-of-tuition-assurance";
 
                   return (
@@ -50,12 +50,12 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
                     const c = course.toLowerCase();
                     let href = "#";
                     
-                    if (c.includes("orientation")) href = "/student-life/orientation";
-                    else if (c.includes("apply now")) href = "/student-life/how-to-apply";
+                    if (c.includes("orientation")) href = "/student-life/orientation?ref=admission";
+                    else if (c.includes("apply now")) href = "/admission-entry/how-to-apply";
                     else if (c.includes("agent")) href = "/admission-entry/authorized-agents";
                     else if (c.includes("tuition assurance") || c.includes("tution")) href = "/admission-entry/statement-of-tuition-assurance";
                     else if (c.includes("handbook")) href = "/OIHE_Student_Handbook_Jul_2026_1.pdf";
-                    else if (c.includes("policies")) href = "/policies";
+                    else if (c.includes("policies")) href = "/policies?ref=admission";
                     else if (c === "pay fees" || c === "payment methods") href = "/fees#payment-methods";
                     else if (c.includes("fee") || c.includes("payment")) href = "/fees";
                     

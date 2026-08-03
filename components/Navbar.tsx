@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { useState, useEffect, useRef } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+import { useState, useEffect, useRef, Suspense } from "react";
 import { ChevronDown, ChevronRight, ChevronLeft } from "./Icons";
 import { navLinks } from "@/constants/navData";
 import StudyMegaMenu from "./StudyMegaMenu";
@@ -55,8 +55,8 @@ const mobileNavData: MobileNavItem[] = [
         children: [
           { name: "Webmail", href: "https://www.office.com/login" },
           { name: "OIHE (Moodle)", href: "https://oihe.ozford.edu.au/login/index.php" },
-          { name: "Policies & Procedures", href: "/policies" },
-          { name: "Our People", href: "/about-us/our-people" }
+          { name: "Policies & Procedures", href: "/policies?ref=student" },
+          { name: "Our People", href: "/about-us/our-people?ref=student" }
         ]
       },
       {
@@ -79,9 +79,9 @@ const mobileNavData: MobileNavItem[] = [
       {
         name: "International Student",
         children: [
-          { name: "Apply", href: "/admission-entry/how-to-apply" },
+          { name: "Apply", href: "/admission-entry/how-to-apply?ref=student" },
           { name: "Accommodation", href: "/student-life/accommodation" },
-          { name: "Study in Melbourne Australia", href: "/about-us/study-in-melbourne" },
+          { name: "Study in Melbourne Australia", href: "/about-us/study-in-melbourne?ref=student" },
           { name: "ESOS Framework", href: "/student-life/esos-framework" }
         ]
       }
@@ -94,12 +94,12 @@ const mobileNavData: MobileNavItem[] = [
         name: "Higher Education",
         children: [
           { name: "Why OIHE?", href: "/admission-entry/why-oihe" },
-          { name: "Intakes & Trimester Dates", href: "/student-life/intakes" },
-          { name: "Orientation", href: "/student-life/orientation" },
+          { name: "Intakes & Trimester Dates", href: "/student-life/intakes?ref=admission" },
+          { name: "Orientation", href: "/student-life/orientation?ref=admission" },
           { name: "Entry Requirements", href: "/admission-entry/entry-requirements" },
           { name: "Pre-Enrolment", href: "/admission-entry/pre-enrolment" },
           { name: "How to Apply", href: "/admission-entry/how-to-apply" },
-          { name: "Policies & Procedures", href: "/policies" },
+          { name: "Policies & Procedures", href: "/policies?ref=admission" },
           { name: "Statement of Tuition Assurance", href: "/admission-entry/statement-of-tuition-assurance" }
         ]
       },
@@ -109,7 +109,7 @@ const mobileNavData: MobileNavItem[] = [
           { name: "Apply Now", href: "/admission-entry/how-to-apply" },
           { name: "Authorised Agents", href: "/admission-entry/authorized-agents" },
           { name: "Statement of Tuition Assurance", href: "/admission-entry/statement-of-tuition-assurance" },
-          { name: "Policies & Procedures", href: "/policies" },
+          { name: "Policies & Procedures", href: "/policies?ref=admission" },
           { name: "Fees & Payment", href: "/fees" }
         ]
       }
@@ -127,31 +127,31 @@ const mobileNavData: MobileNavItem[] = [
           { name: "Gallery", href: "/about-us/gallery" },
           { name: "Testimonials", href: "/about-us/testimonials" },
           { name: "Our Stories", href: "/about-us/our-stories" },
-          { name: "Policies & Procedures", href: "/policies" }
+          { name: "Policies & Procedures", href: "/policies?ref=about" }
         ]
       },
       {
         name: "Life at Ozford",
         children: [
-          { name: "Student Services & Support", href: "/student-life/student-services-support" },
-          { name: "Career Hub", href: "/student-life/career-hub" },
-          { name: "Campus Safety & Sexual Misconduct", href: "/campus-safety" }
+          { name: "Student Services & Support", href: "/student-life/student-services-support?ref=about" },
+          { name: "Career Hub", href: "/student-life/career-hub?ref=about" },
+          { name: "Campus Safety & Sexual Misconduct", href: "/campus-safety?ref=about" }
         ]
       },
       {
         name: "Terms & Policies",
         children: [
           { name: "Terms & Conditions", href: "/terms" },
-          { name: "ESOS Act", href: "/student-life/esos-framework" },
+          { name: "ESOS Act", href: "/student-life/esos-framework?ref=about" },
           { name: "Privacy Statement", href: "/about-us/privacy-statement" },
           { name: "Disclaimer", href: "/about-us/disclaimer" },
-          { name: "Policies & Procedures", href: "/policies" }
+          { name: "Policies & Procedures", href: "/policies?ref=about" }
         ]
       },
       {
         name: "Engage",
         children: [
-          { name: "Blogs & Events", href: "/student-life/events" },
+          { name: "Blogs & Events", href: "/student-life/events?ref=about" },
           { name: "Contact us", href: "/contact-us" },
           { name: "Job Vacancy", href: "/about-us/careers" },
           { name: "FAQ's", href: "/about-us/faqs" }
@@ -167,21 +167,18 @@ const mobileNavData: MobileNavItem[] = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [activeLinkOverride, setActiveLinkOverride] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
 
-  // Sync active link override with URL search params after navigation
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const search = window.location.search;
-      if (search.includes('ref=about')) setActiveLinkOverride('About Us');
-      else if (search.includes('ref=student')) setActiveLinkOverride('Student Life');
-      else if (search.includes('ref=admission')) setActiveLinkOverride('Admission');
-      else setActiveLinkOverride(null);
-    }
-  }, [pathname]);
+  let activeLinkOverride = null;
+  if (searchParams) {
+    const ref = searchParams.get('ref');
+    if (ref === 'about') activeLinkOverride = 'About Us';
+    else if (ref === 'student') activeLinkOverride = 'Student Life';
+    else if (ref === 'admission') activeLinkOverride = 'Admission';
+  }
 
   const isLinkActive = (linkName: string) => {
     if (!pathname) return false;
