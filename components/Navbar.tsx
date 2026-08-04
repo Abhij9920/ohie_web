@@ -166,6 +166,14 @@ const mobileNavData: MobileNavItem[] = [
 ];
 
 export default function Navbar() {
+  return (
+    <Suspense fallback={<div className="h-20 bg-white shadow-sm" />}>
+      <NavbarContent />
+    </Suspense>
+  );
+}
+
+function NavbarContent() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
