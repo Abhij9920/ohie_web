@@ -13,10 +13,10 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
         } hidden lg:block`}
     >
       <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px]">
-        <div className="flex pt-[12px] gap-12">
+        <div className="flex pt-[12px] gap-8 lg:gap-12">
 
-          <div className="flex-1 flex gap-12 pb-[42px]">
-            <div className="flex-1 border-r border-[#E8E8E4] pr-12">
+          <div className="flex-[2] flex gap-8 lg:gap-12 pb-[42px]">
+            <div className="flex-1 border-r border-[#E8E8E4] pr-4 lg:pr-8">
               <MegaMenuBadge title="Admission & Entry" />
               <MegaMenuHeader title="Higher Education" />
               <ul className="space-y-[24px]">
@@ -26,14 +26,9 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
                   if (c.includes("why oihe")) href = "/admission-entry/why-oihe";
                   else if (c.includes("intakes")) href = "/student-life/intakes?ref=admission";
                   else if (c.includes("how to apply")) href = "/admission-entry/how-to-apply";
-                  else if (c.includes("policies")) href = "/policies?ref=admission";
                   else if (c.includes("orientation")) href = "/student-life/orientation?ref=admission";
                   else if (c.includes("entry requirements")) href = "/admission-entry/entry-requirements";
                   else if (c.includes("pre-enrolment")) href = "/admission-entry/pre-enrolment";
-                  else if (c.includes("brochure")) href = "/OIHE_Brochure_2026.pdf";
-                  else if (c.includes("handbook")) href = "/OIHE_Student_Handbook_Jul_2026_1.pdf";
-                  else if (c.includes("terms")) href = "/terms?ref=admission";
-                  else if (c.includes("tuition assurance") || c.includes("tution")) href = "/admission-entry/statement-of-tuition-assurance";
 
                   return (
                     <MegaMenuLink key={idx} href={href} onClick={onClose}>{course}</MegaMenuLink>
@@ -42,7 +37,26 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
               </ul>
             </div>
 
-            <div className="flex-1 pr-12">
+            <div className="flex-1 border-r border-[#E8E8E4] pr-4 lg:pr-8">
+              <div className="mt-[42px]">
+                <MegaMenuHeader title="Documents" />
+                <ul className="space-y-[24px]">
+                  {admissionData.documents.map((course, idx) => {
+                    const c = course.toLowerCase();
+                    let href = "#";
+                    if (c.includes("brochure")) href = "/OIHE_Brochure_2026.pdf";
+                    else if (c.includes("handbook")) href = "/OIHE_Student_Handbook_Jul_2026_1.pdf";
+                    else if (c.includes("tuition assurance") || c.includes("tution")) href = "/admission-entry/statement-of-tuition-assurance";
+                    
+                    return (
+                      <MegaMenuLink key={idx} href={href} onClick={onClose}>{course}</MegaMenuLink>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex-1 pr-4 lg:pr-8">
               <div className="mt-[42px]">
                 <MegaMenuHeader title="Information" />
                 <ul className="space-y-[24px]">
@@ -50,14 +64,10 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
                     const c = course.toLowerCase();
                     let href = "#";
                     
-                    if (c.includes("orientation")) href = "/student-life/orientation?ref=admission";
-                    else if (c.includes("apply now")) href = "/admission-entry/how-to-apply";
-                    else if (c.includes("agent")) href = "/admission-entry/authorized-agents";
-                    else if (c.includes("tuition assurance") || c.includes("tution")) href = "/admission-entry/statement-of-tuition-assurance";
-                    else if (c.includes("handbook")) href = "/OIHE_Student_Handbook_Jul_2026_1.pdf";
-                    else if (c.includes("policies")) href = "/policies?ref=admission";
+                    if (c.includes("agent")) href = "/admission-entry/authorized-agents";
                     else if (c === "pay fees" || c === "payment methods") href = "/fees#payment-methods";
                     else if (c.includes("fee") || c.includes("payment")) href = "/fees";
+                    else if (c.includes("endorsement")) href = "/student-life/endorsement?ref=admission";
                     
                     return (
                       <MegaMenuLink key={idx} href={href} onClick={onClose}>{course}</MegaMenuLink>

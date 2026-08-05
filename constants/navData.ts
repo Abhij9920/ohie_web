@@ -30,25 +30,13 @@ export const studentLifeData = {
   currentStudent: [
     "Webmail",
     "OIHE (Moodle)",
-    "Policies & Procedures",
-    "Our People",
-
   ],
-  support: [
+  studentSupport: [
     "Student Services & Support",
     "Career Hub",
-    "Endorsement",
     "Campus Safety & Sexual Misconduct",
-
   ],
-  keyDates: [
-    "Intakes",
-    "Fee Due Dates",
-    "Orientations",
-    "Events",
-  ],
-  internationalStudent: [
-    "Apply",
+  internationalStudents: [
     "Accommodation",
     "Study in Melbourne Australia",
     "ESOS Framework"
@@ -63,19 +51,18 @@ export const admissionData = {
     "Entry Requirements",
     "Pre-Enrolment",
     "How to Apply",
-    "Terms & Conditions",
+  ],
+  documents: [
     "OIHE Brochure",
     "Student Handbook",
-    "Policies & Procedures",
     "Statement of Tuition Assurance",
   ],
   information: [
-    "Apply Now",
     "Pay Fees",
     "Payment Methods",
     "Fee Help",
-    "Orientations",
-    "Authorised Agents"
+    "Authorised Agents",
+    "Endorsement"
   ]
 };
 
@@ -87,17 +74,9 @@ export const aboutData = {
     "Gallery",
     "Testimonials",
     "Our Stories",
-    "Policies & Procedures",
   ],
-  lifeAtOzford: [
-    "Student Services & Support",
-    "Career Hub",
-    "Endorsement",
-    "Campus Safety & Sexual Misconduct"
-  ],
-  termsAndPolicies: [
+  governanceAndPolicies: [
     "Terms & Conditions",
-    "ESOS Act",
     "Privacy Statement",
     "Disclaimer",
     "Policies & Procedures"

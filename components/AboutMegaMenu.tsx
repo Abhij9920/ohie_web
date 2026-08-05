@@ -20,28 +20,17 @@ export default function AboutMegaMenu({ isActive, onClose }: Props) {
             <MegaMenuHeader title="About Ozford" />
             <ul className="space-y-[24px]">
               {aboutData.aboutOzford.map((course, idx) => (
-                <MegaMenuLink key={idx} href={course === "About us" ? "/about-us" : course === "Our Philosophy" ? "/about-us/our-philosophy" : course === "Our People" ? "/about-us/our-people" : course === "Gallery" ? "/about-us/gallery" : course === "Testimonials" ? "/about-us/testimonials" : course === "Our Stories" ? "/about-us/our-stories" : course === "Policies & Procedures" ? "/policies?ref=about" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                <MegaMenuLink key={idx} href={course === "About us" ? "/about-us" : course === "Our Philosophy" ? "/about-us/our-philosophy" : course === "Our People" ? "/about-us/our-people" : course === "Gallery" ? "/about-us/gallery" : course === "Testimonials" ? "/about-us/testimonials" : course === "Our Stories" ? "/about-us/our-stories" : "#"} onClick={onClose}>{course}</MegaMenuLink>
               ))}
             </ul>
           </div>
 
           <div className="flex-1 border-r border-[#E8E8E4] pr-8 lg:pr-12">
             <div className="mt-[42px]">
-              <MegaMenuHeader title="Life at Ozford" />
+              <MegaMenuHeader title="Governance & Policies" />
               <ul className="space-y-[24px]">
-                {aboutData.lifeAtOzford.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Student Services & Support" ? "/student-life/student-services-support?ref=about" : course === "Career Hub" ? "/student-life/career-hub?ref=about" : course === "Endorsement" ? "/student-life/endorsement?ref=about" : course === "Campus Safety & Sexual Misconduct" ? "/campus-safety?ref=about" : course === "Terms & Policies" ? "/terms?ref=about" : "#"} onClick={onClose}>{course}</MegaMenuLink>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="flex-1 border-r border-[#E8E8E4] pr-8 lg:pr-12">
-            <div className="mt-[42px]">
-              <MegaMenuHeader title="Terms & Policies" />
-              <ul className="space-y-[24px]">
-                {aboutData.termsAndPolicies.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Policies & Procedures" ? "/policies?ref=about" : course === "ESOS Act" ? "/student-life/esos-framework?ref=about" : course === "Terms & Conditions" ? "/terms?ref=about" : course === "Privacy Statement" ? "/about-us/privacy-statement?ref=about" : course === "Disclaimer" ? "/about-us/disclaimer?ref=about" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                {aboutData.governanceAndPolicies.map((course, idx) => (
+                  <MegaMenuLink key={idx} href={course === "Policies & Procedures" ? "/policies?ref=about" : course === "Terms & Conditions" ? "/terms?ref=about" : course === "Privacy Statement" ? "/about-us/privacy-statement?ref=about" : course === "Disclaimer" ? "/about-us/disclaimer?ref=about" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>

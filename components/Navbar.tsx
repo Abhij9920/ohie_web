@@ -54,32 +54,20 @@ const mobileNavData: MobileNavItem[] = [
         name: "Current Student",
         children: [
           { name: "Webmail", href: "https://www.office.com/login" },
-          { name: "OIHE (Moodle)", href: "https://oihe.ozford.edu.au/login/index.php" },
-          { name: "Policies & Procedures", href: "/policies?ref=student" },
-          { name: "Our People", href: "/about-us/our-people?ref=student" }
+          { name: "OIHE (Moodle)", href: "https://oihe.ozford.edu.au/login/index.php" }
         ]
       },
       {
-        name: "Life at Ozford",
+        name: "Student Support",
         children: [
           { name: "Student Services & Support", href: "/student-life/student-services-support" },
           { name: "Career Hub", href: "/student-life/career-hub" },
-          { name: "Endorsement", href: "/student-life/endorsement" },
           { name: "Campus Safety & Sexual Misconduct", href: "/campus-safety" }
         ]
       },
       {
-        name: "Key Dates",
+        name: "International Students",
         children: [
-          { name: "Intakes", href: "/student-life/intakes" },
-          { name: "Orientations", href: "/student-life/orientation" },
-          { name: "Events", href: "/student-life/events" }
-        ]
-      },
-      {
-        name: "International Student",
-        children: [
-          { name: "Apply", href: "/admission-entry/how-to-apply?ref=student" },
           { name: "Accommodation", href: "/student-life/accommodation" },
           { name: "Study in Melbourne Australia", href: "/about-us/study-in-melbourne?ref=student" },
           { name: "ESOS Framework", href: "/student-life/esos-framework" }
@@ -98,19 +86,25 @@ const mobileNavData: MobileNavItem[] = [
           { name: "Orientation", href: "/student-life/orientation?ref=admission" },
           { name: "Entry Requirements", href: "/admission-entry/entry-requirements" },
           { name: "Pre-Enrolment", href: "/admission-entry/pre-enrolment" },
-          { name: "How to Apply", href: "/admission-entry/how-to-apply" },
-          { name: "Policies & Procedures", href: "/policies?ref=admission" },
+          { name: "How to Apply", href: "/admission-entry/how-to-apply" }
+        ]
+      },
+      {
+        name: "Documents",
+        children: [
+          { name: "OIHE Brochure", href: "/OIHE_Brochure_2026.pdf" },
+          { name: "Student Handbook", href: "/OIHE_Student_Handbook_Jul_2026_1.pdf" },
           { name: "Statement of Tuition Assurance", href: "/admission-entry/statement-of-tuition-assurance" }
         ]
       },
       {
         name: "Information",
         children: [
-          { name: "Apply Now", href: "/admission-entry/how-to-apply" },
+          { name: "Pay Fees", href: "/fees#payment-methods" },
+          { name: "Payment Methods", href: "/fees#payment-methods" },
+          { name: "Fee Help", href: "/fees" },
           { name: "Authorised Agents", href: "/admission-entry/authorized-agents" },
-          { name: "Statement of Tuition Assurance", href: "/admission-entry/statement-of-tuition-assurance" },
-          { name: "Policies & Procedures", href: "/policies?ref=admission" },
-          { name: "Fees & Payment", href: "/fees" }
+          { name: "Endorsement", href: "/student-life/endorsement?ref=admission" }
         ]
       }
     ]
@@ -126,23 +120,13 @@ const mobileNavData: MobileNavItem[] = [
           { name: "Our People", href: "/about-us/our-people" },
           { name: "Gallery", href: "/about-us/gallery" },
           { name: "Testimonials", href: "/about-us/testimonials" },
-          { name: "Our Stories", href: "/about-us/our-stories" },
-          { name: "Policies & Procedures", href: "/policies?ref=about" }
+          { name: "Our Stories", href: "/about-us/our-stories" }
         ]
       },
       {
-        name: "Life at Ozford",
-        children: [
-          { name: "Student Services & Support", href: "/student-life/student-services-support?ref=about" },
-          { name: "Career Hub", href: "/student-life/career-hub?ref=about" },
-          { name: "Campus Safety & Sexual Misconduct", href: "/campus-safety?ref=about" }
-        ]
-      },
-      {
-        name: "Terms & Policies",
+        name: "Governance & Policies",
         children: [
           { name: "Terms & Conditions", href: "/terms" },
-          { name: "ESOS Act", href: "/student-life/esos-framework?ref=about" },
           { name: "Privacy Statement", href: "/about-us/privacy-statement" },
           { name: "Disclaimer", href: "/about-us/disclaimer" },
           { name: "Policies & Procedures", href: "/policies?ref=about" }

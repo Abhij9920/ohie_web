@@ -27,21 +27,10 @@ export default function StudentLifeMegaMenu({ isActive, onClose }: Props) {
 
           <div className="flex-1 border-r border-[#E8E8E4] pr-8 lg:pr-12">
             <div className="mt-[42px]">
-              <MegaMenuHeader title="Life at Ozford" />
+              <MegaMenuHeader title="Student Support" />
               <ul className="space-y-[24px]">
-                {studentLifeData.support.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Student Services & Support" ? "/student-life/student-services-support" : course === "Career Hub" ? "/student-life/career-hub" : course === "Endorsement" ? "/student-life/endorsement" : course === "Campus Safety & Sexual Misconduct" ? "/campus-safety" : "#"} onClick={onClose}>{course}</MegaMenuLink>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="flex-1 border-r border-[#E8E8E4] pr-8 lg:pr-12">
-            <div className="mt-[42px]">
-              <MegaMenuHeader title="Key Dates" />
-              <ul className="space-y-[24px]">
-                {studentLifeData.keyDates.map((course, idx) => (
-                  <MegaMenuLink key={idx} href={course === "Intakes" ? "/student-life/intakes" : course === "Orientations" ? "/student-life/orientation" : course === "Events" ? "/student-life/events" : course === "Fee Due Dates" ? "/fees?ref=student#due-dates" : "#"} onClick={onClose}>{course}</MegaMenuLink>
+                {studentLifeData.studentSupport.map((course, idx) => (
+                  <MegaMenuLink key={idx} href={course === "Student Services & Support" ? "/student-life/student-services-support" : course === "Career Hub" ? "/student-life/career-hub" : course === "Campus Safety & Sexual Misconduct" ? "/campus-safety" : "#"} onClick={onClose}>{course}</MegaMenuLink>
                 ))}
               </ul>
             </div>
@@ -51,10 +40,9 @@ export default function StudentLifeMegaMenu({ isActive, onClose }: Props) {
             <div className="mt-[42px]">
               <MegaMenuHeader title="International Students" />
               <ul className="space-y-[24px]">
-                {studentLifeData.internationalStudent.map((course, idx) => {
+                {studentLifeData.internationalStudents.map((course, idx) => {
                   let href = "#";
-                  if (course === "Apply") href = "/admission-entry/how-to-apply?ref=student";
-                  else if (course === "Study in Melbourne Australia") href = "/about-us/study-in-melbourne?ref=student";
+                  if (course === "Study in Melbourne Australia") href = "/about-us/study-in-melbourne?ref=student";
                   else if (course === "ESOS Framework") href = "/student-life/esos-framework";
                   else if (course === "Accommodation") href = "/student-life/accommodation";
                   
