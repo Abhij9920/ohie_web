@@ -106,7 +106,7 @@ export default function OrientationPage() {
       <PageHeader
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Admission & Entry', href: '#' },
+          { label: 'Admission', href: '#' },
           { label: 'Orientation', href: '/student-life/orientation' }
         ]}
         title="Higher Education Orientation"

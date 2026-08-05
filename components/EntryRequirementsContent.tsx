@@ -90,7 +90,7 @@ export default function EntryRequirementsContent() {
       <PageHeader
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Admission & Entry', href: '#' },
+          { label: 'Admission', href: '#' },
           { label: 'Entry Requirements', href: '#' }
         ]}
         hideUnderline={true}

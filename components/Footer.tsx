@@ -187,7 +187,7 @@ export default function Footer() {
                 { label: "How to Apply", href: "/admission-entry/how-to-apply" },
                 { label: "How to Enrol", href: "/admission-entry/pre-enrolment" },
                 { label: "OIHE Requirements", href: "/admission-entry/entry-requirements" },
-                { label: "Pay Fees", href: "/fees" }
+                { label: "Fees and Payments", href: "/fees" }
               ]}
             />
 

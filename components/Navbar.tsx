@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useState, useEffect, useRef, Suspense } from "react";
-import { ChevronDown, ChevronRight, ChevronLeft } from "./Icons";
+import { ChevronDown, ChevronRight, ChevronLeft, ArrowRight } from "./Icons";
 import { navLinks } from "@/constants/navData";
 import StudyMegaMenu from "./StudyMegaMenu";
 import StudentLifeMegaMenu from "./StudentLifeMegaMenu";
@@ -76,7 +76,7 @@ const mobileNavData: MobileNavItem[] = [
     ]
   },
   {
-    name: "Admission & Entry",
+    name: "Admission",
     children: [
       {
         name: "Higher Education",
@@ -100,9 +100,7 @@ const mobileNavData: MobileNavItem[] = [
       {
         name: "Information",
         children: [
-          { name: "Pay Fees", href: "/fees#payment-methods" },
-          { name: "Payment Methods", href: "/fees#payment-methods" },
-          { name: "Fee Help", href: "/fees" },
+          { name: "Fees and Payments", href: "/fees" },
           { name: "Authorised Agents", href: "/admission-entry/authorized-agents" },
           { name: "Endorsement", href: "/student-life/endorsement?ref=admission" }
         ]
@@ -110,7 +108,7 @@ const mobileNavData: MobileNavItem[] = [
     ]
   },
   {
-    name: "About",
+    name: "About Us",
     children: [
       {
         name: "About Ozford",
@@ -148,6 +146,125 @@ const mobileNavData: MobileNavItem[] = [
     href: "https://oihe.ozford.edu.au/login/index.php"
   }
 ];
+
+function MobileMenuItem({ item, level = 0, expandedItems, toggleExpanded, onClose }: { item: MobileNavItem; level?: number; expandedItems: string[]; toggleExpanded: (name: string) => void; onClose: () => void }) {
+  const hasChildren = item.children && item.children.length > 0;
+  
+  // Level 1 logic: Render as a MegaMenuHeader style section rather than an accordion
+  if (level === 1 && hasChildren) {
+    return (
+      <div className="w-full py-5 px-6 border-b border-gray-100/50 last:border-b-0">
+        <div className="mb-[20px]">
+          <h3 className="text-[#0B1F4A] text-[11px] font-semibold tracking-widest uppercase mb-2">
+            {item.name}
+          </h3>
+          <svg width="32" height="2" viewBox="0 0 32 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="2" fill="#477EFF" />
+          </svg>
+        </div>
+        <div className="flex flex-col gap-[20px]">
+          {item.children!.map((child, idx) => (
+            <MobileMenuItem 
+              key={idx} 
+              item={child} 
+              level={level + 1} 
+              expandedItems={expandedItems} 
+              toggleExpanded={toggleExpanded}
+              onClose={onClose}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // Level 2+ or items without children at Level 1 (Render as MegaMenuLink style)
+  if (!hasChildren) {
+    const isExternal = item.href?.startsWith("http");
+    
+    // MegaMenuLink style for deep items (Level 1+)
+    if (level >= 1) {
+       return (
+         <div className="w-full">
+           {isExternal ? (
+             <a href={item.href} target="_blank" rel="noopener noreferrer" onClick={onClose} className="group flex items-center justify-between text-[13px] text-[#374151] hover:text-[#0B1F4A] font-medium transition-colors">
+               <span className="pr-4">{item.name}</span>
+               <ArrowRight />
+             </a>
+           ) : (
+             <Link href={item.href || "#"} onClick={onClose} className="group flex items-center justify-between text-[13px] text-[#374151] hover:text-[#0B1F4A] font-medium transition-colors">
+               <span className="pr-4">{item.name}</span>
+               <ArrowRight />
+             </Link>
+           )}
+         </div>
+       );
+    }
+
+    // Top-level items without children (e.g. Login)
+    return (
+      <div className="w-full">
+        {isExternal ? (
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+            className="w-full py-4 px-6 flex justify-between items-center text-left text-[15px] font-medium text-[#1E293B] hover:bg-gray-50 active:bg-gray-100 transition-colors"
+          >
+            <span>{item.name}</span>
+            <ChevronRight className="w-4 h-4 text-gray-400 opacity-60" />
+          </a>
+        ) : (
+          <Link
+            href={item.href || "#"}
+            onClick={onClose}
+            className="w-full py-4 px-6 flex justify-between items-center text-left text-[15px] font-medium text-[#1E293B] hover:bg-gray-50 active:bg-gray-100 transition-colors"
+          >
+            <span>{item.name}</span>
+          </Link>
+        )}
+      </div>
+    );
+  }
+
+  // Level 0 (Top level with children, e.g. "Study", "Student Life")
+  const isExpanded = expandedItems.includes(item.name);
+  return (
+    <div className="w-full">
+      <button
+        type="button"
+        onClick={() => toggleExpanded(item.name)}
+        className={`w-full py-4 px-6 flex justify-between items-center text-left text-[15px] font-medium text-[#1E293B] hover:bg-gray-50 active:bg-gray-100 transition-colors`}
+      >
+        <span>{item.name}</span>
+        <span className={`transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>
+          <ChevronDown className="w-4 h-4 text-gray-400" />
+        </span>
+      </button>
+      
+      <div 
+        className={`grid transition-all duration-300 ease-in-out ${isExpanded ? 'opacity-100' : 'opacity-0'}`}
+        style={{ gridTemplateRows: isExpanded ? '1fr' : '0fr' }}
+      >
+        <div className="overflow-hidden">
+          <div className="bg-[#F8FAFC]">
+            {item.children!.map((child, idx) => (
+              <MobileMenuItem 
+                key={idx} 
+                item={child} 
+                level={level + 1} 
+                expandedItems={expandedItems} 
+                toggleExpanded={toggleExpanded}
+                onClose={onClose}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Navbar() {
   return (
@@ -202,10 +319,8 @@ function NavbarContent() {
     };
   }, []);
 
-  // Stack for multi-level mobile drill-down navigation
-  const [menuStack, setMenuStack] = useState<{ title: string; items: MobileNavItem[] }[]>([
-    { title: "Main Menu", items: mobileNavData }
-  ]);
+  // Expanded items for mobile accordion navigation
+  const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
   // Lock body scroll when mobile menu is active
   useEffect(() => {
@@ -222,28 +337,18 @@ function NavbarContent() {
   const handleOpenMobileMenu = () => {
     setIsMobileMenuOpen(true);
     setActiveDropdown(null);
-    setMenuStack([{ title: "Main Menu", items: mobileNavData }]);
+    setExpandedItems([]);
   };
 
   const handleCloseMobileMenu = () => {
     setIsMobileMenuOpen(false);
-    setMenuStack([{ title: "Main Menu", items: mobileNavData }]);
+    setExpandedItems([]);
   };
 
-  const currentLevel = menuStack[menuStack.length - 1];
-
-  const handleItemClick = (item: MobileNavItem) => {
-    if (item.children && item.children.length > 0) {
-      setMenuStack((prev) => [...prev, { title: item.name, items: item.children! }]);
-    } else if (item.href) {
-      handleCloseMobileMenu();
-    }
-  };
-
-  const handleBack = () => {
-    if (menuStack.length > 1) {
-      setMenuStack((prev) => prev.slice(0, -1));
-    }
+  const toggleExpanded = (itemName: string) => {
+    setExpandedItems(prev => 
+      prev.includes(itemName) ? [] : [itemName]
+    );
   };
 
   return (
@@ -411,81 +516,31 @@ function NavbarContent() {
             </button>
           </div>
 
-          {/* Back Button Header (if drill-down level > 1) */}
-          {menuStack.length > 1 && (
-            <button
-              type="button"
-              onClick={handleBack}
-              className="w-full bg-gray-50 border-b border-gray-200/80 px-6 py-3.5 flex items-center text-[#0B1F4A] font-semibold text-[14px] hover:bg-gray-100 transition-colors flex-shrink-0"
-            >
-              <ChevronLeft className="w-4 h-4 mr-2 text-[#0B1F4A]" />
-              <span>Back</span>
-            </button>
-          )}
-
           {/* Scrollable Navigation List */}
           <div className="flex-1 overflow-y-auto bg-white divide-y divide-gray-100">
-            {currentLevel.items.map((item, idx) => {
-              const hasChildren = item.children && item.children.length > 0;
+            {mobileNavData.map((item, idx) => (
+              <MobileMenuItem 
+                key={idx} 
+                item={item} 
+                level={0}
+                expandedItems={expandedItems} 
+                toggleExpanded={toggleExpanded}
+                onClose={handleCloseMobileMenu}
+              />
+            ))}
 
-              if (hasChildren) {
-                return (
-                  <button
-                    key={idx}
-                    type="button"
-                    onClick={() => handleItemClick(item)}
-                    className="w-full py-4 px-6 flex justify-between items-center text-left text-[15px] font-medium text-[#1E293B] hover:bg-gray-50 active:bg-gray-100 transition-colors"
-                  >
-                    <span>{item.name}</span>
-                    <ChevronRight className="w-4 h-4 text-gray-400" />
-                  </button>
-                );
-              }
-
-              const isExternal = item.href?.startsWith("http");
-
-              if (isExternal) {
-                return (
-                  <a
-                    key={idx}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={handleCloseMobileMenu}
-                    className="w-full py-4 px-6 flex justify-between items-center text-left text-[15px] font-medium text-[#1E293B] hover:bg-gray-50 active:bg-gray-100 transition-colors"
-                  >
-                    <span>{item.name}</span>
-                    <ChevronRight className="w-4 h-4 text-gray-400 opacity-60" />
-                  </a>
-                );
-              }
-
-              return (
-                <Link
-                  key={idx}
-                  href={item.href || "#"}
-                  onClick={handleCloseMobileMenu}
-                  className="w-full py-4 px-6 flex justify-between items-center text-left text-[15px] font-medium text-[#1E293B] hover:bg-gray-50 active:bg-gray-100 transition-colors"
-                >
-                  <span>{item.name}</span>
-                </Link>
-              );
-            })}
-
-            {/* Apply Now CTA at Root Level */}
-            {menuStack.length === 1 && (
-              <div className="p-6">
-                <Link
-                  href="https://ozford.meshedhe.com.au/Publics/PublicsPages/StudentApply/pp_Application_Step0.aspx"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex justify-center items-center bg-[#0B1F4A] hover:bg-[#081530] text-white text-[15px] font-medium py-3.5 px-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg w-full rounded-sm"
-                  onClick={handleCloseMobileMenu}
-                >
-                  Apply Now
-                </Link>
-              </div>
-            )}
+            {/* Apply Now CTA */}
+            <div className="p-6">
+              <Link
+                href="https://ozford.meshedhe.com.au/Publics/PublicsPages/StudentApply/pp_Application_Step0.aspx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-center items-center bg-[#0B1F4A] hover:bg-[#081530] text-white text-[15px] font-medium py-3.5 px-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg w-full rounded-sm"
+                onClick={handleCloseMobileMenu}
+              >
+                Apply Now
+              </Link>
+            </div>
           </div>
         </div>
       )}

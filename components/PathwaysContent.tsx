@@ -8,7 +8,7 @@ export default function PathwaysContent() {
       <PageHeader
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Admission & Entry', href: '#' },
+          { label: 'Admission', href: '#' },
           { label: 'Pathways', href: '/admission-entry/pathways' }
         ]}
         title="Pathways"

@@ -12,7 +12,7 @@ export const metadata = {
 export default function PrivacyStatementPage() {
   const breadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '#' },
+    { label: 'About Us', href: '#' },
     { label: 'Privacy Statement', href: '/about-us/privacy-statement' },
   ];
 

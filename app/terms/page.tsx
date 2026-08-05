@@ -10,7 +10,7 @@ export default function TermsAndConditionsPage() {
             <PageHeader
                 breadcrumbs={[
                     { label: 'Home', href: '/' },
-                    { label: 'Admission & Entry', href: '#' },
+                    { label: 'Admission', href: '#' },
                     { label: 'Terms And Conditions', href: '/terms' }
                 ]}
                 title="Terms and Conditions"

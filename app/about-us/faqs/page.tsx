@@ -11,7 +11,7 @@ export const metadata = {
 export default function FAQPage() {
   const breadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '#' },
+    { label: 'About Us', href: '#' },
     { label: 'FAQ', href: '/about-us/faqs' },
   ];
 

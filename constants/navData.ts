@@ -58,9 +58,7 @@ export const admissionData = {
     "Statement of Tuition Assurance",
   ],
   information: [
-    "Pay Fees",
-    "Payment Methods",
-    "Fee Help",
+    "Fees and Payments",
     "Authorised Agents",
     "Endorsement"
   ]

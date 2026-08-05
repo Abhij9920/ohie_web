@@ -65,7 +65,6 @@ export default function AdmissionMegaMenu({ isActive, onClose }: Props) {
                     let href = "#";
                     
                     if (c.includes("agent")) href = "/admission-entry/authorized-agents";
-                    else if (c === "pay fees" || c === "payment methods") href = "/fees#payment-methods";
                     else if (c.includes("fee") || c.includes("payment")) href = "/fees";
                     else if (c.includes("endorsement")) href = "/student-life/endorsement?ref=admission";
                     

@@ -7,7 +7,7 @@ export default function StatementOfTuitionAssuranceContent() {
       <PageHeader
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Admission & Entry', href: '#' },
+          { label: 'Admission', href: '#' },
           { label: 'Statement Of Tuition Assurance', href: '/admission-entry/statement-of-tuition-assurance' }
         ]}
         title="Statement of Tuition Assurance"

@@ -14,7 +14,7 @@ export const metadata = {
 export default function AboutUsPage() {
   const breadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: 'Admission & Entry', href: '#' },
+    { label: 'Admission', href: '#' },
     { label: 'About Us', href: '/about-us' },
   ];
 

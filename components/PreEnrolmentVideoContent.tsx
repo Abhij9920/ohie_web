@@ -7,7 +7,7 @@ export default function PreEnrolmentVideoContent() {
       <PageHeader
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Admission & Entry', href: '#' },
+          { label: 'Admission', href: '#' },
           { label: 'Pre-Enrolment', href: '/admission-entry/pre-enrolment' },
           { label: 'Video Guide', href: '#' }
         ]}

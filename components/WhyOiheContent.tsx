@@ -10,7 +10,7 @@ export default function WhyOiheContent() {
       <PageHeader
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Admission & Entry', href: '#' },
+          { label: 'Admission', href: '#' },
           { label: 'Why OIHE?', href: '#' }
         ]}
         hideUnderline={true}

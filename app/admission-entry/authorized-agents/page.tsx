@@ -9,7 +9,7 @@ export default function AuthorizedAgentsPage() {
       <PageHeader
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Admission & Entry', href: '#' },
+          { label: 'Admission', href: '#' },
           { label: 'Authorized Agents', href: '/admission-entry/authorized-agents' }
         ]}
         title="Authorized Agents"

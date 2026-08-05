@@ -121,7 +121,7 @@ export default function HowToApplyContent() {
       <PageHeader
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Admission & Entry', href: '#' },
+          { label: 'Admission', href: '#' },
           { label: 'How To Apply', href: '/admission-entry/how-to-apply' }
         ]}
         title="How to Apply"

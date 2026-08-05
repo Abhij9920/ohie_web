@@ -11,7 +11,7 @@ export const metadata = {
 export default function CareersPage() {
   const breadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '#' },
+    { label: 'About Us', href: '#' },
     { label: 'Careers', href: '/about-us/careers' },
   ];
 

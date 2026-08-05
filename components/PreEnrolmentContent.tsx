@@ -7,7 +7,7 @@ export default function PreEnrolmentContent() {
       <PageHeader
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Admission & Entry', href: '#' },
+          { label: 'Admission', href: '#' },
           { label: 'Pre-Enrolment', href: '#' }
         ]}
         hideUnderline={true}
