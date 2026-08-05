@@ -239,7 +239,7 @@ function MobileMenuItem({ item, level = 0, expandedItems, toggleExpanded, onClos
       >
         <span>{item.name}</span>
         <span className={`transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>
-          <ChevronDown className="w-4 h-4 text-gray-400" />
+          <ChevronDown />
         </span>
       </button>
       
