@@ -9,6 +9,7 @@ export const metadata = {
 export default function ContactUsPage() {
   const breadcrumbs = [
     { label: 'Home', href: '/' },
+    { label: 'About Us', href: '#' },
     { label: 'Contact Us', href: '/contact-us' },
   ];
 
@@ -20,19 +21,19 @@ export default function ContactUsPage() {
         hideUnderline={true}
         description="We're here to help. Reach out to us with any questions or inquiries."
       />
-      
+
       <section className="w-full bg-[#FAFAF7] py-16 md:py-24 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-[#2463A7] opacity-5 blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-[#0B1F4A] opacity-5 blur-3xl pointer-events-none"></div>
 
         <div className="max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] md:px-[40px] lg:px-[80px] xl:px-[100px] xl:px-[100px] relative z-10">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-            
+
             {/* Left Column - Contact Details */}
             <div className="lg:col-span-5 flex flex-col gap-6 lg:gap-8">
-              
+
               {/* Card 1: Head Office */}
               <div className="bg-white rounded-[16px] p-8 shadow-sm border border-[#E8E8E4] hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 bg-[#F0F5FA] rounded-full flex items-center justify-center mb-6">
@@ -63,7 +64,7 @@ export default function ContactUsPage() {
               {/* Card 3: Contact Info */}
               <div className="bg-[#0B1F4A] rounded-[16px] p-8 shadow-lg text-white">
                 <h3 className="text-[20px] font-bold mb-8">Get in Touch</h3>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <svg className="w-6 h-6 text-[#A7BDC4] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -84,7 +85,7 @@ export default function ContactUsPage() {
                       <p className="text-[15px]">+61 3 86637188</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
                     <svg className="w-6 h-6 text-[#A7BDC4] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -107,33 +108,33 @@ export default function ContactUsPage() {
               </div>
 
               <form className="space-y-6">
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="firstName" className="block text-[14px] font-medium text-[#2D3732]">First Name</label>
-                    <input 
-                      type="text" 
-                      id="firstName" 
+                    <input
+                      type="text"
+                      id="firstName"
                       placeholder="John"
                       className="w-full bg-[#FAFAF7] border border-[#E6E6DF] rounded-lg px-4 py-3.5 text-[15px] placeholder-[#9CA3AF] focus:outline-none focus:border-[#2463A7] focus:ring-1 focus:ring-[#2463A7] transition-all"
                     />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="lastName" className="block text-[14px] font-medium text-[#2D3732]">Last Name</label>
-                    <input 
-                      type="text" 
-                      id="lastName" 
+                    <input
+                      type="text"
+                      id="lastName"
                       placeholder="Doe"
                       className="w-full bg-[#FAFAF7] border border-[#E6E6DF] rounded-lg px-4 py-3.5 text-[15px] placeholder-[#9CA3AF] focus:outline-none focus:border-[#2463A7] focus:ring-1 focus:ring-[#2463A7] transition-all"
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <label htmlFor="email" className="block text-[14px] font-medium text-[#2D3732]">Email Address</label>
-                  <input 
-                    type="email" 
-                    id="email" 
+                  <input
+                    type="email"
+                    id="email"
                     placeholder="john@example.com"
                     className="w-full bg-[#FAFAF7] border border-[#E6E6DF] rounded-lg px-4 py-3.5 text-[15px] placeholder-[#9CA3AF] focus:outline-none focus:border-[#2463A7] focus:ring-1 focus:ring-[#2463A7] transition-all"
                   />
@@ -141,9 +142,9 @@ export default function ContactUsPage() {
 
                 <div className="space-y-2">
                   <label htmlFor="phone" className="block text-[14px] font-medium text-[#2D3732]">Phone Number</label>
-                  <input 
-                    type="tel" 
-                    id="phone" 
+                  <input
+                    type="tel"
+                    id="phone"
                     placeholder="+61 400 000 000"
                     className="w-full bg-[#FAFAF7] border border-[#E6E6DF] rounded-lg px-4 py-3.5 text-[15px] placeholder-[#9CA3AF] focus:outline-none focus:border-[#2463A7] focus:ring-1 focus:ring-[#2463A7] transition-all"
                   />
@@ -151,17 +152,17 @@ export default function ContactUsPage() {
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="block text-[14px] font-medium text-[#2D3732]">How can we help?</label>
-                  <textarea 
-                    id="message" 
+                  <textarea
+                    id="message"
                     rows={5}
                     placeholder="Tell us about your inquiry..."
                     className="w-full bg-[#FAFAF7] border border-[#E6E6DF] rounded-lg px-4 py-3.5 text-[15px] placeholder-[#9CA3AF] focus:outline-none focus:border-[#2463A7] focus:ring-1 focus:ring-[#2463A7] transition-all resize-y"
                   ></textarea>
                 </div>
-                
+
                 <div className="pt-2">
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className="w-full sm:w-auto bg-[#2463A7] hover:bg-[#184882] text-white text-[15px] font-semibold py-4 px-10 rounded-lg transition-colors flex items-center justify-center gap-2"
                   >
                     Send Message
@@ -177,13 +178,13 @@ export default function ContactUsPage() {
 
           {/* Full Width Map Section */}
           <div className="mt-16 md:mt-24 w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl shadow-black/5 border border-[#E8E8E4]">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.860166649392!2d144.95635411559107!3d-37.8108661797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d496c84d091%3A0x7dd1cf428d1eb62a!2sOzford!5e0!3m2!1sen!2sus!4v1689255260655!5m2!1sen!2sus" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen={false} 
-              loading="lazy" 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.860166649392!2d144.95635411559107!3d-37.8108661797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d496c84d091%3A0x7dd1cf428d1eb62a!2sOzford!5e0!3m2!1sen!2sus!4v1689255260655!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Ozford Melbourne Campus Map"
               className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 transition-all duration-500"

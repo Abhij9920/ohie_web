@@ -62,7 +62,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'Leadership & Change In Person Session' },
           ]}
@@ -119,7 +119,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'Melbourne Career Expo 2026' },
           ]}
@@ -181,7 +181,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'Referencing & Avoiding Plagiarism' },
           ]}
@@ -233,7 +233,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'Orientation (Melbourne, Brisbane)' },
           ]}
@@ -279,7 +279,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'President & CEO at IDP Fair in Vietnam and Cambodia' },
           ]}
@@ -345,7 +345,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'Susan Inserra in Ho Chi Minh City' },
           ]}
@@ -369,7 +369,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
     const content = (
       <>
         <p><strong>Visit Summary – Head of Marketing, Oxford</strong></p>
-        
+
         <p className="mt-6 text-[#3D3D3D]">
           Name: Susan Inserra<br />
           Position: Head of Marketing, Oxford<br />
@@ -410,7 +410,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'Susan Inserra in Mumbai' },
           ]}
@@ -448,7 +448,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'President/CEO at CIFTIS Beijing' },
           ]}
@@ -489,7 +489,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'Susan Inserra visiting ISU' },
           ]}
@@ -531,7 +531,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'Susan at Study Australia Education Fair – Ulaanbaatar' },
           ]}
@@ -564,7 +564,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'Higher Education orientation' },
           ]}
@@ -601,7 +601,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'President/CEO at SAEE Taiwan' },
           ]}
@@ -633,7 +633,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: '2025 Australia Education Fair' },
           ]}
@@ -666,7 +666,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'Higher Education mid-trimester begins' },
           ]}
@@ -698,7 +698,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'Meet us at CEE 2025' },
           ]}
@@ -730,7 +730,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: 'Higher Education Final Orientation' },
           ]}
@@ -767,7 +767,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         <EventDetail
           breadcrumbs={[
             { label: 'Home', href: '/' },
-            { label: 'News & Events', href: '#' },
+            { label: 'About Us', href: '#' },
             { label: 'Events', href: '/student-life/events' },
             { label: "Bachelor's & Master's Orientation" },
           ]}

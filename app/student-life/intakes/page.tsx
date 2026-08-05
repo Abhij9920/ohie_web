@@ -353,7 +353,7 @@ export default function IntakesPage() {
       <PageHeader
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Student Life', href: '#' },
+          { label: 'Admission', href: '#' },
           { label: 'Intakes', href: '/student-life/intakes' }
         ]}
         title="Intakes and Trimester Dates"

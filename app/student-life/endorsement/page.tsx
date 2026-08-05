@@ -7,7 +7,7 @@ import Accreditations from '@/components/Accreditations';
 export default function EndorsementPage() {
   const breadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: 'About Us', href: '/about-us' },
+    { label: 'Admission', href: '/about-us' },
     { label: 'Endorsement', href: '/student-life/endorsement' }
   ];
 

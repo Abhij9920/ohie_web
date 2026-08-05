@@ -441,8 +441,8 @@ export default function FeesPage() {
             <PageHeader
                 breadcrumbs={[
                     { label: 'Home', href: '/' },
-                    { label: 'Student Life', href: '/student-life' },
-                    { label: 'Fees Due Dates', href: '/fees' }
+                    { label: 'Admission', href: '#' },
+                    { label: 'Fees and payments', href: '/fees' }
                 ]}
                 title="2026 Fees"
                 hideUnderline={true}

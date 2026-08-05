@@ -15,7 +15,7 @@ export const metadata = {
 export default function StudyInMelbournePage() {
   const breadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: 'About Us', href: '#' },
+    { label: 'Student Life', href: '#' },
     { label: 'Study in Melbourne Australia', href: '/about-us/study-in-melbourne' },
   ];
 

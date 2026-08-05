@@ -18,7 +18,7 @@ export interface EventsHeroProps {
 export default function EventsHero({
   breadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: 'News & Events' },
+    { label: 'About Us' },
     { label: 'Events' }
   ],
   title = "Upcoming Events",
@@ -43,7 +43,7 @@ export default function EventsHero({
 
       {/* Foreground Content Container - Aligned with the rest of the site */}
       <div className="relative w-full max-w-[1440px] mx-auto px-4 md:px-[40px] lg:px-[80px] xl:px-[100px] flex flex-col lg:flex-row">
-        
+
         {/* Left Column (Content) */}
         <div className="w-full lg:w-[60%] flex flex-col justify-center py-[60px] md:py-[80px] lg:pr-[40px] xl:pr-[80px]">
           {/* Breadcrumbs */}
@@ -73,7 +73,7 @@ export default function EventsHero({
               {subtitle}
             </p>
           )}
-          
+
           {children && (
             <div className="mt-2">
               {children}
@@ -90,7 +90,7 @@ export default function EventsHero({
             className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
-        
+
       </div>
     </section>
   );
